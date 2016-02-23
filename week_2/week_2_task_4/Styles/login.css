@@ -1,0 +1,70 @@
+body {
+    background: url("../Static/imgs/login%20background.jpg") no-repeat;
+    background-size: cover;
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    color: #fff;
+    text-align: center;
+}
+
+.container h3 span {
+    display: inline-block;
+    position: relative;
+    left: -5px;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+    background: url("../Static/imgs/iconfont-database.png") no-repeat;
+    background-size: cover;
+}
+
+form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    margin: auto;
+    background: rgba(255, 255, 255, .7);
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 1px rgba(50, 50, 50, .7);
+
+}
+
+input {
+    margin-left: 23px;
+    height: 36px;
+    color: #333;
+}
+
+div.title {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+
+#username {
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+#login-submit {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

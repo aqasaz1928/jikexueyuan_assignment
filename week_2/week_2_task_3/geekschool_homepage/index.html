@@ -1,0 +1,3253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>极客学院IT在线教育平台-中国最大的IT在线职业教育平台</title>
+    <link rel="stylesheet" type="text/css" href="Css/default.css">
+    <script src="JavaScript/jquery-2.1.4.js"></script>
+    <script src="JavaScript/jquery.flexslider-min.js"></script>
+    <script src="JavaScript/Concurrent.Thread.js"></script>
+    <script src="JavaScript/app.js"></script>
+</head>
+<body>
+<!--定义右侧的广告栏-->
+<div class="advertisement">
+    <div class="advertisement-box">
+        <a class="close-ad"></a>
+        <img src="http://ubmcmm.baidustatic.com/media/v1/0f000FMMewHUQkE-5dGZ_s.png" alt="">
+    </div>
+    <div class="advertisement-box">
+        <a class="close-ad"></a>
+        <img src="http://ubmcmm.baidustatic.com/media/v1/0f000nGEQVvSJrxudqsnAs.jpg" alt="">
+    </div>
+</div>
+<!--定义右侧的小工具-->
+<div class="fixed-tools">
+    <ul>
+        <li><a id="back-to-top"></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+</div>
+<!--开始定义头部部分-->
+<header>
+    <!--网页再入进度条-->
+    <div class="header-loading"></div>
+
+    <div class="header-panel">
+        <!--头部的网页logo-->
+        <div class="header-logo">
+            <a href="http://www.jikexueyuan.com">
+                <img src="Images/logo_geek.png" alt="极客学院" style="width: 115px">
+            </a>
+        </div>
+        <!--头部的搜索框-->
+        <div class="header-search">
+            <form action="" class="header-search-form">
+                <input type="text" id="search-input" placeholder="搜索课程，问答或Wiki">
+                <input type="submit" id="search-submit" value="">
+                <div class="hot-search">
+                    <!--搜索框内的推荐关键字-->
+                    <a href="">Android</a><a href="">IOS</a><a href="">HTML5</a>
+                </div>
+            </form>
+        </div>
+        <!--头部右侧的工具栏-->
+        <div class="header-login">
+            <ul>
+                <li><a href="">注册</a></li>
+                <li><a href="">登录</a></li>
+                <li><a href="">QQ登录</a></li>
+                <li><a href="">
+                    <img src="Images/iconfont-talk.png" style="width: 20px;opacity: .7;">
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <!--头部下方的导航栏-->
+    <div class="header-nav">
+        <div class="header-navbar">
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">职业课程库</a></li>
+                <li><a href="">知识体系图</a></li>
+                <li><a href="">职业路径图</a></li>
+                <li><a href="">技术问答</a></li>
+                <li><a href="">Wiki</a></li>
+            </ul>
+        </div>
+        <!--导航栏右侧的网页工具-->
+        <div class="header-navtools">
+            <ul>
+                <li><a href="">
+                    <img src="Images/iconfont-download.png" alt="下载客户端" style="width: 20px;opacity: .5;">
+                    <span>
+                        客户端
+                    </span></a></li>
+                <li><a href="">
+                    <img src="Images/iconfont-starhalf.png" alt="求课程" style="width: 20px;opacity: .5;">
+                    <span>
+                        求课程
+                    </span></a></li>
+                <li><a href="">
+                    <img src="Images/iconfont-vip%20(1).png" alt="VIP会员" style="width: 25px;">
+                    <span>VIP会员</span></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--开始定义网页主体部分-->
+<div class="container">
+    <!--内容区域最上方部分-->
+    <div class="content-top-box">
+        <!--课程分类外部的盒子，用来获得鼠标事件-->
+        <div class="lessons-classify-outer"></div>
+        <!--课程分类部分-->
+        <div class="lessons-classify">
+            <ul>
+                <li class="lessons-classify-tab" id="lesson-classify-1">
+                    <a href="">移动开发
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+                <li class="lessons-classify-tab" id="lesson-classify-2">
+                    <a href="">前端开发
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+                <li class="lessons-classify-tab" id="lesson-classify-3">
+                    <a href="">后端开发
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+                <li class="lessons-classify-tab" id="lesson-classify-4">
+                    <a href="">基础知识
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+                <li class="lessons-classify-tab" id="lesson-classify-5">
+                    <a href="">云计算&大数据
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+                <li class="lessons-classify-tab" id="lesson-classify-6">
+                    <a href="">智能硬件&物联网
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+                <li class="lessons-classify-tab" id="lesson-classify-7">
+                    <a href="">数据库
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+                <li class="lessons-classify-tab" id="lesson-classify-8">
+                    <a href="">认证考试
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+                <li class="lessons-classify-tab" id="lesson-classify-9">
+                    <a href="">企业IT
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+                <li class="lessons-classify-tab" id="lesson-classify-10">
+                    <a href="">软件测试
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+                <li class="lessons-classify-tab" id="lesson-classify-11">
+                    <a href="">设计&产品
+                        <img src="Images/iconfont-right.png"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--课程分类下方的标签-->
+        <div class="lessons-classify-downer">
+            <img src="Images/triangledown.png" alt="" style="width: 10px">
+        </div>
+        <!--课程分类的内容部分-->
+        <div class="lessons-classify-content">
+            <div class="lesson-classify-1" style="z-index: 999">
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/app/" cgid="58">应用开发</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/android/" cgid="59">Android</a>
+
+                            <a href="http://www.jikexueyuan.com/course/ios/" cgid="60">iOS</a>
+
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/games/" cgid="13">游戏开发</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/cocos/" cgid="63">Cocos</a>
+
+                            <a href="http://www.jikexueyuan.com/course/unity3d/" cgid="64">Unity3D</a>
+
+                            <a href="http://www.jikexueyuan.com/course/spritekit2d/" cgid="65">SpriteKit 2D</a>
+
+                            <a href="http://www.jikexueyuan.com/course/unreal/" cgid="66">Unreal</a>
+
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/frame/" cgid="14">常用框架</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/cordova/" cgid="68">Cordova</a>
+
+                            <a href="http://www.jikexueyuan.com/course/reactnative1/" cgid="382">React Native</a>
+
+                        </dd>
+                    </dl>
+            </div>
+            <div class="lesson-classify-2" style="z-index: 999">
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/webbase/" cgid="16">前端基础</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/html/" cgid="76">HTML</a>
+
+                            <a href="http://www.jikexueyuan.com/course/css/" cgid="77">CSS</a>
+
+                            <a href="http://www.jikexueyuan.com/course/javascript/" cgid="78">JavaScript</a>
+
+                            <a href="http://www.jikexueyuan.com/course/html5/" cgid="79">HTML5</a>
+
+                            <a href="http://www.jikexueyuan.com/course/css3/" cgid="80">CSS3</a>
+
+                            <a href="http://www.jikexueyuan.com/course/prospective/" cgid="81">技术前瞻</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/advance/" cgid="18">前端进阶</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/typescript/" cgid="97">Typescript</a>
+
+                            <a href="http://www.jikexueyuan.com/course/security/" cgid="98">前端安全</a>
+
+                            <a href="http://www.jikexueyuan.com/course/practice/" cgid="99">项目实战</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/webframe/" cgid="17">前端框架</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/jquery/" cgid="82">jQuery</a>
+
+                            <a href="http://www.jikexueyuan.com/course/jqueryui/" cgid="83">jQuery UI</a>
+
+                            <a href="http://www.jikexueyuan.com/course/jquerymobile/" cgid="84">jQuery Mobile</a>
+
+                            <a href="http://www.jikexueyuan.com/course/angularjs/" cgid="86">AngularJS</a>
+
+                            <a href="http://www.jikexueyuan.com/course/reactjs/" cgid="87">ReactJS</a>
+
+                            <a href="http://www.jikexueyuan.com/course/bootstrap/" cgid="94">Bootstrap</a>
+
+                            <a href="http://www.jikexueyuan.com/course/reactnative/" cgid="371">React Native</a>
+
+                            <a href="http://www.jikexueyuan.com/course/backbone/" cgid="372">Backbone</a>
+
+                            <a href="http://www.jikexueyuan.com/course/threejs/" cgid="373">Three.js</a>
+
+                            <a href="http://www.jikexueyuan.com/course/mootools/" cgid="374">MooTools</a>
+
+                            <a href="http://www.jikexueyuan.com/course/compass/" cgid="375">Compass</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/html5games/" cgid="19">HTML5游戏</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/canvas/" cgid="100">Canvas</a>
+
+                            <a href="http://www.jikexueyuan.com/course/svg/" cgid="102">SVG</a>
+
+                            <a href="http://www.jikexueyuan.com/course/webgl/" cgid="103">WebGL</a>
+
+                            <a href="http://www.jikexueyuan.com/course/cocos2djs/" cgid="105">Cocos2d-js</a>
+
+                            <a href="http://www.jikexueyuan.com/course/createjs/" cgid="106">CreateJS</a>
+
+                            <a href="http://www.jikexueyuan.com/course/webflash/" cgid="107">Flash</a>
+
+                            <a href="http://www.jikexueyuan.com/course/webunreal/" cgid="108">Unreal</a>
+
+                            <a href="http://www.jikexueyuan.com/course/webegret/" cgid="109">Egret</a>
+
+                            <a href="http://www.jikexueyuan.com/course/phaser/" cgid="376">Phaser</a>
+
+                        </dd>
+                    </dl>
+            </div>
+            <div class="lesson-classify-3" style="z-index: 999">
+
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/python/" cgid="23">Python</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/pythonbase/" cgid="147">Python 基础</a>
+
+                            <a href="http://www.jikexueyuan.com/course/web2py/" cgid="148">web2py</a>
+
+                            <a href="http://www.jikexueyuan.com/course/django/" cgid="149">Django</a>
+
+                            <a href="http://www.jikexueyuan.com/course/flask/" cgid="150">Flask</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/php/" cgid="21">PHP</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/phpbase/" cgid="123">PHP 基础</a>
+
+                            <a href="http://www.jikexueyuan.com/course/yii/" cgid="125">YII</a>
+
+                            <a href="http://www.jikexueyuan.com/course/thinkphp/" cgid="126">ThinkPHP</a>
+
+                            <a href="http://www.jikexueyuan.com/course/laravel/" cgid="127">Laravel</a>
+
+                            <a href="http://www.jikexueyuan.com/course/wordpress/" cgid="128">WordPress</a>
+
+                            <a href="http://www.jikexueyuan.com/course/phalcon/" cgid="131">Phalcon</a>
+
+                            <a href="http://www.jikexueyuan.com/course/apachedev/" cgid="135">Apache</a>
+
+                            <a href="http://www.jikexueyuan.com/course/fackbookhack/" cgid="136">Fackbook Hack</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/nodedotjs/" cgid="26">Node.js</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/nodejs/" cgid="158">Node.js 基础</a>
+
+                            <a href="http://www.jikexueyuan.com/course/express/" cgid="159">express</a>
+
+                            <a href="http://www.jikexueyuan.com/course/meteor/" cgid="161">Meteor</a>
+
+                            <a href="http://www.jikexueyuan.com/course/hexo/" cgid="386">Hexo</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/aspdotnet/" cgid="22">ASP.NET</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/csharpdev/" cgid="137">C#</a>
+
+                            <a href="http://www.jikexueyuan.com/course/mvc/" cgid="139">ASP.NET MVC</a>
+
+                            <a href="http://www.jikexueyuan.com/course/entity/" cgid="140">Entity Framework</a>
+
+                            <a href="http://www.jikexueyuan.com/course/wpf/" cgid="368">WPF</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/j2ee/" cgid="20">J2EE</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/jsp/" cgid="111">JSP</a>
+
+                            <a href="http://www.jikexueyuan.com/course/maven/" cgid="112">Maven</a>
+
+                            <a href="http://www.jikexueyuan.com/course/spring/" cgid="114">Spring</a>
+
+                            <a href="http://www.jikexueyuan.com/course/springmvc/" cgid="115">SpringMVC</a>
+
+                            <a href="http://www.jikexueyuan.com/course/struts2/" cgid="116">Struts2</a>
+
+                            <a href="http://www.jikexueyuan.com/course/mybatis/" cgid="117">MyBatis</a>
+
+                            <a href="http://www.jikexueyuan.com/course/hibernate/" cgid="118">Hibernate</a>
+
+                            <a href="http://www.jikexueyuan.com/course/lucene/" cgid="120">Lucene</a>
+
+                            <a href="http://www.jikexueyuan.com/course/j2eeframe/" cgid="369">常用框架</a>
+
+                            <a href="http://www.jikexueyuan.com/course/j2eepractice/" cgid="370">项目实战</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/ruby/" cgid="24">Ruby</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/rubybase/" cgid="151">Ruby 基础</a>
+
+                            <a href="http://www.jikexueyuan.com/course/rails/" cgid="152">Ruby on Rails</a>
+
+                            <a href="http://www.jikexueyuan.com/course/grape/" cgid="153">Grape</a>
+
+                            <a href="http://www.jikexueyuan.com/course/rubyadvanced/" cgid="366">Ruby进阶</a>
+
+                            <a href="http://www.jikexueyuan.com/course/rubymine/" cgid="367">RubyMine</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/go/" cgid="25">Go</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/gobase/" cgid="155">Go 基础</a>
+
+                            <a href="http://www.jikexueyuan.com/course/beego/" cgid="157">beego</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/erlang/" cgid="387">Erlang</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/erlangbase/" cgid="388">Erlang 基础</a>
+
+                        </dd>
+                    </dl>
+
+
+
+            </div>
+            <div class="lesson-classify-4" style="z-index: 999">
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/baselang/" cgid="27">基础语言</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/c/" cgid="162">C</a>
+
+                            <a href="http://www.jikexueyuan.com/course/cpp/" cgid="163">C++</a>
+
+                            <a href="http://www.jikexueyuan.com/course/oc/" cgid="165">Objective-C</a>
+
+                            <a href="http://www.jikexueyuan.com/course/swift/" cgid="166">Swift</a>
+
+                            <a href="http://www.jikexueyuan.com/course/csharp/" cgid="167">C#</a>
+
+                            <a href="http://www.jikexueyuan.com/course/java/" cgid="168">Java</a>
+
+                            <a href="http://www.jikexueyuan.com/course/perl/" cgid="169">Perl</a>
+
+                            <a href="http://www.jikexueyuan.com/course/shell/" cgid="170">Shell</a>
+
+                            <a href="http://www.jikexueyuan.com/course/qt/" cgid="171">Qt</a>
+
+                            <a href="http://www.jikexueyuan.com/course/scala/" cgid="390">Scala</a>
+
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/computer/" cgid="28">计算机基础</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/theory/" cgid="172">计算机组成原理</a>
+
+                            <a href="http://www.jikexueyuan.com/course/network/" cgid="173">网络工程</a>
+
+                            <a href="http://www.jikexueyuan.com/course/word/" cgid="175">Word</a>
+
+                            <a href="http://www.jikexueyuan.com/course/excel/" cgid="176">Excel</a>
+
+                            <a href="http://www.jikexueyuan.com/course/ppt/" cgid="177">PowerPoint</a>
+
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/devbase/" cgid="29">开发基础</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/count/" cgid="178">算法基础</a>
+
+                            <a href="http://www.jikexueyuan.com/course/figure/" cgid="179">数据结构</a>
+
+                            <a href="http://www.jikexueyuan.com/course/model/" cgid="180">设计模式</a>
+
+                            <a href="http://www.jikexueyuan.com/course/software/" cgid="181">软件工程</a>
+
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/devtools/" cgid="30">开发工具</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/git/" cgid="183">Git/Github</a>
+
+                            <a href="http://www.jikexueyuan.com/course/svn/" cgid="184">SVN</a>
+
+                            <a href="http://www.jikexueyuan.com/course/vi/" cgid="185">VI</a>
+
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/devstd/" cgid="31">开放标准</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/opencl/" cgid="186">OpenCL</a>
+
+                            <a href="http://www.jikexueyuan.com/course/xml/" cgid="187">Open XML</a>
+
+                            <a href="http://www.jikexueyuan.com/course/gles/" cgid="188">OpenGL/GLES</a>
+
+                        </dd>
+                    </dl>
+            </div>
+            <div class="lesson-classify-5" style="z-index: 999">
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/cloudcompute/" cgid="32">云计算</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/openstack/" cgid="189">OpenStack</a>
+
+                            <a href="http://www.jikexueyuan.com/course/docker/" cgid="191">Docker</a>
+
+                            <a href="http://www.jikexueyuan.com/course/cloudstack/" cgid="197">CloudStack</a>
+
+                            <a href="http://www.jikexueyuan.com/course/windowsazure/" cgid="378">Windows Azure</a>
+
+                            <a href="http://www.jikexueyuan.com/course/Iaas/" cgid="389">IaaS</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/bigdata/" cgid="33">大数据</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/hadoop/" cgid="198">Hadoop</a>
+
+                            <a href="http://www.jikexueyuan.com/course/storm/" cgid="200">Storm</a>
+
+                            <a href="http://www.jikexueyuan.com/course/hive/" cgid="204">Hive</a>
+
+                            <a href="http://www.jikexueyuan.com/course/kafka/" cgid="208">Kafka</a>
+
+                            <a href="http://www.jikexueyuan.com/course/hbase/" cgid="211">Hbase</a>
+
+                            <a href="http://www.jikexueyuan.com/course/spark/" cgid="213">Spark</a>
+
+                            <a href="http://www.jikexueyuan.com/course/Informationretrieval/" cgid="377">信息检索</a>
+
+                            <a href="http://www.jikexueyuan.com/course/dataanalysis/" cgid="383">数据分析</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/virtual/" cgid="34">虚拟化</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/vmware/" cgid="220">VMware</a>
+
+                        </dd>
+                    </dl>
+
+            </div>
+            <div class="lesson-classify-6" style="z-index: 999">
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/hardware/" cgid="35">硬件架构</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/c51/" cgid="222">C51</a>
+
+                            <a href="http://www.jikexueyuan.com/course/armframe/" cgid="223">ARM</a>
+
+                            <a href="http://www.jikexueyuan.com/course/keil/" cgid="226">Keil</a>
+
+                            <a href="http://www.jikexueyuan.com/course/cortex-m/" cgid="228">Cortex-M</a>
+
+                            <a href="http://www.jikexueyuan.com/course/cortex-a/" cgid="229">Cortex-A</a>
+
+                            <a href="http://www.jikexueyuan.com/course/avr/" cgid="379">AVR</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/iot/" cgid="36">物联网操作系统</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/rtos/" cgid="231">RTOS</a>
+
+                            <a href="http://www.jikexueyuan.com/course/androidwear/" cgid="233">Android Wear</a>
+
+                            <a href="http://www.jikexueyuan.com/course/applewatchkit/" cgid="236">Apple Watchkit</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/open/" cgid="37">开源硬件平台</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/arduino/" cgid="237">Arduino</a>
+
+                            <a href="http://www.jikexueyuan.com/course/pibow/" cgid="238">树莓派</a>
+
+                            <a href="http://www.jikexueyuan.com/course/mbed/" cgid="239">mbed</a>
+
+                            <a href="http://www.jikexueyuan.com/course/goKit/" cgid="242">GoKit</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/link/" cgid="38">通信链接技术</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/wifi/" cgid="243">无线WiFi</a>
+
+                            <a href="http://www.jikexueyuan.com/course/tel/" cgid="244">移动通信</a>
+
+                            <a href="http://www.jikexueyuan.com/course/bluetooth/" cgid="245">蓝牙</a>
+
+                            <a href="http://www.jikexueyuan.com/course/nfc/" cgid="247">NFC</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/infosense/" cgid="39">信息感知处理技术</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/sensor/" cgid="251">传感器</a>
+
+                            <a href="http://www.jikexueyuan.com/course/dig/" cgid="255">数据挖掘</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/hci/" cgid="40">人机交互技术</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/asr/" cgid="257">语音识别</a>
+
+                            <a href="http://www.jikexueyuan.com/course/face/" cgid="259">人脸识别</a>
+
+                            <a href="http://www.jikexueyuan.com/course/gesture/" cgid="261">手势识别</a>
+
+                        </dd>
+                    </dl>
+
+            </div>
+            <div class="lesson-classify-7" style="z-index: 999">
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/sql/" cgid="41">SQL</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/mysql/" cgid="262">MySQL</a>
+
+                            <a href="http://www.jikexueyuan.com/course/sqlserver/" cgid="263">SQL Server</a>
+
+                            <a href="http://www.jikexueyuan.com/course/oracledb/" cgid="264">Oracle</a>
+
+                            <a href="http://www.jikexueyuan.com/course/sqlite/" cgid="265">SQLite</a>
+
+                            <a href="http://www.jikexueyuan.com/course/postgresql/" cgid="266">PostgreSQL</a>
+
+                            <a href="http://www.jikexueyuan.com/course/db2/" cgid="267">DB2</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/nosql/" cgid="42">NoSQL</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/cassandra/" cgid="212">Cassandra</a>
+
+                            <a href="http://www.jikexueyuan.com/course/redis/" cgid="269">Redis</a>
+
+                            <a href="http://www.jikexueyuan.com/course/mongoDB/" cgid="271">MongoDB</a>
+
+                        </dd>
+                    </dl>
+
+            </div>
+            <div class="lesson-classify-8" style="z-index: 999">
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/exam/" cgid="43">计算机等级考试</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/first/" cgid="275">一级</a>
+
+                            <a href="http://www.jikexueyuan.com/course/secc/" cgid="276">二级C</a>
+
+                            <a href="http://www.jikexueyuan.com/course/secjava/" cgid="277">二级Java</a>
+
+                            <a href="http://www.jikexueyuan.com/course/seccpp/" cgid="278">二级C++</a>
+
+                            <a href="http://www.jikexueyuan.com/course/networking/" cgid="281">网络工程师</a>
+
+                            <a href="http://www.jikexueyuan.com/course/dba/" cgid="282">数据库工程师</a>
+
+                            <a href="http://www.jikexueyuan.com/course/secure/" cgid="283">信息安全工程师</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/enterprise/" cgid="45">企业认证</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/cisco/" cgid="298">思科认证</a>
+
+                            <a href="http://www.jikexueyuan.com/course/oracle/" cgid="299">Oracle认证</a>
+
+                            <a href="http://www.jikexueyuan.com/course/linux/" cgid="301">Linux认证</a>
+
+                            <a href="http://www.jikexueyuan.com/course/arm/" cgid="302">ARM认证</a>
+
+                        </dd>
+                    </dl>
+
+            </div>
+            <div class="lesson-classify-9" style="z-index: 999">
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/operation/" cgid="46">运维管理</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/shellmaintain/" cgid="303">Shell</a>
+
+                            <a href="http://www.jikexueyuan.com/course/auto/" cgid="304">自动化运维</a>
+
+                            <a href="http://www.jikexueyuan.com/course/nginx/" cgid="305">Nginx</a>
+
+                            <a href="http://www.jikexueyuan.com/course/apache/" cgid="308">Apache</a>
+
+                            <a href="http://www.jikexueyuan.com/course/operationmonitor/" cgid="380">运维监控</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/os/" cgid="48">操作系统</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/linuxsys/" cgid="311">Linux</a>
+
+                            <a href="http://www.jikexueyuan.com/course/windows/" cgid="312">Windows</a>
+
+                            <a href="http://www.jikexueyuan.com/course/macos/" cgid="313">Mac OS</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/enterpriseservice/" cgid="384">企业服务</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/b2c/" cgid="385">B2C</a>
+
+                        </dd>
+                    </dl>
+
+            </div>
+            <div class="lesson-classify-10" style="z-index: 999">
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/testtools/" cgid="50">测试工具</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/autotest/" cgid="325">自动化测试</a>
+
+                        </dd>
+                    </dl>
+
+            </div>
+            <div class="lesson-classify-11" style="z-index: 999">
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/designbase/" cgid="51">设计基础</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/photoshop/" cgid="327">Photoshop</a>
+
+                            <a href="http://www.jikexueyuan.com/course/flash/" cgid="329">Flash</a>
+
+                            <a href="http://www.jikexueyuan.com/course/illustrator/" cgid="330">Illustrator</a>
+
+                            <a href="http://www.jikexueyuan.com/course/sketch/" cgid="331">Sketch</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/gamedesign/" cgid="52">游戏设计</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/interface/" cgid="336">界面设计</a>
+
+                            <a href="http://www.jikexueyuan.com/course/role/" cgid="338">角色设计</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/pm/" cgid="54">产品经理</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/demand/" cgid="341">需求分析</a>
+
+                            <a href="http://www.jikexueyuan.com/course/axure/" cgid="343">Axure</a>
+
+                            <a href="http://www.jikexueyuan.com/course/item/" cgid="344">项目实战</a>
+
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="http://www.jikexueyuan.com/course/vd/" cgid="362">视觉设计</a></dt>
+                        <dd class="cf">
+
+                            <a href="http://www.jikexueyuan.com/course/appui/" cgid="340">应用UI设计</a>
+
+                            <a href="http://www.jikexueyuan.com/course/webui/" cgid="363">网页UI设计</a>
+
+                            <a href="http://www.jikexueyuan.com/course/dt/" cgid="364">设计理论</a>
+
+                            <a href="http://www.jikexueyuan.com/course/gd/" cgid="365">图形设计</a>
+
+                        </dd>
+                    </dl>
+
+            </div>
+        </div>
+        <!--内容区域右边的部分-->
+        <div class="top-right-box">
+            <div class="right-box-content">
+                <div class="top-right-up">
+                    <h3>极客学院 让学习更有效</h3>
+
+                    <p> 最新 | 系统 | 实战</p>
+                    <button>了解极客学院</button>
+                </div>
+                <div class="top-right-down">
+                    <h3>成为VIP 即刻启程</h3>
+
+                    <p>&radic;全部课程&nbsp; &radic;高清视频</p>
+
+                    <p>&radic;问答服务&nbsp; &radic;课程资料</p>
+                    <button>了解VIP权益</button>
+                </div>
+            </div>
+        </div>
+        <!--内容区域上方部分的图片轮播-->
+        <div class="top-banner">
+            <ul class="slides">
+                <li><img src="Images/geek_banner_4.jpg" alt="" class="banner-img-4"></li>
+                <li><img src="Images/geek_banner_1.jpg" alt="" class="banner-img-1"></li>
+                <li><img src="Images/geek_banner_2.jpg" alt="" class="banner-img-2"></li>
+                <li><img src="Images/geek_banner_3.jpg" alt="" class="banner-img-3"></li>
+                <li><img src="Images/geek_banner_4.jpg" alt="" class="banner-img-4"></li>
+            </ul>
+            <!--图片轮播的控制按钮-->
+            <div class="banner-change">
+                <a class="banner-change-left flex-pre">
+                </a>
+                <a class="banner-change-right flex-next">
+                </a>
+            </div>
+            <!--<div class="banner-navbar">-->
+                <!--<ul>-->
+                    <!--<li><a></a></li>-->
+                    <!--<li><a></a></li>-->
+                    <!--<li><a></a></li>-->
+                    <!--<li><a></a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <!--推荐课程区域-->
+    <div class="class-recommendation">
+        <div class="class-recommendation-box recommendation-a">
+            <a>热门推荐</a>
+            <span></span>
+        </div>
+        <div class="class-recommendation-box recommendation-b">
+            <a>最新课程</a>
+            <span></span>
+        </div>
+        <div class="class-recommendation-box recommendation-c">
+            <a>免费课程</a>
+            <span></span>
+        </div>
+        <div class="class-recommendation-box recommendation-d">
+            <a>项目实战</a>
+            <span></span>
+        </div>
+        <div class="class-recommendation-box recommendation-e">
+            <a>全球首发</a>
+            <span></span>
+        </div>
+        <div class="class-recommendation-box recommendation-f">
+            <a>企业合作</a>
+            <span></span>
+        </div>
+    </div>
+    <!--推荐课程区域的主要内容部分-->
+    <div class="box">
+        <ul class="show">
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201511/25/948b/565515d0c303b.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201511/25/a709/565515fa9057f.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201503/18/4dbd/5508de1b9362e.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201504/01/12c3/551b5d08b2a73.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201507/15/d6c8/55a5bffbb592f.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201506/12/d507/557a38245768b.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201507/09/882c/559dda9e77ab8.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201504/01/bc8f/551b5c6a507ea.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201505/29/8dcf/5567c81a548e7.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201504/01/bc8f/551b5c6a507ea.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201511/27/4541/5657b76db0b34.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201509/22/7455/5600b04e50967.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201508/19/223c/55d3e1386277e.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201508/19/223c/55d3e1386277e.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201508/19/8e1c/55d3e019768e4.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201509/11/2485/55f234908afe4.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="Images/classA.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201506/11/6678/5578e9df3bd16.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201506/04/a899/55703ecb2b4cb.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201511/25/948b/565515d0c303b.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201511/19/d7a3/564d2b9a132b3.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201509/10/730e/55f0e82c62d5d.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201508/05/abb2/55c175652e142.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201509/08/f453/55ee3def2d921.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="Images/classC.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="Images/classG.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="Images/classB.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="Images/classE.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="Images/classC.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201511/09/8f74/563ffe9b472c6.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201507/03/5d12/5595f3a3cb160.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201507/01/c5b1/55934f8cc4efd.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul>
+        <li>
+            <div class="class-box">
+                <div class="class-img-box">
+                    <img src="Images/classE.jpg" alt=""
+                         class="class-main-img">
+                    <a href="" class="play-now">
+                        <img src="Images/iconfont-play.png" alt="">
+                        <a href="" class="like-this-class">
+                        </a>
+                    </a>
+                </div>
+                <div class="class-text-box">
+                    <h3>课程标题</h3>
+
+                    <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                        课程描述课程描述</p>
+                </div>
+                <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                    <span class="class-visited">1人学习</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="class-box">
+                <div class="class-img-box">
+                    <img src="http://a1.jikexueyuan.com/home/201508/03/837a/55bec8d3041a8.jpg" alt=""
+                         class="class-main-img">
+                    <a href="" class="play-now">
+                        <img src="Images/iconfont-play.png" alt="">
+                        <a href="" class="like-this-class">
+                        </a>
+                    </a>
+                </div>
+                <div class="class-text-box">
+                    <h3>课程标题</h3>
+
+                    <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                        课程描述课程描述</p>
+                </div>
+                <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                    <span class="class-visited">1人学习</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="class-box">
+                <div class="class-img-box">
+                    <img src="http://a1.jikexueyuan.com/home/201510/30/1943/563309d648331.jpg" alt=""
+                         class="class-main-img">
+                    <a href="" class="play-now">
+                        <img src="Images/iconfont-play.png" alt="">
+                        <a href="" class="like-this-class">
+                        </a>
+                    </a>
+                </div>
+                <div class="class-text-box">
+                    <h3>课程标题</h3>
+
+                    <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                        课程描述课程描述</p>
+                </div>
+                <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                    <span class="class-visited">1人学习</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="class-box">
+                <div class="class-img-box">
+                    <img src="http://a1.jikexueyuan.com/home/201509/23/09a1/5602619aecb4b.jpg" alt=""
+                         class="class-main-img">
+                    <a href="" class="play-now">
+                        <img src="Images/iconfont-play.png" alt="">
+                        <a href="" class="like-this-class">
+                        </a>
+                    </a>
+                </div>
+                <div class="class-text-box">
+                    <h3>课程标题</h3>
+
+                    <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                        课程描述课程描述</p>
+                </div>
+                <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                    <span class="class-visited">1人学习</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="class-box">
+                <div class="class-img-box">
+                    <img src="http://a1.jikexueyuan.com/home/201509/23/4e74/5602098a27cc6.jpg" alt=""
+                         class="class-main-img">
+                    <a href="" class="play-now">
+                        <img src="Images/iconfont-play.png" alt="">
+                        <a href="" class="like-this-class">
+                        </a>
+                    </a>
+                </div>
+                <div class="class-text-box">
+                    <h3>课程标题</h3>
+
+                    <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                        课程描述课程描述</p>
+                </div>
+                <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                    <span class="class-visited">1人学习</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="class-box">
+                <div class="class-img-box">
+                    <img src="http://a1.jikexueyuan.com/home/201508/27/9ed4/55de6e317dd7f.jpg" alt=""
+                         class="class-main-img">
+                    <a href="" class="play-now">
+                        <img src="Images/iconfont-play.png" alt="">
+                        <a href="" class="like-this-class">
+                        </a>
+                    </a>
+                </div>
+                <div class="class-text-box">
+                    <h3>课程标题</h3>
+
+                    <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                        课程描述课程描述</p>
+                </div>
+                <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                    <span class="class-visited">1人学习</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="class-box">
+                <div class="class-img-box">
+                    <img src="http://a1.jikexueyuan.com/home/201507/28/9633/55b6e8e34a585.jpg" alt=""
+                         class="class-main-img">
+                    <a href="" class="play-now">
+                        <img src="Images/iconfont-play.png" alt="">
+                        <a href="" class="like-this-class">
+                        </a>
+                    </a>
+                </div>
+                <div class="class-text-box">
+                    <h3>课程标题</h3>
+
+                    <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                        课程描述课程描述</p>
+                </div>
+                <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                    <span class="class-visited">1人学习</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="class-box">
+                <div class="class-img-box">
+                    <img src="http://a1.jikexueyuan.com/home/201508/31/ec2a/55e3b2741b39d.jpg" alt=""
+                         class="class-main-img">
+                    <a href="" class="play-now">
+                        <img src="Images/iconfont-play.png" alt="">
+                        <a href="" class="like-this-class">
+                        </a>
+                    </a>
+                </div>
+                <div class="class-text-box">
+                    <h3>课程标题</h3>
+
+                    <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                        课程描述课程描述</p>
+                </div>
+                <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                    <span class="class-visited">1人学习</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+        <ul>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="Images/classF.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201508/31/ec2a/55e3b2741b39d.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201507/06/68c7/5599dcf4b6dcd.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201506/30/ca9e/5591f70cb9853.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201506/26/3cc8/558cb2dc88278.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201506/24/3079/558a0e0f4f8b1.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201506/26/1e10/558cc8da3ed38.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="class-box">
+                    <div class="class-img-box">
+                        <img src="http://a1.jikexueyuan.com/home/201506/09/5e6c/557642fc0860e.jpg" alt=""
+                             class="class-main-img">
+                        <a href="" class="play-now">
+                            <img src="Images/iconfont-play.png" alt="">
+                            <a href="" class="like-this-class">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="class-text-box">
+                        <h3>课程标题</h3>
+
+                        <p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述
+                            课程描述课程描述</p>
+                    </div>
+                    <div class="class-info-box">
+                                <span class="class-time">
+                                    <img src="Images/iconfont-clock.png" alt="" style="width: 20px">
+                                    1课时&nbsp;59分</span>
+                                <span class="class-platform">
+                                    <img src="Images/iconfont-computer.png" alt="" style="width: 20px;">
+                                </span>
+                                <span class="class-level">
+                                    <img src="Images/iconfont-rank.png" alt="" style="width: 20px;">
+                                    中级
+                                </span>
+                        <span class="class-visited">1人学习</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--职业路径区域-->
+    <div class="job-path">
+        <div class="job-path-header">
+            <h3><a href="">
+                职业路径图
+                <img src="Images/iconfont-question.png" alt="" style="width: 15px">
+            </a></h3>
+            <a href="" class="more">更多>></a>
+        </div>
+        <div class="job-path-content">
+            <ul>
+                <li>
+                    <div class="it-engineer">
+                        <div class="engineer-image">
+                            <img src="Images/engineer1.png" alt="">
+                        </div>
+                        <div class="engineer-text">
+                            <h3>WEB大前端工程师</h3>
+
+                            <p>月薪7-30K</p>
+
+                            <p>WEB开发的未来趋势</p>
+                        </div>
+                        <button>立即学习</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="it-engineer">
+                        <div class="engineer-image">
+                            <img src="Images/engineer2.png" alt="">
+                        </div>
+                        <div class="engineer-text">
+                            <h3>Android工程师</h3>
+
+                            <p>月薪7-30K</p>
+
+                            <p>最火爆职业，人才缺口巨大</p>
+                        </div>
+                        <button>立即学习</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="it-engineer">
+                        <div class="engineer-image">
+                            <img src="Images/engineer3.png" alt="">
+                        </div>
+                        <div class="engineer-text">
+                            <h3>IOS开发工程师</h3>
+
+                            <p>月薪6-30K</p>
+
+                            <p>企业必争的人才资源</p>
+                        </div>
+                        <button>立即学习</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="it-engineer">
+                        <div class="engineer-image">
+                            <img src="Images/engineer4.png" alt="">
+                        </div>
+                        <div class="engineer-text">
+                            <h3>JavaWeb工程师</h3>
+
+                            <p>月薪6-35K</p>
+
+                            <p>就业面最广的职业方向</p>
+                        </div>
+                        <button>立即学习</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="it-engineer">
+                        <div class="engineer-image">
+                            <img src="Images/engineer5.png" alt="">
+                        </div>
+                        <div class="engineer-text">
+                            <h3>PHP工程师</h3>
+
+                            <p>月薪5-35K</p>
+
+                            <p>最好的开发语言，没有之一</p>
+                        </div>
+                        <button>立即学习</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="it-engineer">
+                        <div class="engineer-image">
+                            <img src="Images/engineer6.png" alt="">
+                        </div>
+                        <div class="engineer-text">
+                            <h3>Coco2d工程师</h3>
+
+                            <p>月薪7-30K</p>
+
+                            <p>最流行的跨平台手机游戏开发</p>
+                        </div>
+                        <button>立即学习</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="it-engineer">
+                        <div class="engineer-image">
+                            <img src="Images/engineer7.png" alt="">
+                        </div>
+                        <div class="engineer-text">
+                            <h3>Unity3D工程师</h3>
+
+                            <p>月薪7-40K</p>
+
+                            <p>全球最热门的3D游戏引擎</p>
+                        </div>
+                        <button>立即学习</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="it-engineer">
+                        <div class="engineer-image">
+                            <img src="Images/engineer8.png" alt="">
+                        </div>
+                        <div class="engineer-text">
+                            <h3>ASP.NET工程师</h3>
+
+                            <p>月薪5-30K</p>
+
+                            <p>由微软大力推行的开发语言</p>
+                        </div>
+                        <button>立即学习</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="it-engineer">
+                        <div class="engineer-image">
+                            <img src="Images/engineer9.png" alt="">
+                        </div>
+                        <div class="engineer-text">
+                            <h3>大数据工程师</h3>
+
+                            <p>月薪8-40K</p>
+
+                            <p>目前最稀缺的职业方向</p>
+                        </div>
+                        <button>立即学习</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="it-engineer">
+                        <div class="engineer-image">
+                            <img src="Images/engineer10.png" alt="">
+                        </div>
+                        <div class="engineer-text">
+                            <h3>运维工程师</h3>
+
+                            <p>月薪6-30K</p>
+
+                            <p>最能折腾的职业岗位</p>
+                        </div>
+                        <button>立即学习</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--知识体系图部分-->
+    <div class="technique-system">
+        <div class="technique-header">
+            <h3><a href="">
+                知识体系图
+                <img src="Images/iconfont-question.png" alt="" style="width: 15px">
+            </a></h3>
+            <a href="" class="more">更多>></a>
+        </div>
+        <div class="technique-content">
+            <ul>
+
+                <li>
+                    <div class="technique">
+                        <div class="technique-front">
+                            <img src="Images/android.png" alt="">
+
+                            <p>Android开发</p>
+                            <a href="">10门课程</a>
+                        </div>
+                        <div class="technique-back">
+                            <p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front">
+                            <img src="Images/web.png" alt="">
+
+                            <p>Web前端</p>
+                            <a href="">10门课程</a>
+                        </div>
+                        <div class="technique-back">
+                            <p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/html.png" alt="">
+
+                            <p>HTML5开发</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/Java.png" alt="">
+
+                            <p>Java语言</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/php.png" alt="">
+
+                            <p>PHP语言</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/jweb.jpg" alt="">
+
+                            <p>JavaWeb</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/ios.png" alt="">
+
+                            <p>IOS开发</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/donet.png" alt="">
+
+                            <p>Asp.Net</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/c.png" alt="">
+
+                            <p>C语言</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/python.png" alt="">
+
+                            <p>Python</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/u3d.png" alt="">
+
+                            <p>Unity3D</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/swift.png" alt="">
+
+                            <p>Swift语言</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/Csharp.png" alt="">
+
+                            <p>C#</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/bootstrap.png" alt="">
+
+                            <p>Bootstrap</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/Cocos2d-x.png" alt="">
+
+                            <p>Cocos2d-x开发</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/c1.jpg" alt="">
+
+                            <p>计算机一级</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/c2.jpg" alt="">
+
+                            <p>计算机二级</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/GUI.png" alt="">
+
+                            <p>GUI</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/watch.png" alt="">
+
+                            <p>WatchKit开发</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/docker.png" alt="">
+
+                            <p>Docker</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front"><img src="Images/egret.png" alt="">
+
+                            <p>Egret</p>                             <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front">
+                            <img src="Images/Adru.png" alt="">
+
+                            <p>Arduino</p>
+                            <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+                        <div class="technique-front">
+                            <img src="Images/androidui.png" alt="">
+
+                            <p>Android UiAutomator</p>
+                            <a href="">10门课程</a></div>
+                        <div class="technique-back"><p>99999人学习</p>
+                            <button>立即学习</button>
+                        </div>
+
+
+                    </div>
+                </li>
+                <li>
+                    <div class="technique">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--精品系列课程-->
+    <div class="best-lessons">
+        <div class="best-lessons-header">
+            <h3><a href="">
+                精品课程
+                <img src="Images/iconfont-question.png" alt="" style="width: 15px">
+            </a></h3>
+            <a href="" class="more">更多>></a>
+        </div>
+        <div class="best-content">
+            <div class="the-best-lesson">
+                <div class="best-lesson-content">
+                    <h3>PHP项目实战开发...</h3>
+                    <img src="Images/bestclass1.jpg" alt="">
+                    <span>10门&nbsp;10000人学习</span>
+                    <button>收藏</button>
+                    <div class="lesson-teacher">
+                        <img src="Images/iconfont-user.png" alt="" class="teacher-img">
+                        <a href="" class="teacher-name">好老师</a>
+                        <a href="" class="teacher-say">这个课程很棒，快来学吧，来学吧，学吧，吧...</a>
+                        <button class="learn-now">马上学习</button>
+                    </div>
+                </div>
+            </div>
+            <div class="the-best-lesson">
+                <div class="best-lesson-content">
+                    <h3>Axsure从入门到精通...</h3>
+                    <img src="Images/bestclass2.jpg" alt="">
+                    <span>10门&nbsp;10000人学习</span>
+                    <button>收藏</button>
+                    <div class="lesson-teacher">
+                        <img src="Images/iconfont-user.png" alt="" class="teacher-img">
+                        <a href="" class="teacher-name">好老师</a>
+                        <a href="" class="teacher-say">这个课程很棒，快来学吧，来学吧，学吧，吧...</a>
+                        <button class="learn-now">马上学习</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="the-best-lesson">
+                <div class="best-lesson-content">
+                    <h3>C++开发系统学习...</h3>
+                    <img src="Images/bestclass3.jpg" alt="">
+                    <span>10门&nbsp;10000人学习</span>
+                    <button>收藏</button>
+                    <div class="lesson-teacher">
+                        <img src="Images/iconfont-user.png" alt="" class="teacher-img">
+                        <a href="" class="teacher-name">好老师</a>
+                        <a href="" class="teacher-say">这个课程很棒，快来学吧，来学吧，学吧，吧...</a>
+                        <button class="learn-now">马上学习</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="the-best-lesson">
+                <div class="best-lesson-content">
+                    <h3>Spring框架深入解析...</h3>
+                    <img src="Images/bestclass4.jpg" alt="">
+                    <span>10门&nbsp;10000人学习</span>
+                    <button>收藏</button>
+                    <div class="lesson-teacher">
+                        <img src="Images/iconfont-user.png" alt="" class="teacher-img">
+                        <a href="" class="teacher-name">好老师</a>
+                        <a href="" class="teacher-say">这个课程很棒，快来学吧，来学吧，学吧，吧...</a>
+                        <button class="learn-now">马上学习</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--WIKI部分-->
+    <div class="wiki">
+        <div class="wiki-header">
+            <h3><a href="">
+                Wiki
+                <img src="Images/iconfont-question.png" alt="" style="width: 15px">
+            </a></h3>
+            <a href="" class="more">更多>></a>
+        </div>
+        <div class="wiki-content-box">
+            <h3>推荐</h3>
+
+            <div class="best-wiki">
+                <div class="best-wiki-left-back"></div>
+                <div class="best-wiki-right-back"></div>
+                <div class="best-wiki-left-img wiki-img-1"></div>
+                <div class="best-wiki-right-img wiki-img-2"></div>
+                <div class="best-wiki-left-text">
+                    <h3>Django 搭建博客...</h3>
+
+                    <p>68页/13章</p>
+                </div>
+                <div class="best-wiki-right-text">
+                    <h3>GitHub 使用手册...</h3>
+
+                    <p>50页/6章</p>
+                </div>
+            </div>
+            <div class="good-wiki">
+                <ul>
+                    <li><a href=""><span>其他教程</span><span>99页10章</span></a></li>
+                    <li><a href=""><span>其他教程</span><span>99页10章</span></a></li>
+                    <li><a href=""><span>其他教程</span><span>99页10章</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wiki-content-box">
+
+            <h3>最新</h3>
+
+            <div class="best-wiki">
+                <div class="best-wiki-left-back"></div>
+                <div class="best-wiki-right-back"></div>
+                <div class="best-wiki-left-img wiki-img-3"></div>
+                <div class="best-wiki-right-img wiki-img-4"></div>
+                <div class="best-wiki-left-text">
+                    <h3>Laravel 官方文档...</h3>
+
+                    <p>2015/11/11</p>
+                </div>
+                <div class="best-wiki-right-text">
+                    <h3>Pro Git 中文版...</h3>
+
+                    <p>2015/10/30</p>
+                </div>
+            </div>
+            <div class="good-wiki">
+                <ul>
+                    <li><a href=""><span>其他教程</span><span>2015-11-11</span></a></li>
+                    <li><a href=""><span>其他教程</span><span>2015-11-11</span></a></li>
+                    <li><a href=""><span>其他教程</span><span>2015-11-11</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wiki-content-box">
+
+            <h3>热门</h3>
+
+            <div class="best-wiki">
+                <div class="best-wiki-left-back"></div>
+                <div class="best-wiki-right-back"></div>
+                <div class="best-wiki-left-img wiki-img-5"></div>
+                <div class="best-wiki-right-img wiki-img-6"></div>
+                <div class="best-wiki-left-text">
+                    <h3>Material Design</h3>
+
+                    <p>327762人学习</p>
+                </div>
+                <div class="best-wiki-right-text">
+                    <h3>Swift 2.0 教程...</h3>
+
+                    <p>1477813人学习</p>
+                </div>
+            </div>
+            <div class="good-wiki">
+                <ul>
+                    <li><a href=""><span>其他教程</span><span>9999人学习</span></a></li>
+                    <li><a href=""><span>其他教程</span><span>9999人学习</span></a></li>
+                    <li><a href=""><span>其他教程</span><span>9999人学习</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--合作伙伴-->
+    <div class="partner">
+        <div class="partner-header">
+            <h3><a href="">
+                合作伙伴
+                <img src="Images/iconfont-question.png" alt="" style="width: 15px">
+            </a></h3>
+            <a href="" class="more">更多>></a>
+        </div>
+        <div class="partner-body">
+
+
+        <div class="flexslider partner-content">
+            <ul class="slides">
+                <li><img src="Images/partner1.png" alt=""></li>
+                <li><img src="Images/partner2.png" alt=""></li>
+                <li><img src="Images/partner3.jpg" alt=""></li>
+                <li><img src="Images/partner4.jpg" alt=""></li>
+                <li><img src="Images/partner5.png" alt=""></li>
+                <li><img src="Images/partner6.jpg" alt=""></li>
+                <li><img src="Images/partner7.png" alt=""></li>
+                <li><img src="Images/partner8.jpg" alt=""></li>
+                <li><img src="http://a1.jikexueyuan.com/home/201502/04/9fd6/54d1d9f50e1af.jpg" alt=""></li>
+                <li><img src="http://wirrorcdn.jikexueyuan.com/picture/tengxun.jpg" alt=""></li>
+            </ul>
+        </div>
+        <div class="banner-controller banner-controller-partner">
+            <a class="flex-pre"></a>
+            <a class="flex-next"></a>
+        </div>
+        </div>
+    </div>
+    <!--合作高校-->
+    <div class="school">
+        <div class="school-header">
+            <h3><a href="">
+                合作高校
+                <img src="Images/iconfont-question.png" alt="" style="width: 15px">
+            </a></h3>
+            <a href="" class="more">更多>></a>
+        </div>
+        <div class="school-body">
+            <div class="school-content">
+                <ul class="slides">
+                    <li><img src="http://mooc.jikexueyuan.com/File/40669370a3f2ea7e3d21a6d182cf296c.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/1eb9dcb3193de807d21941b297483635.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/c9a111a4946bf39e77cd811c207740b9.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/496ab840e239a60c1bb4b1139268c54e.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/3ab8eb024ecd5a8dce2c5f83972781b3.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/b05d88a6f5306cf55905c8fcb2e49b89.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/8dda2bb223523163ca596c7f026de6ad.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/acd12acf25c0681c43ab4144d2955aec.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/62906dcda2846bc2437efa99ab382722.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/c14635ad605aca1d593e1e52500945af.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/604ebd122c8734703e1f49f7b4d842ad.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/c2000b91a02f14b794d2c9b9071e745d.png" alt="" style="width: 110px">
+                    </li>
+                    <li><img src="http://mooc.jikexueyuan.com/File/40669370a3f2ea7e3d21a6d182cf296c.png" alt="" style="width: 110px">
+                    </li>
+                </ul>
+            </div>
+            <div class="banner-controller banner-controller-school">
+                <a href="" class="flex-pre"></a>
+                <a href="" class="flex-next"></a>
+            </div>
+        </div>
+
+    </div>
+    <!--合作媒体-->
+    <div class="media">
+        <div class="media-header">
+            <h3><a href="">
+                合作媒体
+                <img src="Images/iconfont-question.png" alt="" style="width: 15px">
+            </a></h3>
+            <a href="" class="more">更多>></a>
+        </div>
+       <div class="media-body">
+           <div class="media-content">
+               <ul class="slides">
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_1_42b5088.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_2_28e84dd.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_3_46bc154.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_4_2376f75.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_5_8427d73.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_6_21a38b7.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_7_7b98ea4.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_8_22fde55.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_9_c0db122.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_10_d2a046a.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_10_d2a046a.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_13_fefd1ec.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_12_47fcda1.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_11_82c3d18.jpg" alt=""></li>
+                   <li><img src="http://s1.jikexueyuan.com/index/images/mt_14_d3100a3.jpg" alt=""></li>
+               </ul>
+           </div>
+           <div class="banner-controller banner-controller-media">
+               <a href="" class="flex-pre"></a>
+               <a href="" class="flex-next"></a>
+           </div>
+       </div>
+
+    </div>
+
+</div>
+<!--开始定义底部内容区域-->
+<footer>
+    <div class="footer-content">
+        <div class="footer-text">
+            <div class="footer-text-list">
+                <ul><a href="">极客学院</a>
+                    <li><a href="">职业课程库</a></li>
+                    <li><a href="">知识体系图</a></li>
+                    <li><a href="">职业路径图</a></li>
+                    <li><a href="">企业课程</a></li>
+                    <li><a href="">资源下载</a></li>
+                    <li><a href="">课程标签</a></li>
+                </ul>
+                <ul><a href="">网站服务</a>
+                    <li><a href="">课程需求</a></li>
+                    <li><a href="">免费体验VIP</a></li>
+                    <li><a href="">黑板报</a></li>
+                    <li><a href="">网站地图</a></li>
+                </ul>
+                <ul><a href="">帮助中心</a>
+                    <li><a href="">技术问答</a></li>
+                    <li><a href="">VIP权益</a></li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">服务条款</a></li>
+                    <li><a href="">免责声明</a></li>
+                    <li><a href="">版权声明</a></li>
+                </ul>
+                <ul><a href="">交流合作</a>
+                    <li><a href="">关于我们</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">社会招聘</a></li>
+                    <li><a href="">布道师招募</a></li>
+                    <li><a href="">合作咨询</a></li>
+                    <li><a href="">友情链接</a></li>
+                    <li><a href="">极客助教招募</a></li>
+                </ul>
+            </div>
+            <div class="footer-text-info">
+                <h3>极客学院，编程是一种信仰</h3>
+                <a href="" class="phone-download">
+                    <img src="Images/iconfont-phone.png" alt="">
+                    <h2>手机客户端</h2>
+                    <p>
+                        离线缓存&nbsp;随时学习
+                    </p>
+                </a>
+                <div class="outside-link">
+                    <a href="">
+
+                    </a>
+                    <a href="">
+
+                    </a>
+                    <a href="">
+
+                    </a>
+                </div>
+                <a href="" class="service">
+                    <img src="Images/iconfont-servicefill.png" alt="">
+                    <p>联系我们</p>
+                    <p>工作日9:00-21:00在线</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="copyright-content">
+
+            Copyright © 2013-2015 <strong><a href="http://www.jikexueyuan.com/" target="_blank">
+            极客学院</a>
+        </strong>&nbsp;<strong>
+            <a href="http://www.jikexueyuan.com/" target="_blank">jikexueyuan.com</a></strong>
+            All Rights Reversed. 京ICP备11018032号-8 京公网安备11010802013056
+
+        </div>
+    </div>
+</footer>
+<script>
+
+</script>
+</body>
+</html>

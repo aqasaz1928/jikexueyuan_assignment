@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="libs/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap-3.3.5-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="Styles/login.css">
+    <script src="JavaScript/jquery.min.js"></script>
+    <script src="libs/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="JavaScript/JsFunc.js"></script>
+    <title>后台管理登录</title>
+
+</head>
+<body>
+<div class="container">
+    <h3 class="col-md-12 col-xs-12"><span></span>新闻数据管理后台登陆</h3>
+
+    <form action="DashBoard.php" method="post">
+        <div class="title col-md-12">
+            <img src="Static/imgs/iconfont-baidu.png" alt="" style="width: 30px">
+            <img src="Static/imgs/news%20center.png" alt="" style="width: 100px">
+        </div>
+        <input type="text" name="username" class="col-md-10" placeholder="输入用户名" id="username" required>
+        <input type="password" name="password" id="password" class="col-md-10" required>
+        <input type="submit" value="提交" id="login-submit" class="btn btn-info col-md-6">
+    </form>
+</div>
+
+
+</body>
+</html>

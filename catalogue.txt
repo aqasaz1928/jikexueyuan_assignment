@@ -27,13 +27,23 @@ week_2:
 		caculator_advance,
 		hao123_theme
 	task_3:
+		baidu_complete,
+		baidu_images,
+		geekschool_homepage
 	task_4:
+		baidu_news_mobie_php
 
 week_3:
 	task_1:
+		baidu_news_mobie_node
 	task_2:
+		baidu_use_fis
 	task_3:
+		bus_station,
+		geek_home_use_sass
 	task_4:
+		advanced_web_enginneer,
+		baidu_use_jsmodule
 
 week_4:
 	task_1:

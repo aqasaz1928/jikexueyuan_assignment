@@ -1,0 +1,979 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[ifltIE9]>
+    <script type="text/javascript" src="script/html5shiv.js"></script>
+    <![endif]-->
+
+    <title>My Baidu Home</title>
+    <script type="text/javascript" src="Resource/jquery-2.1.4.min%20.js"></script>
+    <script type="text/javascript" src="Resource/index.js"></script>
+    <!--通过媒体内容来控制电脑端和手机端-->
+    <!--使用media-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen and (min-device-width:720px)">
+    <link rel="stylesheet" type="text/css" href="css/styleMobie.css" media="screen and (max-device-width:719px)">
+
+</head>
+<body>
+<!--电脑板页面主体部分-->
+<div class="wrapper">
+    <!--设置面板-->
+    <div class="wrapper-header before-login">
+        <!--天气显示工具栏-->
+        <div class="before-login header-tools">
+            <a href="" id="weather-now"><span id="current-city"></span> <span id="current-temperature"></span>
+                <span id="current-weather"></span>
+                <span id="current-pm25"></span></a>
+            <ul>
+                <li><a href="">宝箱</a></li>
+                <li><a href="">换肤</a></li>
+                <li><a href="">消息</a></li>
+            </ul>
+        </div>
+        <!--头部部分右边的工具栏-->
+        <div id="u1" class="before-login">
+            <li><a href="http://news.baidu.com/">新闻</a></li>
+            <li><a href="http://www.hao123.com">hao123</a></li>
+            <li><a href="http://map.baidu.com/">地图</a></li>
+            <li><a href="http://v.baidu.com">视频</a></li>
+            <li><a href="http://tieba.baidu.com" id="tieba">贴吧</a></li>
+            <li><a id="login" class="lb"><b>登录</b></a></li>
+            <li><a id="setting" class="lb">设置</a></li>
+            <li><a class="products" id="more-products" href="https://www.baidu.com/more/">更多产品</a></li>
+        </div>
+    </div>
+    <!--登陆之后的用户控制面板-->
+    <div class="ceo-control-panel">
+        <ul>
+            <li><a href="#">招聘员工</a></li>
+            <li><a href="#">开除员工</a></li>
+            <li><a href="#">投资公司</a></li>
+            <li><a href="#">抛售股票</a></li>
+            <li><a href="#" id="exit-ceo">退出</a></li>
+        </ul>
+    </div>
+    <!--百度搜索设置面板-->
+    <div class="setting-pannel before-login">
+        <ul>
+            <li><a href="#">搜索设置</a></li>
+            <li><a href="#">高级搜索</a></li>
+            <li><a href="#">关闭预测</a></li>
+            <li><a href="#">搜索历史</a></li>
+        </ul>
+    </div>
+    <!--更多产品部分-->
+    <div class="more-items">
+        <div class="more-items-title">
+            更多产品
+        </div>
+        <div class="more-items-list">
+            <ul>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">音乐</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">图片</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">知道</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">文库</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">风云榜</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">百度推广</div>
+                </a></li>
+            </ul>
+        </div>
+        <div class="more-items-bottom">
+            全部产品<br>
+            >>
+        </div>
+    </div>
+    <!--导航栏-->
+
+    <div class="s_form_wrapper">
+        <div class="img-box">
+            <img src="Resource/bdlogo.png" alt="百度的logo" title="百度一下，你就知道"
+                 name="baidu-logo" id="logo"
+                 width="270" height="129">
+        </div>
+
+        <!--利用get方法可以实现简单的搜索-->
+        <div class="search-form">
+            <form action="http://www.baidu.com/s" method="get">
+        <span class="input-span">
+        <input type="text" name="wd" id="wd" autofocus="autofocus">
+        </span>
+        <span class="submit-span">
+        <input type="submit" value="百度一下" title="百度一下，你就知道" id="for-search">
+        </span>
+            </form>
+        </div>
+    </div>
+    <!--登陆后将显示的，内容区域-->
+    <div class="content-box before-login">
+        <!--内容区域上方的导航栏-->
+        <div class="content-header-nav">
+            <ul>
+                <li><a class="active">我的关注</a></li>
+                <li><a>推荐</a></li>
+                <li><a>导航</a></li>
+                <li><a>视频</a></li>
+                <li><a>购物</a></li>
+            </ul>
+            <!--导航栏右侧的设置按钮-->
+            <button class="content-box-setting"></button>
+        </div>
+        <!--我的关注-->
+        <div class="content-box-body" id="my-focus">
+            <div class="content-box-wrapper">
+                <div class="body-navbar">
+                    <span>我的导航</span>
+                </div>
+                <div class="body-content-list body-website">
+                    <span>
+                        综合
+                    </span>
+                    <ul>
+                        <li><a href="">新浪</a></li>
+                        <li><a href="">网易邮箱</a></li>
+                        <li><a href="">搜狐</a></li>
+                        <li><a href="">地图</a></li>
+                        <li><a href="">
+                            hao123
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="body-content-list body-tieba">
+                    <span>
+                        贴吧
+                    </span>
+                    <ul>
+                        <li><a href="">编程吧</a></li>
+                        <li><a href="">前端开发吧</a></li>
+                        <li><a href="">码农吧</a></li>
+                        <li><a href="">图拉丁吧</a></li>
+                        <li><a href="">
+                            显卡吧
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="body-content-list body-sociality">
+                    <span>
+                        社区
+                    </span>
+                    <ul>
+                        <li><a href="">微博</a></li>
+                        <li><a href="">人人</a></li>
+                        <li><a href="">知乎</a></li>
+                        <li><a href="">天涯</a></li>
+                        <li><a href="">
+                            草榴
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="body-content-list body-shopping">
+                    <span>
+                        购物
+                    </span>
+                    <ul>
+                        <li><a href="">京东</a></li>
+                        <li><a href="">淘宝</a></li>
+                        <li><a href="">苏宁易购</a></li>
+                        <li><a href="">亚马逊中国</a></li>
+                        <li><a href="">
+                            天猫商城
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="body-content-list body-others">
+                    <span>
+                        未分类
+                    </span>
+                    <ul>
+                        <li><a href="">TGFC</a></li>
+                        <li><a href="">cnbeta</a></li>
+                        <li><a href="">acfun</a></li>
+                        <li><a href="">极客学院</a></li>
+                        <li><a href="">
+                            网易音乐
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="body-custom">
+                    <span>自定义</span>
+                </div>
+                <div class="content-box-footer">
+                    设为首页©2015Baidu 使用百度前必读 意见反馈 京ICP证030173号
+                </div>
+            </div>
+        </div>
+        <!--推荐-->
+        <div class="content-box-body" id="my-recommend">
+            <div class="content-box-wrapper">
+                <div class="body-navbar">
+                    <span></span>
+                </div>
+                <div class="hot-news">
+                    <div class="hot-news-item-a">
+                        <h2 class="news-title"><a href="">测试新闻标题测试新闻标题</a></h2>
+                        <a href=""><img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1716964199,2297365169&fm=80"
+                                        alt="" class="news-img"></a>
+
+                        <p><a href="" class="news-from">新浪新闻</a><span class="news-info">11-25 10:49</span></p>
+                    </div>
+                    <div class="hot-news-item-b">
+                        <h2 class="news-title"><a href="">测试新闻标题2测试新闻标题2</a></h2>
+                        <ul class="img-news-list">
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href="">
+                            </a></li>
+                        </ul>
+                        <p><a href="" class="news-from">新浪新闻</a><span class="news-info">11-25 10:49</span></p>
+                    </div>
+                    <div class="hot-news-item-c">
+                        <h2 class="news-title"><span></span><a href="">测试新闻标题3测试新闻标题3</a></h2>
+
+                        <p><a href="" class="news-from">新浪新闻</a><span class="news-info">11-25 10:49</span></p>
+                    </div>
+                </div>
+                <div class="hot-point">
+                    <div class="hot-point-title">
+                        <span>实时热点</span>
+                        <button>&nbsp;&nbsp;换一换</button>
+                    </div>
+                    <ul class="hot-point-list">
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                        <li><a href="">· 测试新闻标题</a></li>
+                    </ul>
+                </div>
+                <div class="content-box-footer">
+                    设为首页©2015Baidu 使用百度前必读 意见反馈 京ICP证030173号
+                </div>
+            </div>
+        </div>
+        <!--导航-->
+        <div class="content-box-body" id="my-navigation">
+            <div class="content-box-wrapper">
+                <div class="navigation-content">
+                    <ul class="navigation-list list-a">
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                    </ul>
+                    <h2>资讯信息</h2>
+                    <ul class="navigation-list list-b">
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                    </ul>
+                    <h2>娱乐休闲</h2>
+                    <ul class="navigation-list list-c">
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                    </ul>
+                    <h2>海淘购物</h2>
+                    <ul class="navigation-list list-d">
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                    </ul>
+                    <h2>生活周边</h2>
+                    <ul class="navigation-list list-e">
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                        <li><a href="">测试标签</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="content-box-footer">
+                    设为首页©2015Baidu 使用百度前必读 意见反馈 京ICP证030173号
+                </div>
+            </div>
+        </div>
+        <!--视频-->
+        <div class="content-box-body" id="my-video">
+            <div class="content-box-wrapper">
+                <div class="video-content-box">
+                    <div class="video-left-box">
+                        <div class="video-img-box-high">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">半支烟</a>
+                            </div>
+                        </div>
+                        <div class="video-img-box-high">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">神鹰反恐特战队</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-right-box">
+                        <div class="video-img-box-low">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">测试视频标题</a>
+                            </div>
+                        </div>
+                        <div class="video-img-box-low">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">测试视频标题</a>
+                            </div>
+                        </div>
+                        <div class="video-img-box-low">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">测试视频标题</a>
+                            </div>
+                        </div>
+                        <div class="video-img-box-low">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">测试视频标题</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-content-box">
+                    <div class="video-left-box">
+                        <div class="video-img-box-high">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">半支烟</a>
+                            </div>
+                        </div>
+                        <div class="video-img-box-high">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">神鹰反恐特战队</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-right-box">
+                        <div class="video-img-box-low">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">测试视频标题</a>
+                            </div>
+                        </div>
+                        <div class="video-img-box-low">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">测试视频标题</a>
+                            </div>
+                        </div>
+                        <div class="video-img-box-low">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">测试视频标题</a>
+                            </div>
+                        </div>
+                        <div class="video-img-box-low">
+                            <div class="img-part">
+                                <a href=""></a>
+                            </div>
+                            <div class="text-part">
+                                <a href="">测试视频标题</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box-footer">
+                    设为首页©2015Baidu 使用百度前必读 意见反馈 京ICP证030173号
+                </div>
+            </div>
+        </div>
+        <!--购物-->
+        <div class="content-box-body" id="my-shopping">
+            <div class="content-box-wrapper">
+                <div class="shopping-box-a">
+                    <ul class="coupon-list">
+                        <li><a href="">
+                            <span class="saled-already">已售9999</span>
+                        </a>
+
+                            <p>优惠券测试<span class="coupon-price">￥99</span></p>
+                        </li>
+                        <li><a href="">
+                            <span class="saled-already">已售9999</span>
+                        </a>
+
+                            <p>优惠券测试<span class="coupon-price">￥99</span></p>
+                        </li>
+                        <li><a href="">
+                            <span class="saled-already">已售9999</span>
+                        </a>
+
+                            <p>优惠券测试<span class="coupon-price">￥99</span></p>
+                        </li>
+                        <li><a href="">
+                            <span class="saled-already">已售9999</span>
+                        </a>
+
+                            <p>优惠券测试<span class="coupon-price">￥99</span></p>
+                        </li>
+                        <li><a href="">
+                            <span class="saled-already">已售9999</span>
+                        </a>
+
+                            <p>优惠券测试<span class="coupon-price">￥99</span></p>
+                        </li>
+                        <li><a href="">
+                            <span class="saled-already">已售9999</span>
+                        </a>
+
+                            <p>优惠券测试<span class="coupon-price">￥99</span></p>
+                        </li>
+                        <li><a href="">
+                            <span class="saled-already">已售9999</span>
+                        </a>
+
+                            <p>优惠券测试<span class="coupon-price">￥99</span></p>
+                        </li>
+                        <li><a href="">
+                            <span class="saled-already">已售9999</span>
+                        </a>
+
+                            <p>优惠券测试<span class="coupon-price"> ￥99</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shopping-box-b">
+                    <ul class="goods-list">
+                        <li><a class="goods-img">
+                            <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/scrop%3D273%3Bq%3D100/sign=3c3091adcc8065387fb4e34ce7e09373/d31b0ef41bd5ad6e72e7700987cb39dbb6fd3c32.jpg"
+                                 alt="">
+                        </a>
+                            <a class="goods-link">商品名称</a>
+                        </li>
+                        <li><a class="goods-img">
+                            <img src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/scrop%3D273%3Bq%3D100/sign=ce798e690af431adb88c04663b0b9e98/d1160924ab18972ba8c96b31e0cd7b899f510a5d.jpg"
+                                 alt="">
+                        </a>
+                            <a class="goods-link">商品名称</a></li>
+                        <li><a class="goods-img">
+                            <img src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/scrop%3D273%3Bq%3D100/sign=b6f1683bb51c8701d2e8f5b95742ac18/b90e7bec54e736d1b7ac5ad79d504fc2d46269b6.jpg"
+                                 alt="">
+                        </a>
+                            <a class="goods-link">商品名称</a></li>
+                    </ul>
+                    <ul class="goods-list">
+                        <li><a class="goods-img">
+                            <img src="https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/super/scrop%3D273%3Bq%3D100/sign=3c3091adcc8065387fb4e34ce7e09373/d31b0ef41bd5ad6e72e7700987cb39dbb6fd3c32.jpg"
+                                 alt="">
+                        </a>
+                            <a class="goods-link">商品名称</a>
+                        </li>
+                        <li><a class="goods-img">
+                            <img src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/super/scrop%3D273%3Bq%3D100/sign=ce798e690af431adb88c04663b0b9e98/d1160924ab18972ba8c96b31e0cd7b899f510a5d.jpg"
+                                 alt="">
+                        </a>
+                            <a class="goods-link">商品名称</a></li>
+                        <li><a class="goods-img">
+                            <img src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/super/scrop%3D273%3Bq%3D100/sign=b6f1683bb51c8701d2e8f5b95742ac18/b90e7bec54e736d1b7ac5ad79d504fc2d46269b6.jpg"
+                                 alt="">
+                        </a>
+                            <a class="goods-link">商品名称</a></li>
+                    </ul>
+                </div>
+                <div class="content-box-footer">
+                    设为首页©2015Baidu 使用百度前必读 意见反馈 京ICP证030173号
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--底部标签-->
+    <div class="footer before-login">
+        <p class="up">
+            <a href="https://www.baidu.com/cache/sethelp/help.html">
+                把百度设为主页
+            </a>
+            <a href="http://home.baidu.com/">
+                关于百度
+            </a>
+            <a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-homeprofile">
+                About Baidu
+            </a>
+        </p>
+        <span id="declaration">
+            ©2015 Baidu
+            <a href="http://www.baidu.com/duty">使用百度前必读</a>
+            <a href="http://jianyi.baidu.com">意见反馈</a>
+            京ICP证030173号</span>
+        <i class="c-icon-icrlogo"></i>
+
+    </div>
+
+    <!--固定搜索栏，当鼠标滚动至下方出现-->
+    <div class="fixed-search">
+        <img src="Resource/bdlogo.png" alt="" style="height: 60px;width: 120px">
+        <form action="">
+            <input type="text">
+            <input type="submit" value="百度一下">
+        </form>
+    </div>
+    <!--回到顶部按钮-->
+    <div class="back-to-top">
+        <a></a>
+    </div>
+    <!--用户登录框-->
+    <div class="login-panel">
+        <div class="login-panel-content">
+            <div class="login-panel-header">
+                <img src="Resource/iconfont-baidu.png" alt="" style="width: 35px; height: 35px"/>
+                    <span>
+                        登录百度账号
+                    </span>
+                <button id="close-login-panel"></button>
+            </div>
+            <div class="login-panel-body">
+                <p id="login-by-phone">
+                    <img src="Resource/iconfont-phone.png" alt="" style="width: 15px;height: 15px">
+                    <a href="">短信快捷登录</a>
+                </p>
+
+                <form action="" id="user-login">
+                    <div class="user-name-box">
+                        <span></span>
+                        <input type="text" name="userName" id="userName" placeholder="请输入用户名" required>
+                        <botton id="clear-userName" onclick="document.getElementById('userName').value =''"></botton>
+                    </div>
+                    <div class="user-password-box">
+                        <span></span>
+                        <input type="password" name="userPassword" id="userPassword" placeholder="请输入密码" required>
+                    </div>
+                    <div class="login-tools">
+                           <span>
+                               <input type="checkbox" name="auto-login" id="auto-login">下次自动登录
+                           </span>
+                        <a href="">忘记密码？</a>
+                    </div>
+                    <input type="button" value="登录" id="login-submit">
+                    <a href="" id="register-now">立即注册</a>
+                </form>
+            </div>
+            <div class="login-panel-footer">
+                <p>可以使用以下方式登录</p>
+                <a href="" class="login-with-qq"></a>
+                <a href="" class="login-with-weibo"></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--开始定义手机端页面-->
+<div class="phone-container">
+    <div class="phone-header">
+        <div class="phone-login">
+            <a href="#" class="glyphicon glyphicon-user"></a>
+        </div>
+    </div>
+    <div class="phone-logo-box">
+        <img src="Resource/bdlogo.png" alt="百度一下，你就知道" style="width: 70%"/>
+    </div>
+    <div class="phone-search-box">
+        <form action="http://wap.baidu.com" class="phone-search">
+            <div class="phone-search-input">
+                <input type="text" name="search">
+                <a href="#" class="phone-speaker"></a>
+            </div>
+            <input type="submit" value="百度一下" class="phone-submit">
+        </form>
+    </div>
+
+    <!--百度搜所服务列表-->
+    <div class="phone-nav">
+        <ul>
+            <li>
+                <a href="#" class="glyphicon glyphicon-list-alt"></a>
+
+                <div class="phone-nav-text">新闻</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-book"></a>
+
+                <div class="phone-nav-text">小说</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-hd-video"></a>
+
+                <div class="phone-nav-text">视频</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-plus"></a>
+
+                <div class="phone-nav-text">生活+</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-map-marker"></a>
+
+                <div class="phone-nav-text">地图</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-menu-down" id="phone-more"></a>
+
+                <div class="phone-nav-text">更多</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-comment"></a>
+
+                <div class="phone-nav-text">贴吧</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-picture"></a>
+
+                <div class="phone-nav-text">图片</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-eye-open"></a>
+
+                <div class="phone-nav-text">网址</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-globe"></a>
+
+                <div class="phone-nav-text">推广</div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!--常用网页部分-->
+    <div class="phone-hot-site">
+        <div class="phone-box-header">
+            <a href="" class="phone-header-left glyphicon glyphicon-globe"></a> 常用网址
+            <a class="phone-header-right glyphicon glyphicon-option-vertical" id="hot-site-right"></a>
+        </div>
+        <div class="phone-header-setting-pannel" id="hot-site-setting">
+            <ul>
+                <li><a href="#">编辑</a></li>
+                <li><a href="#">置顶</a></li>
+                <li><a href="#">关闭</a></li>
+            </ul>
+        </div>
+        <div class="phone-box-content">
+            <ul>
+                <li><a href="#">贴吧</a></li>
+                <li><a href="#">hao123</a></li>
+                <li><a href="#">地图</a></li>
+                <li><a href="#">百度...</a></li>
+                <li><a href="#">图片</a></li>
+                <li><a href="#">音乐</a></li>
+                <li><a href="#">糯米</a></li>
+                <li><a href="#" class="glyphicon glyphicon-plus"></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--热点新闻区域-->
+    <div class="phone-hot-news">
+        <div class="phone-box-header">
+            <a href="" class="phone-header-left glyphicon glyphicon-duplicate"></a> 热点新闻
+            <a class="phone-header-right glyphicon glyphicon-option-vertical" id="hot-news-right"></a>
+        </div>
+        <div class="phone-news-content">
+            <ul>
+                <li><a href="#">热点新闻热点新闻</a></li>
+                <li><a href="#">热点新闻热点新闻</a></li>
+                <li><a href="#">热点新闻热点新闻</a></li>
+                <li><a href="#">热点新闻热点新闻</a></li>
+                <li><a href="#">热点新闻热点新闻</a></li>
+                <li><a href="#">热点新闻热点新闻</a></li>
+            </ul>
+        </div>
+        <div class="phone-news-bottom">
+            <a href="">
+                百度风云榜 >
+            </a>
+        </div>
+    </div>
+
+    <!--地址服务的区域-->
+    <div class="phone-service">
+        <div class="phone-box-header">
+            <a href="" class="phone-header-left glyphicon glyphicon-map-marker"></a> 生活服务
+            <a class="phone-header-right glyphicon glyphicon-option-vertical" id="service-right"></a>
+        </div>
+        <div class="phone-header-setting-pannel" id="service-setting">
+            <ul>
+                <li><a href="#">置顶</a></li>
+                <li><a href="#">关闭</a></li>
+            </ul>
+        </div>
+        <div class="position-locate">
+            <div class="position-locate-text">
+                点击按钮获取您的位置信息
+            </div>
+            <button class="position-locate-btn"><a class="glyphicon glyphicon-screenshot"></a>
+                <span class="position-text">定位</span>
+            </button>
+        </div>
+
+        <div class="phone-service-items">
+            <ul>
+                <li><a href="#">
+                    <div class="service-icon"></div>
+                    <div class="service-text">电影</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">团购</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">外卖</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">打车</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">酒店</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">美食</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">KTV</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">银行</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">飞机票</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">火车票</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">汽车票</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">公交站</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">旅行</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">挂号</div>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <button class="show-more-service">
+        展开全部
+    </button>
+    <!--百度设置部分-->
+    <div class="phone-baidu-setting">
+        <a href="" class="glyphicon glyphicon-cog"></a>
+        <a id="into-phone-manager" href="#top">管理我的百度首页</a>
+    </div>
+    <div class="phone-bottom">
+        <ul>
+            <li><a href="">极速版</a></li>
+            <li><a href="">用户反馈</a></li>
+        </ul>
+    </div>
+    <!--底部版权声明-->
+    <div class="phone-footer">
+        使用百度前必读&nbspBaidu&nbsp京ICP证030173号
+    </div>
+
+    <!--手机管理界面-->
+    <div class="phone-manager">
+        <div class="phone-manager-header">
+            <a id="manager-back" name="top" class="glyphicon glyphicon-menu-left"></a>
+
+            <h1>管理我的首页</h1>
+        </div>
+        <div class="phone-manager-content">
+            <ul>
+                <li>
+                    <div class="phone-manager-text">
+                        <p class="up"><a class="glyphicon glyphicon-globe"></a>常用网址</p>
+
+                        <p class="down">常用网址一触即达</p>
+                    </div>
+                    <a class="phone-manager-toggle toggle-1">
+                        <div class="toggle-switch switch-1"></div>
+                    </a>
+                </li>
+                <li>
+                    <div class="phone-manager-text">
+                        <p class="up"><a class="glyphicon glyphicon-duplicate"></a>时事热点</p>
+
+                        <p class="down">实时资讯随时掌握</p>
+                    </div>
+                    <a class="phone-manager-toggle toggle-2">
+                        <div class="toggle-switch switch-2"></div>
+                    </a>
+                </li>
+                <li>
+                    <div class="phone-manager-text">
+                        <p class="up"><a class="glyphicon glyphicon-map-marker"></a>生活服务</p>
+
+                        <p class="down">随时随地吃喝玩乐</p>
+                    </div>
+                    <a class="phone-manager-toggle toggle-3">
+                        <div class="toggle-switch switch-3"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(function () {
+//        使用JQuery方法来跨域获取天气
+        $.getJSON('http://api.map.baidu.com/telematics/v3/weather?callback=?', {
+            location: '北京',
+            output: 'json',
+            ak: 'VbOREkY4dIL1SagbedaYgG0t'
+        }, function (data) {
+            var dataToday = data.results[0];
+            var weatherDataToday = dataToday['weather_data'][0];
+            $('#current-city').text(dataToday.currentCity);
+            $('#current-temperature').text(weatherDataToday.date.slice(13, -1));
+            $('#current-weather').text(weatherDataToday.weather);
+            $('#current-pm25').text(dataToday.pm25);
+
+        });
+
+
+    })
+</script>
+</body>
+</html>

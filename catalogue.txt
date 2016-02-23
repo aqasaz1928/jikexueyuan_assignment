@@ -8,7 +8,10 @@ week_1:
 		table_and_form,
 		flex_box
 	task_3:
-	
+		css_cube,
+		css_animation,
+		baidu_for_ie6,
+		swing_layout
 	task_4:
 	
 week_2:

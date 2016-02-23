@@ -1,0 +1,53 @@
+﻿body{
+    margin: 0;
+    padding: 0;
+    background: #fff1f1;
+
+}
+div.container{
+    width: 80%;
+    margin: 0 auto;
+
+}
+div.header{
+    background: #f1f1ff;
+    height: 100px;
+}
+/*设置中间隐藏溢出*/
+div.article{
+    overflow: hidden;
+    background: #fafaaa;
+
+}
+div.footer{
+    height: 50px;
+    background: #4169e1;
+}
+div.left{
+    background: #8fbc8f;
+    float: left;
+    width: 200px;
+    margin-left: -100%; /*使左边内容靠左*/
+    margin-bottom: -9999px; /*使左边内容和中间高度一致*/
+    padding-bottom: 9999px;
+
+}
+div.right{
+    margin-left: -150px; /*使右边内容靠右*/
+    float: left;
+    width: 150px;
+    background: #7b68ee;
+    margin-bottom: -9999px; /*使右边内容和中间高度一致*/
+    padding-bottom: 9999px;
+}
+
+div.middle{
+    float: left;
+    width: 100%;
+    background: #fff;
+}
+/*inner-box设置中间内容区域，避开左右两边内容*/
+div.box-inner{
+    margin-left: 200px;
+    margin-right: 150px;
+}

@@ -1,0 +1,490 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+
+@-webkit-keyframes change-back{
+    0%{
+        background: rgba(255,255,255,1);
+    }
+    50%{
+        background: rgba(255,20,20,.5);
+    }
+    100%{
+        background: rgba(255,255,255,1);
+    }
+}
+.inner {
+    overflow: hidden;
+    position: relative;
+    width: 450px;
+    height: 600px;;
+    border: 1px #333 solid;
+    margin: 50px auto;
+    -webkit-animation: change-back .5s linear 0s infinite;
+    
+}
+
+
+.umaru {
+    position: absolute;
+}
+
+/*脸部样式*/
+.face {
+    top: 30px;
+    left: 50px;
+    width: 200px;
+    height: 110px;
+    border: 3px solid #333;
+    background: #fff;
+    border-radius: 150px 150px 45px 45px;
+}
+
+/*人物眼睛*/
+.eyes {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 5px solid #333;
+    border-radius: 50% 50%;
+
+}
+
+.eyes-l {
+    top: 30px;
+    left: 40px;
+}
+
+.eyes-r {
+    top: 30px;
+    right: 40px;
+}
+
+/*人物的眉毛*/
+.brow {
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 5px 5px;
+}
+
+.brow-l {
+    transform: rotate(15deg);
+    top: 20px;
+    left: 40px;
+}
+
+.brow-r {
+    transform: rotate(-15deg);
+    top: 20px;
+    right: 40px;
+}
+
+/*人物的嘴部*/
+.mouth {
+    left: 60px;
+    top: 20px;
+}
+
+.mouth-in {
+    width: 80px;
+    height: 20px;
+    top: 20px;
+    margin-left: -3px;
+    border: 1px solid #333;
+    border-bottom: 0;
+    border-radius: 50% 50% 75% 75%;
+}
+
+.mouth-out {
+    box-sizing: border-box;
+    position: absolute;
+    top: 45px;
+    width: 80px;
+    height: 40px;
+    border: 3px solid #333;
+    border-radius: 30% 30% 50% 50%;
+}
+
+/*设置头部动画*/
+@-webkit-keyframes hat-anim {
+    0% {
+        top: 35px;
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+
+        top: 25px;
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        top: 35px;
+    }
+}
+
+.hat {
+    width: 300px;
+    height: 200px;
+    background: #FFDAB9;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    border-left: 3px solid #333;
+    border-radius: 50% 50% 40% 40%;
+    top: 35px;
+    left: 75px;
+    -webkit-animation: hat-anim 1s linear 0s infinite;
+}
+
+/*头部顶部的装饰*/
+.eyes-hat {
+    width: 1px;
+    height: 1px;
+    border: 1px solid #333;;
+    border-radius: 50%;
+}
+
+.eyes-hat-l {
+    top: 10px;
+    left: 140px;
+}
+
+.eyes-hat-r {
+    top: 10px;
+    left: 160px;
+}
+
+.brow-hat {
+    width: 10px;
+    height: 2px;
+    border: 1px solid #333;
+    background: #333;
+    border-radius: 50%;
+}
+
+.brow-hat-l {
+    top: 5px;
+    left: 135px;
+    transform: rotate(-10deg);
+}
+
+.brow-hat-r {
+    top: 5px;
+    left: 155px;
+    transform: rotate(10deg);
+}
+
+.hat-mouth {
+    width: 10px;
+    height: 6px;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+
+.hat-mouth-l {
+    top: 15px;
+    left: 140px;
+    transform: rotate(-10deg);
+}
+
+.hat-mouth-r {
+    top: 15px;
+    left: 150px;
+    transform: rotate(5deg);
+}
+
+.hat-ear {
+    width: 30px;
+    height: 30px;
+    border-top: 3px solid #333;
+    border-left: 3px solid #333;
+    border-right: 3px solid #333;
+    border-radius: 50%;
+    text-align: center;
+    background: #FFDAB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hat-ear-l {
+    transform: rotate(-30deg);
+    top: 10px;
+    left: 5px;
+}
+
+.hat-ear-r {
+    transform: rotate(30deg);
+    top: 10px;
+    right: 5px;
+}
+
+.hat-ear .ear-inner {
+    width: 15px;
+    height: 15px;
+    background: #333;
+    border-radius: 50%;
+}
+
+/*人物身体部分*/
+.clothes {
+    width: 300px;
+    height: 200px;
+    left: 80px;
+    bottom: 190px;
+    background: #FFDAB9;
+    border: 3px solid #333;
+    border-top: 0;
+    border-radius: 60% 60% 30% 30%;
+}
+
+.clothes-inner {
+    width: 200px;
+    height: 150px;
+    bottom: 0;
+    background: #fff;
+    left: 47px;
+    border-right: 3px solid #333;
+    border-left: 3px solid #333;
+    border-top: 3px solid #333;
+    border-radius: 100% 100% 30% 30%;
+}
+
+/*双手的动画*/
+@-webkit-keyframes shake-l {
+    0% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+@-webkit-keyframes shake-r {
+    0% {
+        transform: rotate(165deg);
+    }
+    50% {
+        transform: rotate(150deg);
+    }
+    100% {
+        transform: rotate(165deg);
+    }
+}
+
+/*手部的样式*/
+.arm {
+    width: 100px;
+    height: 30px;
+}
+
+.arm-l {
+    transform: rotate(15deg);
+    transform-origin: 100% 50%;
+    -webkit-animation: shake-l 1s linear 0s infinite;
+    top: 240px;
+    left: 10px;
+}
+
+.arm-r {
+    transform-origin: 100% 50%;
+    transform: rotate(165deg);
+    -webkit-animation: shake-r 1s linear 0s infinite;
+    top: 240px;
+    right: 90px;
+}
+
+.hand .finger-l {
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 5px;
+    border: 2px solid #333;
+    transform: rotate(20deg);
+    border-radius: 50%;
+    background: #fff;
+
+}
+
+.hand .finger-r {
+    top: 15px;
+    left: 2px;
+    width: 20px;
+    height: 5px;
+    border: 2px solid #333;
+    transform: rotate(-20deg);
+    border-radius: 50%;
+    background: #fff;
+
+}
+
+.hand .palm {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    top: 2px;
+    left: 25px;
+}
+
+.arm .arm-maim {
+    background-color: #FFDAB9;
+    width: 50px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50% 15% 15% 50%;
+    top: 2px;
+    left: 50px;
+}
+
+/*设置脚部动画和样式*/
+.foot {
+    width: 60px;
+    height: 40px;
+    border-radius: 70% 70% 20% 20%;
+    border: 3px solid #333;
+    bottom: 170px;
+    background-color: #fff;
+}
+
+@-webkit-keyframes foot-l {
+    0% {
+        left: 110px;
+
+    }
+    50% {
+        left: 80px;
+        transform: rotate(25deg);
+    }
+    100% {
+        left: 110px;
+    }
+}
+
+@-webkit-keyframes foot-r {
+    0% {
+        right: 90px;
+
+    }
+    50% {
+        right: 50px;
+        transform: rotate(-25deg);
+    }
+    100% {
+        right: 90px;
+    }
+}
+
+.foot-l {
+    -webkit-animation: foot-l 1s linear 0s infinite;
+    left: 110px;
+}
+
+.foot-r {
+    -webkit-animation: foot-r 1s linear 0s infinite;
+    right: 90px;
+}
+
+/*设置腹部装饰*/
+.hole {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #343;
+    border-radius: 50%;
+    bottom: 30px;
+    margin-left: 50%;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.holex1 {
+    width: 20px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: #333;
+}
+
+.holex2 {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: 0px;
+    top: 10px;
+    transform: rotate(-45deg);
+    background-color: #333;
+}
+
+.doorframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+}
+
+/*设置外门的样式*/
+.door {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(30deg, #A0522D, #8B2500, #A0522D);
+    transform-origin: 0% 50%;
+    transition: all 3s
+}
+
+/*鼠标移动开门*/
+.door:hover {
+    transform: rotateY(90deg);
+}
+
+.door-inner {
+    margin: 10% auto;
+    width: 80%;
+    height: 80%;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 3px 3px #8B1A1A,
+    -3px -3px 3px 3px #8b1a1a,
+    inset 3px 3px 3px 3px #8B1A1A,
+    inset -3px -3px 3px 3px #8b1a1a;
+    border: 15px solid #8B3E2F;
+}
+
+.door .deco {
+    width: 100px;
+    height: 150px;
+    margin-left: 30px;
+    margin-top: 30px;
+    background: -webkit-linear-gradient(45deg, #CD853F, #8B2500, #CD853F);
+    border: 10px solid #8B2500;
+    box-shadow: inset 3px 3px 3px 3px #8B1A1A, inset -3px -3px 3px 3px #8B1A1A;
+    float: left;
+}
+
+.doorhandle {
+    position: absolute;
+    top: 45%;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    background: -webkit-linear-gradient(45deg, #ccc, #555, #fff);
+}
+.info p{
+    position: absolute;
+    top: 100px;
+    left:10px;
+    font-size: 24px;
+    font-family: "Microsoft Yahei"
+}

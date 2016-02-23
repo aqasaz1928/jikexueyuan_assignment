@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>双飞翼布局</title>
+    <!--引入css样式表-->
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<!--实现简单的双飞翼布局-->
+<body>
+<div class="container">
+
+<div class="header">我是头部</div>
+    <div class="article">
+        <!--中间内容最为重要需要优先加载-->
+        <div class="middle">
+            <!--利用inner-box实现双飞翼布局的中间内容-->
+            <div class="box-inner">
+                <p>我是中间</p>
+                <p>我是中间</p>
+                <p>我是中间</p>
+                <p>我是中间</p>
+                <p>我是中间</p>
+                <p>我是中间</p>
+                <p>我是中间</p>
+                <p>我是中间</p>
+                <p>我是中间</p>
+                <p>我是中间</p>
+
+            </div>
+        </div>
+        <div class="left">我是左</div>
+        <div class="right">我是右</div>
+    </div>
+    <div class="footer">我是版权</div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,276 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-color: snow;
+}
+
+div {
+    margin: 30px;
+}
+.nav-title {
+    margin: 5px;
+    padding: 0px;
+}
+
+ul{
+    float: left;
+    margin-top: -20px;
+    margin-left: -25px;
+
+
+}
+li{
+    display: inline;
+
+}
+a:link, a:visited{
+    font-weight: bold;
+    color: darkgray;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+a:hover, a:active{
+    color: dimgray;
+    font-size: 18px;
+    text-shadow: 5px 5px 3px #ccc;
+
+}
+
+.wrapper{
+    width: 80%;
+    min-width: 720px;
+    margin: 10px auto;
+    padding: 0;
+    background-color: aliceblue;
+}
+nav{
+    width: 100%;
+    min-width: 720px;
+    height: 100px;
+    background-color: snow;
+}
+
+
+/*普通盒子，制定content大小，div大小包括padding和border*/
+#shoebox{
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: dodgerblue;
+
+}
+#shoe{
+    border: 1px solid #fff;
+    margin: 5px;
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    background-color: brown;
+}
+
+/*怪异盒子，指定盒子大小，内容被挤压*/
+#shoebox-border{
+    -webkit-box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: dodgerblue;
+
+}
+#shoe-border{
+    -webkit-box-sizing: border-box;
+    border: 1px solid #fff;
+    margin: 5px;
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    background-color: brown;
+}
+
+.news {
+    min-width: 800px;
+    -webkit-column-count: 3; /*将盒子分成三栏*/
+    -webkit-column-rule-style: dotted; /*设置盒子分隔线为小点*/
+}
+
+.center {
+    width: 300px;
+    height: 300px;
+    background-color: darkorange;
+    display: -webkit-box; /*将盒子设置为弹性盒子*/
+    -webkit-box-pack: center; /*盒子内容左右居中*/
+    -webkit-box-align: center; /*盒子内容上下居中*/
+}
+
+div.flex-box-hor {
+    display: -webkit-flex; /*使用新版flex*/
+    background-color: indigo;
+}
+
+div.flex-box-hor > div {
+    margin: 0;
+    padding: 0;
+}
+
+div#one {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-flex: 1;
+    height: 100px;
+    background-color: aqua;
+}
+
+div#two {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-flex: 2;
+    height: 100px;
+    background-color: burlywood;
+}
+
+div#three {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-flex: 3;
+    height: 100px;
+    background-color: cornflowerblue;
+}
+
+div#four {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-flex: 4;
+    height: 100px;
+    background-color: lightcoral;
+}
+
+div.flex-box-ver {
+    height: 400px;
+    display: -webkit-flex; /*使用新版flex*/
+    -webkit-flex-direction: column;
+    background-color: indigo;
+}
+
+div.flex-box-ver > div {
+    margin: 0;
+    padding: 0;
+}
+
+div#one-ver {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-flex-grow: 1;
+    order: 3;
+    width: 100%;
+    background-color: aqua;
+}
+
+div#two-ver {
+    order: 1;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-flex-grow: 2;
+    width: 100%;
+    background-color: burlywood;
+}
+
+div#three-ver {
+    order: 4;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-flex-grow: 3;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+
+div#four-ver {
+    order: 2;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-flex-grow: 4;
+    width: 100%;
+    background-color: lightcoral;
+}
+
+/*手风琴效果实现*/
+.panel {
+    border: 1px solid #CCC;
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.panel > div {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    height: 150px;
+    opacity: 1;
+    border-left: 1px solid #CCC;
+    transition: flex 500ms ease,opacity 500ms ease; /*使用transition实现flex改变时的动画*/
+}
+
+.panel > div:first-child {
+    border: 0;
+}
+
+.panel > div:hover {
+    flex: 5; /*改变flex实现效果*/
+    border: 1px solid #000;
+    opacity: 0.5;
+    box-shadow: 2px 2px 1px #ccc inset ;/*用内阴影实现按下的效果*/
+}
+.panel1 {
+    border: 1px solid #CCC;
+    width: 80%;
+    height: 150px;
+    display: flex;
+    flex-flow: column wrap;
+}
+.panel1 >div{
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    height: 40px;
+    width: 70px;
+    opacity: 1;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    border-right: 0;
+    -webkit-transition:width 500ms linear;
+    overflow: hidden;
+}
+.panel1 p{
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+    float: right;
+}
+
+.panel1 > div:hover {
+    opacity: 0.7;
+    border-right: 1px solid #CCC;
+    width: 200px;
+    background-color: darkturquoise;
+    box-shadow: 2px 2px 1px #ccc inset ;/*用内阴影实现按下的效果*/
+}

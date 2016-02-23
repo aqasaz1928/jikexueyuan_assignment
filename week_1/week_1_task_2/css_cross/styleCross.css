@@ -1,0 +1,87 @@
+body {
+    /*初始化内边距和外边距*/
+    margin: 0;
+    padding: 0;
+}
+
+div.container {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%; /*使容器的左上角居中*/
+    margin-left: -150px;
+    margin-top: -150px; /*使容器保持居中*/
+
+}
+
+.cross {
+    /*十字架长和宽都为100px*/
+    width: 100px;
+    height: 100px;
+}
+
+.up {
+    border-radius: 8px 8px 0 0; /*设置圆角和阴影*/
+    box-shadow: 3px 0 orange;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+/*中间并排摆放三个盒子*/
+.left {
+    border-radius: 8px 0 0 8px; /*设置圆角和阴影*/
+    box-shadow: 0 3px orange;
+    float: left;
+    display: inline-block;
+    background-color: antiquewhite;
+}
+
+.center {
+   /* box-shadow: 4px 4px orange; 设置圆角和阴影*/
+    float: left;
+    display: inline-block;
+    background-color: antiquewhite;
+}
+
+.right {
+    border-radius: 0 8px 8px 0; /*设置圆角和阴影*/
+    box-shadow: 3px 3px orange;
+    float: left;
+    display: inline-block;
+    background-color: antiquewhite;
+}
+
+.down {
+    border-radius: 0 0 8px 8px; /*设置圆角和阴影*/
+    box-shadow: 3px 3px orange;
+    float: left;
+    margin-left: 100px;
+    display: block;
+    background-color: antiquewhite;
+}
+
+/*利用透明效果*/
+.cross:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/*设置中间图片*/
+a.image{
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    background:url("images/girlhandsdown.png") no-repeat;
+	background-position:center;
+    background-size: 34px 34px;
+	
+}
+/*鼠标滑过时手举起来*/
+a.image:hover{
+    background:url("images/girlhandsup.png") no-repeat;
+	background-position:center;
+    background-size: 64px 64px;
+	
+}

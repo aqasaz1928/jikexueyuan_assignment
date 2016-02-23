@@ -1,0 +1,267 @@
+﻿body{
+    margin: 0;
+    padding: 0;
+    font: 12px arial;
+    height: 100%;
+    position: relative;
+}
+
+div {
+    display: block;
+}
+
+/*设置页面最小高度和宽度*/
+div.wrapper {
+    height: 100%;
+    text-align: center;
+    min-height: 600px;
+    min-width: 810px;
+}
+
+
+/*顶部导航栏样式 */
+#u1 {
+    text-align: right;
+    float: right;
+    z-index: 2;
+    color: white;
+    position: relative;
+    right: -20px;
+    top: 0;
+    margin: 15px 0 5px 0;
+    padding: 0;
+    width: 500px;
+}
+
+#u1 a {
+    position: relative;
+    right: 33px;
+    top: -3px;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 17px;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#u1 a:hover {
+    color: blue;
+}
+
+#u1.lb {
+    display: inline-block;
+    color: #888 !important;
+    font-weight: 100 !important;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+/*更多产品按钮*/
+.products {
+    display: inline-block;
+    position: relative;
+    top: 4px !important;
+    right: 30px !important;
+    width: 60px;
+    height: 23px;
+    color: white !important;
+    background: #38f;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-right: 2px;
+    text-decoration: none !important;
+}
+
+.products:hover {
+    opacity: 0.85;
+}
+
+.s_form_wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -191px;
+    margin-left: -320px;
+    padding: 0;
+
+}
+
+
+/*百度logo图片位置和样式*/
+div.img-box {
+
+    text-align: center;
+    min-width: 600px;
+
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    width: 270px;
+    height: 129px;
+}
+
+/*设置输入框位置*/
+div.search-form {
+    margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+    z-index: 100;
+    position: relative;
+    top: -20px;
+}
+
+/*设置输入框大小*/
+span.input-span {
+    float: left;
+    position: relative;
+    border: 1px solid;
+    border-color: #7b7b7b #b6b6b6 #b6b6b6 #7b7b7b;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    height: 34px;
+    margin-right: 0;
+    border-right-width: 0;
+    overflow: hidden;
+}
+
+/*输入框样式*/
+#wd {
+    position: relative;
+    width: 526px;
+    height: 22px;
+    font: 16px arial;
+    line-height: 22px;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+
+}
+
+input {
+    display: inline-block;
+    border: 0;
+    padding: 0;
+}
+
+.search-form input {
+    width: 500px;
+
+}
+
+.submit-span {
+    /*float: left;*/
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid transparent;
+}
+
+/*搜索按钮样式*/
+.submit-span > #for-search {
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    cursor: pointer;
+}
+
+/*鼠标滑过的效果*/
+.submit-span >#for-search:hover{
+    background: #3377ff;
+
+}
+
+/*底部文字和样式*/
+footer {
+    height: 100px;
+    position: absolute;
+    margin-left: 50%;
+    left: -300px;
+    bottom: 44px;
+    text-align: center;
+    width: 600px;
+    z-index: 0;
+    overflow: hidden;
+
+}
+
+footer > p {
+    width: 600px;
+    margin: 0 auto;
+}
+
+p.up{
+    margin: 16px 0 5px;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+p>a{
+    margin: 0 10px;
+}
+
+span #declaration {
+    color: #666!important;
+}
+#declaration a{
+    color: #666!important;
+}
+
+/*底部logo*/
+.c-icon-icrlogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png) no-repeat;
+    _background-image: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_15f748ea.gif);
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}
+#setting-panel{
+    opacity: 0;
+    position: absolute;
+    float: right;
+    right: 75px;
+    top: 20px;
+    width: 70px;
+    height: 110px;
+    background-color: transparent;
+    z-index: 99;
+    border-radius: 5px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    box-shadow: 3px 3px 2px #888;
+}
+#setting-panel:hover{
+    opacity: 1;
+}
+#setting-panel a{
+    position: relative;
+    top: 20px;
+    display: block;
+    cursor: pointer;
+}
+#setting-panel a:hover{
+    color: #fff;
+    background-color: #888888;
+}

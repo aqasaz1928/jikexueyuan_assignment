@@ -1,0 +1,50 @@
+﻿  body {
+        margin: 0;
+        padding: 0;
+        background-color: antiquewhite;
+    }
+
+	/*主容器的样式*/
+    .container {
+        margin: 10px auto; /*容器居中*/
+        border: 1px solid orange;
+        background-color: #fff;
+		/*设置阴影和圆角*/
+        border-radius: 20px;
+        box-shadow: 10px 10px #cccccc;
+
+    }
+	/*设置导航栏位置*/
+    .header .guide {
+        text-align: right;
+        vertical-align: bottom;
+
+    }
+    .guide a{
+        margin-left: 5px;
+    }
+	/*红色字体类型*/
+    .text-red {
+        color: red;
+    }
+	/*设置底部样式*/
+    .footer {
+        margin: 0 auto;
+        height: 60px;
+        text-align: center;
+    }
+
+    a {
+        cursor: pointer;
+    }
+	/*定义多选表单格式*/
+	ul{
+		padding:0 0;
+		margin: 0 0;
+	}
+
+	li{
+		/*防止多选表格换行*/
+		display:inline-block;
+	}
+   

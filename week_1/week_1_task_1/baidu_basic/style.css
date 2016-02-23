@@ -1,0 +1,58 @@
+body {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+#u1 a {
+    margin: 5px;
+    color: #000;
+}
+
+#u1 a:hover {
+    color: blue;
+}
+
+.img-box {
+    margin-top: 10%;
+}
+
+#wd {
+    height: 34px;
+    font-size: 14px;
+    width: 400px;
+    border: 1px solid lightskyblue;
+    font-family: "Microsoft YaHei", Verdana, Geneva, sans-serif;
+
+}
+
+.btn-style-01 {
+    padding: 8px 8px 30px;
+    width: 120px;
+    height: 35px;
+    margin-left: -5px;
+    color: #fff;
+    font: 10px "Microsoft YaHei", Verdana, Geneva, sans-serif;
+    cursor: pointer;
+    border: 1px lightskyblue solid;
+    -webkit-box-shadow: inset 0px 0px 1px #fff;
+    -moz-box-shadow: inset 0px 0px 1px #fff;
+    box-shadow: inset 0px 0px 1px #fff; /*内发光效果*/
+    border-radius: 0px; /*边框圆角*/
+    text-shadow: 1px 1px 0px blue; /*字体阴影效果*/
+    background-color: dodgerblue;
+
+}
+
+.btn-style-01:hover {
+    background-color: #1e90df;
+
+}
+
+.footer {
+    margin-top: 200px;
+    color: #888;
+}
+
+.footer a {
+    color: #888;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/js/script.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/theme-blue.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/theme-gold.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/theme-green.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/theme-island.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/theme-lol.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/theme-purple.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/theme-red.css" charset="UTF-8" />
+  </component>
+</project>

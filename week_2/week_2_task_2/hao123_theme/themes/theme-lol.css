@@ -1,0 +1,33 @@
+
+body{
+    background: url("../images/lol.jpg") no-repeat;
+    background-size: 100%;
+}
+.container{
+    background: none;
+}
+.bottom-tabs a{
+    color: #fff;
+}
+.banner-nav a{
+    color: #FFB90F;
+}
+a.theme{
+    color: #FFB90F;
+}
+li.unselected a:hover{
+    color: #fff;
+}
+.nav-bar-list{
+    border-top: 2px solid #FFB90F;
+
+}
+.nav-bar-list li:first-child{
+    background-color: #FFB90F;
+}
+.main-panel{
+    border: 1px solid #fff;
+}
+.guess-you-like-icon{
+    background-color: #fff;
+}

@@ -20,7 +20,12 @@ week_1:
 	
 week_2:
 	task_1:
+		js_array,
+		student_classify,
+		js_caculator
 	task_2:
+		caculator_advance,
+		hao123_theme
 	task_3:
 	task_4:
 

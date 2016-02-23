@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>好123-上网从这里开始</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onclick="hideListPanel()">
+<div class="container">
+    <div class="header">
+        <div class="baidu-logo-box">
+            <a href="http://www.baidu.com">
+                <img src="images/baidulogotransp.png" alt="百度一下" style="width: 110px">
+            </a>
+        </div>
+        <div class="search-panel">
+            <form action="">
+                <div class="text-input">
+                    <input type="button" value="网页&or;">
+                    <input type="text">
+                </div>
+                <input type="submit" value="百度一下">
+            </form>
+        </div>
+        <div class="theme-change">
+            <a class="theme" onmousemove="toggleSelectTheme()">选择主题&or;</a>
+            <div class="theme-change-list" id="theme-change-list">
+                <ul>
+                    <li><a class="theme-img" onclick="changeTheme('theme-green')"></a><a class="theme-text">柔和绿色</a></li>
+                    <li><a class="theme-img" onclick="changeTheme('theme-gold')"></a><a class="theme-text">土豪金</a></li>
+                    <li><a class="theme-img" onclick="changeTheme('theme-blue')"></a><a class="theme-text">深邃蓝</a></li>
+                    <li><a class="theme-img" onclick="changeTheme('theme-purple')"></a><a class="theme-text">基佬紫</a></li>
+                    <li><a class="theme-img" onclick="changeTheme('theme-red')"></a><a class="theme-text">烈焰红</a></li>
+                    <li><a class="theme-img" onclick="changeTheme('theme-lol')"></a><a class="theme-text">英雄联盟</a></li>
+                    <li><a class="theme-img" onclick="changeTheme('theme-island')"></a><a class="theme-text">海 岛</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-tabs">
+            <ul>
+                <li><a class="theme" href="">热搜</a></li>
+                <li><a href="">今日天气</a></li>
+                <li><a href="">体育赛事</a></li>
+                <li><a href="">金融快讯</a></li>
+                <li><a href="">娱乐时尚</a></li>
+                <li><a href="">特价热卖</a></li>
+                <li><a class="theme" href="">更多</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="body-content">
+        <div class="nav-bar">
+            <ul class="nav-bar-list">
+                <li class="selected">
+                    <a href="" >首页</a></li>
+                <li class="unselected"><a href="">电视剧</a></li>
+                <li class="unselected"><a href="">最新电影</a></li>
+                <li class="unselected"><a href="">新闻头条</a></li>
+                <li class="unselected"><a href="">八卦娱乐</a></li>
+                <li class="unselected"><a href="">军事热点</a></li>
+                <li class="unselected"><a href="">热门游戏</a></li>
+                <li class="unselected"><a href="">小游戏</a></li>
+                <li class="unselected"><a href="">今日特价</a></li>
+                <li class="unselected"><a href="">特价旅游</a></li>
+                <li class="unselected"><a href="">生活服务</a></li>
+            </ul>
+        </div>
+        <div class="left-panel">
+            <div class="left-top-panel">
+                <div class="img-box"></div>
+                <div class="text-box">
+                    <a href="">
+                        <p> 小米公司以每股990美元的价格溢价收购Apple</p>
+                    </a>
+                    <a href="">
+                        <p>马云宣布明年双十一天猫全场免费</p>
+                    </a>
+
+                </div>
+                <div class="arrow-box">
+                    <a class="arrow-left" href="">&lt;</a>
+                    <a href="" class="arrow-right">&gt;</a>
+                </div>
+            </div>
+            <div class="left-bottom-panel">
+                <div class="left-list">
+                    <ul>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-video.png" alt="" style="width:15px">
+                                <span>电视剧 | 综艺</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-movie.png" alt="" style="width:15px">
+                                <span>电影 | 直播</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-news.png" alt="" style="width:15px">
+                                <span>头条 | 军事</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-ticket.png" alt="" style="width:15px">
+                                <span>彩票 | 股票</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-sortbyprice.png" alt="" style="width:15px">
+                                <span>特价 | 海淘</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-bag.png" alt="" style="width:15px">
+                                <span>生活 | 天气</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-list">
+                    <ul>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-game.png" alt="" style="width:15px">
+                                <span>游戏 | 小游戏</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-cat.png" alt="" style="width:15px">
+                                <span>动画 | 漫画</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-sun.png" alt="" style="width:15px">
+                                <span>旅游 | 门票</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-smile.png" alt="" style="width:15px">
+                                <span>搞笑 | 小说</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-education.png" alt="" style="width:15px">
+                                <span>教育 | 理财</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="left-icon">
+                                <img src="images/iconfont-food.png" alt="" style="width:15px">
+                                <span>美食 | 音乐</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-panel">
+            <div class="main-up">
+                <ul>
+                    <li><a href="">百度 • 贴吧</a></li>
+                    <li><a href="">百度 • 贴吧</a></li>
+                    <li><a href="">搜狐 • 热点</a></li>
+                    <li><a href="">腾　讯</a></li>
+                    <li><a href="">网　易</a></li>
+                    <li><a href="">爱奇艺高清</a></li>
+                    <li><a href="">天　猫</a></li>
+                    <li><a href="">凤 凰 网</a></li>
+                    <li><a href="">淘 宝 网</a></li>
+                    <li><a href="">免费游戏</a></li>
+                    <li><a href="">4399游戏</a></li>
+                    <li><a href="">新华 • 人民</a></li>
+                    <li><a href="">京东商城</a></li>
+                    <li><a href="">聚 划 算</a></li>
+                    <li><a href="">今日特价</a></li>
+                    <li><a href="">hao123影视</a></li>
+                    <li><a href="">汽车之家</a></li>
+                    <li><a href="">去 哪 儿</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-down">
+                <ul>
+                    <li><a href="">东方财富•理财</a></li>
+                    <li><a href="">58 同 城</a></li>
+                    <li><a href="">搜 房 网</a></li>
+                    <li><a href="">携程旅行网</a></li>
+                    <li><a href="">PPTV聚力</a></li>
+                    <li><a href="">旅游•12306</a></li>
+                    <li><a href="">聚美优品</a></li>
+                    <li><a href="">赶 集 网</a></li>
+                    <li><a href="">易 车 网</a></li>
+                    <li><a href="">彩票开奖</a></li>
+                    <li><a href="">爱卡汽车</a></li>
+                    <li><a href="">美　拍</a></li>
+                    <li><a href="">唯 品 会</a></li>
+                    <li><a href="">同程旅游</a></li>
+                    <li><a href="">途牛旅游网</a></li>
+                    <li><a href="">百度浏览器</a></li>
+                    <li><a href="">太平洋汽车</a></li>
+                    <li><a href="">艺 龙 网</a></li>
+                    <li><a href="">百度糯米</a></li>
+                    <li><a href="">蘑 菇 街</a></li>
+                    <li><a href="">hao到家•学习</a></li>
+                    <li><a href="">陆金所理财</a></li>
+                    <li><a href="">萌主页•动漫</a></li>
+                    <li><a href="">购物•手机</a></li>
+                    <li><a href="" class="theme">苏宁易购</a></li>
+                    <li><a href="" class="theme">国美在线</a></li>
+                    <li><a href="" class="theme">什么值得买</a></li>
+                    <li><a href="" class="theme">1 号 店</a></li>
+                    <li><a href="" class="theme">爱 淘 宝</a></li>
+                    <li><a href="" class="theme">携程机票</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner-nav">
+            <ul>
+                <li><a href="">聚划算</a></li>
+                <li><a href="">天猫精选</a></li>
+                <li><a href="">京东</a></li>
+                <li><a href="">值得买</a></li>
+                <li><a href="">景点门票</a></li>
+                <li><a href="">低价再续</a></li>
+                <li><a href="">今日秒杀</a></li>
+                <li><a href="">爆款</a></li>
+                <li><a href="">理财贷款</a></li>
+                <li><a href="">理财红包</a></li>
+            </ul>
+        </div>
+
+        <div class="guess-you-like">
+            <div class="guess-you-like-icon">
+                猜你喜欢
+            </div>
+            <ul>
+                <li><a href="" class="theme">生活</a></li>
+                <li><a href="">高薪工作</a></li>
+                <li><a href="">小语种学习</a></li>
+                <li><a href="">PPT攻略</a></li>
+                <li><a href="">三周学演讲</a></li>
+                <li><a href="">推拿立减68</a></li>
+                <li><a href="">洗车代金券</a></li>
+                <li><a href="">美甲优惠</a></li>
+                <li><a href="">换一换</a></li>
+            </ul>
+            <ul>
+                <li><a href="" class="theme">商城</a></li>
+                <li><a href="">换季优惠</a></li>
+                <li><a href="">品牌特卖</a></li>
+                <li><a href="">一元包邮</a></li>
+                <li><a href="">秋冬爆款</a></li>
+                <li><a href="">超值女装</a></li>
+                <li><a href="">品牌羽绒服</a></li>
+                <li><a href="">时尚女靴</a></li>
+                <li><a href="">换一换</a></li>
+            </ul>
+            <ul>
+                <li><a href="" class="theme">特卖</a></li>
+                <li><a href="">商城特惠</a></li>
+                <li><a href="">苏宁易购</a></li>
+                <li><a href="">海外直邮</a></li>
+                <li><a href="">一折特卖</a></li>
+                <li><a href="">一元秒杀</a></li>
+                <li><a href="">进口奶粉</a></li>
+                <li><a href="">小家电</a></li>
+                <li><a href="">换一换</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
+

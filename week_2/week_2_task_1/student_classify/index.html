@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生等级查询</title>
+    <link rel="stylesheet" href="css.css" type="text/css">
+</head>
+<body>
+<div class="container">
+    <header><p>学生成绩查询</p></header>
+    <div class="content">
+        <input type="number" id="student-score" placeholder="请输入成绩查询等级" required>
+        <input type="submit" value="查询" id="get-class" onclick="getStudentClass()">
+    </div>
+</div>
+<script>
+    //定义方法
+    function getStudentClass() {
+        var stuScore = document.getElementById("student-score").value;  //得到输入的分数值
+        //判断分数是否合法
+        if (stuScore > 100 || stuScore < 0) {
+            alert("输入的值必须在0到100之间");
+        } else {
+            stuScore = (10-parseInt(stuScore / 10));  //将分数除以十取整，以得到等级
+            switch (stuScore) {
+                case 0:
+					alert("满分");
+					break;
+				default:
+                    alert("第"+stuScore+"等");
+					break;
+            }
+        }
+//        查询完毕后将数据清空
+        stuScore = null;
+		document.getElementById("student-score").value = null; //清空输入框
+    }
+
+</script>
+</body>
+</html>

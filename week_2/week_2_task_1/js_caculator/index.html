@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="app.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="container">
+    <div class="caculator">
+        <input type="number" id="number" readonly value="0">
+        <div class="math-function btn-group">
+            <ul>
+                <li>
+                    <button class="btn btn-info" onclick="onSin()">sin()</button>
+                </li>
+                <li>
+                    <button class="btn btn-info" onclick="onCos()">cos()</button>
+                </li>
+                <li>
+                    <button class="btn btn-info" onclick="backSpace()">back</button>
+                </li>
+                <li>
+                    <button class="btn btn-info" onclick="onSquare()">X²</button>
+                </li>
+                <li>
+                    <button class="btn btn-info" onclick="onSqrt()">√</button>
+                </li>
+                <li>
+                    <button class="btn btn-info" onclick="onReciprocal()">
+                        1/x
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="num-panel btn-group" role="group">
+            <ul>
+                <li>
+                    <button class="btn btn-default" id="num7" onclick="getNum(this)">7</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" id="num8" onclick="getNum(this)">8</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" id="num9" onclick="getNum(this)">9</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" id="num4" onclick="getNum(this)">4</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" id="num5" onclick="getNum(this)">5</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" id="num6" onclick="getNum(this)">6</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" id="num1" onclick="getNum(this)">1</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" id="num2" onclick="getNum(this)">2</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" id="num3" onclick="getNum(this)">3</button>
+                </li>
+            </ul>
+        </div>
+        <div class="num-panel-bottom">
+            <button class="btn btn-default" id="num0" onclick="getNum(this)">0</button>
+            <button class="btn btn-default" id="dot" onclick="getNum(this)">.</button>
+        </div>
+        <div class="control-panel">
+            <button id="clear" class="btn btn-danger" onclick="Clean()">C</button>
+            <button id="divide" class="btn btn-warning" onclick="caculateMethod(this)">除</button>
+            <button id="multi" class="btn btn-warning" onclick="caculateMethod(this)">X</button>
+            <button id="minus" class="btn btn-primary" onclick="caculateMethod(this)">-</button>
+            <button id="plus" class="btn btn-primary" onclick="caculateMethod(this)">+</button>
+            <button id="equal" class="btn btn-success" onclick="getResult(this)">=</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

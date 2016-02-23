@@ -1,0 +1,30 @@
+.container{
+    background: rgba(240, 240, 240, 1);
+}
+
+.bottom-tabs a{
+    color: #A020F0;
+}
+.banner-nav a{
+    color: #A020F0;
+}
+
+a.theme{
+    color: #A020F0;
+}
+li.unselected a:hover{
+    color: #A020F0;
+}
+.nav-bar-list{
+    border-top: 2px solid #A020F0;
+
+}
+.nav-bar-list li:first-child{
+    background-color: #A020F0;
+}
+.main-panel{
+    border: 1px solid #A020F0;
+}
+.guess-you-like-icon{
+    background-color: #A020F0;
+}

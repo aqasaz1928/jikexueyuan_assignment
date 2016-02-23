@@ -1,0 +1,704 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*将div默认设置成怪异盒子模型*/
+div {
+    box-sizing: border-box;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 240, 240, 1);
+    min-width: 1080px;
+
+}
+
+/*使用媒体查询，适配不同的屏幕*/
+@media screen and (max-device-width: 1080px) {
+    .container {
+        min-width: 720px;
+    }
+}
+
+/*设定头部样式*/
+.header {
+    position: relative;
+    width: 100%;
+    height: 130px;
+
+}
+
+/*左边的百度图标*/
+.baidu-logo-box {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    height: 70%;
+    float: left;
+
+}
+
+.baidu-logo-box a {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}
+
+
+/*搜索框样式*/
+.search-panel {
+    position: relative;
+    width: 55%;
+    display: inline-block;
+    height: 70%;
+    float: left;
+}
+
+form {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.text-input {
+    display: inline-block;
+    float: left;
+    width: 80%;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #8a8a8a;
+    box-shadow: inset 1px 1px 1px 1px #777;
+}
+
+/*搜索框左边的下拉菜单*/
+.search-panel input[type="button"] {
+    display: inline-block;
+    margin-left: 5px;
+    height: 100%;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0);
+    color: #aaaaaa;
+}
+
+.search-panel input {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*搜索输入框*/
+.search-panel input[type="text"] {
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    width: 90%;
+}
+
+.search-panel input[type="text"]:focus {
+    border: 0;
+}
+
+/*搜索提交按钮*/
+.search-panel input[type="submit"] {
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid #666;
+    border-radius: 1px;
+    background: -webkit-linear-gradient(bottom, #ccc, #fff);
+    background: linear-gradient(bottom, #ccc, #fff);
+}
+
+.search-panel input[type="submit"]:hover {
+    opacity: .7;
+}
+
+/*切换主题区域的样式*/
+.theme-change {
+    z-index: 19;
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 70%;
+    float: left;
+}
+
+/*搜索框下方的标签*/
+.bottom-tabs {
+    display: inline-block;
+    position: absolute;
+    bottom: 15px;
+    width: 600px;
+    left: 25%;
+    height: 30%;
+}
+
+.bottom-tabs ul {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+
+}
+
+.bottom-tabs li {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 12%;
+    height: 100%;
+}
+
+.bottom-tabs li:last-child {
+    width: 100px;
+    text-align: right;
+}
+
+.bottom-tabs a {
+    color: #333;
+    display: inline-block;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.bottom-tabs a:hover {
+    text-decoration: underline;
+
+}
+
+
+/*下方主要内容区域*/
+.body-content {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+/*导航栏样式*/
+.nav-bar {
+    width: 100%;
+    height: 40px;
+
+}
+
+.nav-bar ul {
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .9);
+}
+
+.nav-bar li {
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    list-style: none;
+    width: 9%;
+    height: 95%;
+
+}
+
+.nav-bar li.selected a {
+    color: #ffffff;
+}
+
+.nav-bar a {
+    display: inline-block;
+    width: 100%;
+    height: 70%;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 8px;
+    text-decoration: none;
+    border-right: 1px solid rgba(200, 200, 200, .9);
+    color: #000;
+}
+
+.nav-bar li:last-child a {
+    border-right: 0;
+}
+
+
+/*左边的内容栏*/
+.left-panel {
+    position: relative;
+    margin-top: 15px;
+    float: left;
+    width: 23%;
+    height: 400px;
+}
+
+/*右面的主要内容区域*/
+.main-panel {
+    margin-top: 15px;
+    float: left;
+    width: 76%;
+    height: 275px;
+    margin-left: 1%;
+    background: rgba(255, 255, 255, .9);
+}
+
+/*左边上方样式*/
+.left-top-panel {
+    width: 100%;
+    height: 150px;
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid #cecece;
+}
+
+.left-top-panel:hover > .arrow-box {
+    display: inline-block;
+}
+
+.left-top-panel .img-box {
+    width: 100%;
+    height: 50%;
+    background: url("images/lefttopimg.jpg") repeat-x;
+    background-size: 50%;
+}
+
+
+.left-panel .text-box {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.left-top-panel a p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+
+}
+
+.left-top-panel a p:hover {
+    color: orange;
+}
+
+.left-top-panel a {
+    display: inline-block;
+    width: 100%;
+    height: 20%;
+    text-decoration: none;
+    margin-top: 5px;
+    color: #000;
+    cursor: none;
+}
+
+/*左边上方的箭头按钮*/
+.arrow-box {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 14%;
+}
+
+.arrow-box a {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 20px;
+    height: 100%;
+    font-size: 28px;
+    line-height: 35px;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(90, 90, 90, .5);
+}
+
+a.arrow-left {
+    float: left;
+}
+
+a.arrow-right {
+    float: right;
+}
+
+
+
+/*左边栏下方的样式*/
+.left-bottom-panel {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    height: 200px;
+    border: 1px solid #cecece;
+    background: rgba(255, 255, 255, .9);
+
+}
+
+.left-bottom-panel .left-list {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.left-bottom-panel .right-list {
+    position: relative;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+}
+
+.left-bottom-panel ul {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.left-bottom-panel li {
+    display: inline-block;
+    width: 100%;
+    height: 16.6%;
+    list-style: none;
+}
+
+a.left-icon {
+    display: inline-block;
+    width: 90%;
+    height: 15px;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #777;
+
+}
+
+a.left-icon img {
+    opacity: .5;
+}
+
+a.left-icon:hover {
+    text-decoration: underline;
+    color: #f23;
+}
+
+a.left-icon span {
+    position: relative;
+    top: -2px;
+
+}
+
+
+/*右边主要区域上方*/
+.main-up {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40%;
+}
+
+.main-up ul {
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    left: 2.5%;
+    top: 5px;
+    height: 90%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(230, 230, 230, .5);
+
+}
+
+.main-up li {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+    text-align: left;
+    color: #333;
+    width: 16.6%;
+    height: 33%;
+
+}
+
+.main-up a {
+    position: relative;
+    top: 5px;
+    width: 100%;
+    color: #333;
+    height: 100%;
+    text-decoration: none;
+    left: 20%;
+
+}
+
+.main-up a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+
+/*主要区域下方*/
+.main-down {
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+}
+
+.main-down ul {
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    left: 2.5%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.main-down li {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    float: left;
+    text-align: left;
+    color: #333;
+    width: 16.6%;
+    height: 20%;
+
+}
+
+.main-down a {
+    position: relative;
+    top: 5px;
+    width: 100%;
+    color: #333;
+    height: 100%;
+    text-decoration: none;
+    left: 20%;
+
+}
+
+.main-down a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+
+/*右边中间的导航栏*/
+.banner-nav {
+    width: 76%;
+    float: right;
+    height: 30px;
+
+}
+
+.banner-nav ul,
+.banner-nav li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-nav ul {
+    width: 95%;
+    left: 3%;
+}
+
+.banner-nav li {
+    width: 9%;
+    text-align: center;
+}
+
+.banner-nav a {
+    position: relative;
+    top: 3px;
+    color: #3b5998;
+    text-decoration: none;
+}
+
+.banner-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/*猜你喜欢区域样式*/
+.guess-you-like {
+    position: relative;
+    display: inline-block;
+    width: 76%;
+    margin-left: 1%;
+    height: 110px;
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid #cecece;
+}
+
+.guess-you-like ul,
+.guess-you-like li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+    height: 25%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.guess-you-like ul {
+    width: 95%;
+    top: 10px;
+    left: 5%;
+}
+
+.guess-you-like li {
+    width: 11.1%;
+    height: 100%;
+    float: left;
+}
+
+.guess-you-like a {
+    text-decoration: none;
+    color: #333;
+    line-height: 30px;
+}
+
+.guess-you-like a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.guess-you-like-icon {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 18%;
+    width: 22px;
+    border-radius: 0 5px 5px 0;
+    height: 62%;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.theme-change a{
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+    left: 10px;
+}
+.theme-change-list{
+    display: none;
+    position: absolute;
+    right: 100px;
+    top: 70px;
+    background: #fff;
+    width: 150px;
+    height: 200px;
+    z-index: 99;
+    overflow-y: scroll;
+
+}
+.theme-change-list ul{
+    margin: 0;
+    padding:0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+}
+.theme-change-list li{
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    list-style-type: none;
+    height: 33%;
+    border-bottom: 1px solid rgba(230,230,230,.7);
+}
+.theme-change-list li:hover{
+    background: #ccc;
+    opacity: .7;
+}
+.theme-change-list a{
+    margin: 0;
+    padding: 0;
+}
+a.theme-img{
+    position: absolute;
+    top: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 80%;
+    height: 60%;
+    cursor: pointer;
+}
+
+.theme-change-list li:first-child .theme-img{
+    background-color: #0aa770;
+}
+.theme-change-list li:nth-child(2) .theme-img{
+    background-color: #FFDa00;
+}
+.theme-change-list li:nth-child(3) .theme-img{
+    background-color: #0000CD;
+}
+.theme-change-list li:nth-child(4) .theme-img{
+    background-color: #A020F0;
+}
+.theme-change-list li:nth-child(5) .theme-img{
+    background-color: #EE2C2C;
+}
+.theme-change-list li:nth-child(6) .theme-img{
+    background:url("images/lol.jpg") no-repeat;
+    background-size: 100%;
+}
+.theme-change-list li:last-child .theme-img{
+    background:url("images/海岛.jpg") no-repeat;
+    background-size: 100%;
+}
+
+a.theme-text{
+    position: absolute;
+    font-size: 14px;
+    box-sizing: border-box;
+    top: 45px;
+    text-align: center;
+    display: inline-block;
+    width: 80%;
+    height: 30%;
+}

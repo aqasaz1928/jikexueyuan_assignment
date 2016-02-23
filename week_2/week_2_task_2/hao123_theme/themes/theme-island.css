@@ -1,0 +1,33 @@
+
+body{
+    background: url("../images/海岛.jpg") no-repeat;
+    background-size: 100%;
+}
+.container{
+    background: none;
+}
+.bottom-tabs a{
+    color: #ff0;
+}
+.banner-nav a{
+    color: #f00;
+}
+a.theme{
+    color: #ff0;
+}
+li.unselected a:hover{
+    color: darkgreen;
+}
+.nav-bar-list{
+    border-top: 2px solid darkgreen;
+
+}
+.nav-bar-list li:first-child{
+    background-color: darkgreen;
+}
+.main-panel{
+    border: 1px solid darkgreen;
+}
+.guess-you-like-icon{
+    background-color: darkgreen;
+}

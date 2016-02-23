@@ -1,0 +1,710 @@
+@import url("bootstrap.min.css");/*引入bootstrap小图标*/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+/*手机端先将电脑端的内容全部隐藏*/
+.wrapper{
+    display: none;
+}
+
+.phone-container{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+/*手机端头部央视*/
+.phone-header{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+}
+
+/*头部右边登陆按钮*/
+.phone-login{
+    box-sizing: border-box;
+    float: right;
+    position: relative;
+    right: 20px;
+    top: 20px;
+    width: 8%;
+    height: 100%;
+}
+
+.phone-login a{
+    padding: 10px;
+    top: 3px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 54px;
+    color: #aaa;
+    font-size: 400%;
+}
+/*百度logo样式*/
+.phone-logo-box{
+    width: 100%;
+    text-align: center;
+}
+
+/*搜索框的样式*/
+.phone-search-box{
+    box-sizing: border-box;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+
+}
+/*搜索框表单*/
+form.phone-search{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 90%;
+    height: 100%;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.phone-search-input{
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 75%;
+    height: 100%;
+
+}
+
+.phone-search-input input{
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    padding: 10px;
+}
+/*搜索框右边的话筒按钮*/
+.phone-search-input a{
+    width: 10%;
+    background: url("//m.baidu.com/static/search/ala/callicon.png") no-repeat 15px 0;
+    background-size: 200%;
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+/*提交按钮*/
+.phone-submit{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 25%;
+    height: 100%;
+    background: -webkit-linear-gradient(top,#f9f9f9,#e7e9eb);
+    float: left;
+    color: #46484b;
+    border-left: 1px solid #8d9394;
+    font-weight: 700;
+    font-size: 36px;
+    text-shadow: 0 1px 0 #fafafa;
+}
+/*搜索框下方的菜单*/
+.phone-nav{
+    width: 90%;
+    height: 150px;
+    box-sizing: border-box;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.phone-nav ul,
+.phone-nav ul li{
+    margin: 0;
+    padding: 0;
+
+}
+
+.phone-nav ul li{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 16%;
+    height: 150px;
+
+}
+/*设置每个菜单item的样式*/
+.phone-nav a{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60%;
+    line-height: 200%;
+    text-align: center;
+    font-size: 400%;
+    color: #888;
+}
+/*菜单下方的文字*/
+.phone-nav-text{
+    line-height: 200%;
+    font-size: 30px;
+    text-align: center;
+    color: #aaaaaa;
+}
+/*设置常用网页部分*/
+.phone-hot-site{
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    height: 300px;
+    border: 1px solid rgba(230,230,230,.6);
+    box-shadow: 1px 1px 1px 1px #aaa, -1px -1px 1px 1px #aaa;
+}
+/*常用网页上方的标题栏，*/
+/*可以与其他的部分复用*/
+.phone-box-header{
+    box-sizing: border-box;
+    line-height: 85px;
+    font-size: 34px;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    background: rgba(240,240,240,.2);
+}
+/*标题栏左边的文字和图表*/
+.phone-box-header .phone-header-left{
+    display: inline-block;
+    box-sizing: border-box;
+    width: auto;
+    height: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/*标题栏右边的按钮*/
+.phone-header-right{
+    float: right;
+    top: 15px;
+    margin-right: 15px;
+    color: #aaa;
+    display: inline-block;
+    box-sizing: border-box;
+    width: auto;
+    height: 100%;
+}
+.phone-header-setting-pannel{
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    top: 100px;
+    right: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #aaa, -1px -1px 1px #aaa;
+    z-index: 9;
+}
+.phone-header-setting-pannel ul{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.phone-header-setting-pannel li{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 33%;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+.phone-header-setting-pannel a{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    line-height: 300%;
+}
+/*设置热点新闻的样式*/
+.phone-hot-news{
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    height: 600px;
+    border: 1px solid rgba(230,230,230,.6);
+    box-shadow: 1px 1px 1px 1px #aaa, -1px -1px 1px 1px #aaa;
+}
+.phone-hot-news .phone-header-left{
+    color: #00aa00;
+}
+.phone-news-content{
+    position: relative;
+    width: 90%;
+    height: 60%;
+    box-sizing: border-box;
+    margin: 10px auto;
+}
+.phone-news-content ul{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.phone-news-content li{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    width: 49%;
+    height: 120px;
+
+}
+.phone-news-content li a{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    line-height: 100px;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.phone-news-bottom{
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    border: 1px solid #ccc;
+
+}
+.phone-news-bottom a{
+    display: inline-block;
+    height: 100%;
+    width: 30%;
+    float: right;
+    line-height: 120px;
+    font-size: 38px;
+}
+
+    /*设置位置服务区域的样式*/
+.phone-service{
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    height: 590px;
+    overflow: hidden;
+    border: 1px solid rgba(230,230,230,.6);
+    box-shadow: 1px 0 1px 1px #aaa, -1px -1px 1px 1px #aaa;
+}
+#service-setting{
+    height: 200px;
+
+}
+#service-setting li{
+    height: 50%;
+}
+
+.position-locate{
+    box-sizing: border-box;
+    width: 90%;
+    height: 150px;
+    margin: 10px auto;
+
+}
+.position-locate-text{
+    width: 70%;
+    height: 100%;
+    color: #333;
+    padding: 5px;
+    line-height: 145px;
+    font-size: 36px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.position-locate-btn{
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    top: 24px;
+    font-size: 36px;
+    width: 30%;
+    height: 100px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0;
+
+}
+.position-locate-btn span{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    line-height: 95px;
+
+    float: left;
+    text-align: left;
+}
+.position-locate-btn a{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    color: #333;
+    line-height: 95px;
+    float: left;
+    font-size: 45px;
+    text-align: center;
+}
+
+.phone-service-items{
+    position: relative;
+    box-sizing: border-box;
+    width: 90%;
+    height: 600px;
+    margin: 10px auto;
+}
+.phone-service-items ul{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+}
+.phone-service-items li{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 24.5%;
+    height: 150px;
+    list-style: none;
+}
+.phone-service-items a{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+.phone-service-items .service-text {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    color: #333;
+    text-align: center;
+    font-size: 34px;
+}
+.phone-service-items .service-icon{
+    box-sizing: border-box;
+    width: 40%;
+    height: 50%;
+    margin: 15px auto;
+    border-radius: 50%;
+}
+.phone-service-items li:nth-child(1) .service-icon{
+    background: rgba(200,0,255,.7);
+}
+.phone-service-items li:nth-child(2) .service-icon{
+    background: rgba(200,255,0,.7);
+}
+.phone-service-items li:nth-child(3) .service-icon{
+    background: rgba(0,200,255,.7);
+}
+.phone-service-items li:nth-child(4) .service-icon{
+    background: rgba(150,255,255,.7);
+}
+.phone-service-items li:nth-child(5) .service-icon{
+    background: rgba(250,0,150,.7);
+}
+.phone-service-items li:nth-child(6) .service-icon{
+    background: rgba(20,255,20,.7);
+}
+.phone-service-items li:nth-child(7) .service-icon{
+    background: rgba(255,0,0,.7);
+}
+.phone-service-items li:nth-child(8) .service-icon{
+    background: rgba(0,0,255,.7);
+}
+.phone-service-items li:nth-child(9) .service-icon{
+    background: rgba(255,10,255,.7);
+}
+.phone-service-items li:nth-child(10) .service-icon{
+    background: rgba(255,255,0,.7);
+}
+.phone-service-items li:nth-child(11) .service-icon{
+    background: rgba(250,150,55,.7);
+}
+.phone-service-items li:nth-child(12) .service-icon{
+    background: rgba(200,0,255,.7);
+}.phone-service-items li:nth-child(13) .service-icon{
+     background: rgba(200,0,25,.7);
+ }.phone-service-items li:nth-child(14) .service-icon{
+      background: rgba(20,100,255,.7);
+  }
+
+.show-more-service{
+    display: inline-block;
+    width: 90%;
+    margin-top: -20px;
+    margin-left: 5%;
+    box-sizing: border-box;
+    height: 150px;
+    background: #fff;
+    border: 1px solid rgba(230,230,230,.6);
+    border-top: 0;
+    box-shadow: 1px 1px 1px 1px #aaa, -1px 0 1px 1px #aaa;
+    font-size: 36px;
+
+}
+
+
+
+
+/*内容部分的样式*/
+.phone-box-content{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+}
+
+.phone-hot-site .phone-box-content ul
+{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.phone-hot-site .phone-box-content li{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 100px;
+    width: 24.5%;
+
+}
+.phone-hot-site .phone-box-content a{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    line-height: 100px;
+    text-align: center;
+    color: #aaa;
+}
+
+/*下方的百度设置*/
+.phone-baidu-setting{
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    height: 100px;
+    border: 1px solid rgba(230,230,230,.4);
+    box-shadow: 1px 1px 1px 1px #aaa, -1px -1px 1px 1px #aaa;
+    text-align: center;
+}
+.phone-baidu-setting a{
+    display: inline-block;
+    height: 100px;
+    font-size: 38px;
+    line-height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*底部的按钮*/
+.phone-bottom{
+    position: relative;
+    box-sizing: border-box;
+    margin: 20px auto;
+    width: 90%;
+    height: 150px;
+
+}
+.phone-bottom ul{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 10px auto;
+    width: 100%;
+    height: 100px;
+    padding: 0;
+}
+
+.phone-bottom li{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 49.5%;
+    height: 100px;
+    text-align: center;
+}
+.phone-bottom li a{
+    width: 90%;
+    height: 70px;
+    font-size: 36px;
+    color: #aaa;
+    text-align: center;
+    line-height: 70px;
+    display: inline-block;
+    border: 1px solid #555;
+}
+
+/*最下方的版权文字*/
+.phone-footer{
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 36px;
+    color: #888;
+}
+
+
+
+/*手机页面管理界面*/
+.phone-manager{
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 999;
+}
+.phone-manager-header{
+    position: relative;
+    top: -20px;
+    width: 100%;
+    height: 170px;
+    border-bottom: 1px solid #485567;
+    background-color: #3e4958;
+    text-shadow: 0 1px 0 #313a45;
+}
+.phone-manager-header h1{
+    position: absolute;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 380px;
+    height: 80%;
+    font-size: 58px;
+    line-height: 150px;
+    margin-left: 50%;
+    left: -180px;
+    color: #fff;
+}
+.phone-manager-header a{
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    line-height: 180px;
+    font-size: 52px;
+    color: #ccc;
+    text-align: right;
+
+}
+
+.phone-manager-content{
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 100%;
+}
+.phone-manager-content ul{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.phone-manager-content li{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.phone-manager-toggle{
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    width: 20%;
+    height: 60%;
+    border: 1px solid #ccc;
+    background: #00aa00;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 1px 1px #777;
+}
+.toggle-switch{
+    width: 50%;
+    height: 70%;
+    margin-right: 10%;
+    float: right;
+    margin-top: 10%;
+    border: 1px solid #777;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px 1px #aaa;
+}
+.phone-manager-text{
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    width: 50%;
+
+}
+.phone-manager-text p{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    font-size: 38px;
+    color: #333;
+    margin-left: 5%;
+}
+.phone-manager-text a{
+    margin-right: 10px;
+}
+.phone-manager-text p.up{
+    font-size: 42px;
+    line-height: 180px;
+}

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>初级前端工程师面试题</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+<div class="container">
+    <h2><a id="user-content-html" class="anchor" href="#html" aria-hidden="true"><span
+            class="octicon octicon-link"></span></a><a>HTML</a></h2>
+    <hr>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">对WEB标准以及W3C的理解与认识？</p>
+        </div>
+        <div class="panel-body"><pre>
+    标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性;
+
+</pre>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">XHTML和HTML有什么区别？</p>
+        </div>
+        <div class="panel-body"><pre>
+HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言
+　　最主要的不同：
+　　XHTML 元素必须被正确地嵌套。
+　　XHTML 元素必须被关闭。
+　　标签名必须用小写字母。
+　　XHTML 文档必须拥有根元素。
+</pre>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">前端页面有哪三层构成，分别是什么?作用是什么？</p>
+        </div>
+        <div class="panel-body"><pre>　结构层 HTML 表示层 CSS 行为层 js。
+</pre>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">Doctype作用？标准模式与兼容模式各有什么区别?</p>
+        </div>
+        <div class="panel-body"><pre>
+    （1）、&lt;!DOCTYPE&gt;声明位于位于HTML文档中的第一行，处于 &lt;html&gt;
+    标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。
+
+    （2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,
+    模拟老式浏览器的行为以防止站点无法工作。
+
+</pre>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">HTML5 为什么只需要写 &lt;!DOCTYPE HTML&gt;？</p>
+        </div>
+        <div class="panel-body"><pre>  HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；
+
+    而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</p>
+        </div>
+        <div class="panel-body"><pre> 首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，
+            每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；
+            span默认display属性值为“inline”，是“行内”元素。
+
+    （1）行内元素有：a b span img input select strong（强调的语气）
+    （2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p
+    （3）常见的空元素：
+    &lt;br&gt; &lt;hr&gt; &lt;img&gt; &lt;input&gt; &lt;link&gt; &lt;meta&gt;
+    鲜为人知的是：
+    &lt;area&gt; &lt;base&gt; &lt;col&gt; &lt;command&gt; &lt;embed&gt; &lt;keygen&gt; &lt;param&gt; &lt;source&gt; &lt;track&gt;
+    &lt;wbr&gt;
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">页面导入样式时，使用link和@import有什么区别？</p>
+        </div>
+        <div class="panel-body"><pre>
+        （1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS,定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;
+
+        （2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;
+
+        （3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">介绍一下你对浏览器内核的理解？</p>
+        </div>
+        <div class="panel-body"><pre> 主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。
+
+    渲染引擎：  负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，
+                       然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。
+                       所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。
+
+    JS引擎则：解析和执行javascript来实现网页的动态效果。
+
+    最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">常见的浏览器内核有哪些？</p>
+        </div>
+        <div class="panel-body"><pre> Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]
+    Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等
+    Presto内核：Opera7及以上。 [Opera内核原为：Presto，现为：Blink;]
+    Webkit内核：Safari,Chrome等。 [ Chrome的：Blink（WebKit的分支）]
+  </pre>
+        </div>
+        <div class="panel-footer">
+            <p>详细文章<a href="http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html">浏览器内核的解析和对比
+                - 依水间 </a>
+            </p>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？
+            </p>
+        </div>
+        <div class="panel-body"><pre> * HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
+    绘画 canvas;
+    用于媒介回放的 video 和 audio 元素;
+    本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;
+    sessionStorage 的数据在浏览器关闭后自动删除;
+    语意化更好的内容元素，比如 article、footer、header、nav、section;
+    表单控件，calendar、date、time、email、url、search;
+    新的技术webworker, websockt, Geolocation;
+
+    移除的元素：
+
+    纯表现的元素：basefont，big，center，font, s，strike，tt，u;
+    对可用性产生负面影响的元素：frame，frameset，noframes；
+
+    * 支持HTML5新标签：
+    IE8/IE7/IE6支持通过document.createElement方法产生的标签，
+    可以利用这一特性让这些浏览器支持HTML5新标签，
+    浏览器支持新标签后，还需要添加标签默认的样式。
+
+    当然最好的方式是直接使用成熟的框架、使用最多的是html5shim框架
+    &lt;!--[if lt IE 9]&gt;
+    &lt;script&gt; src="http://html5shim.googlecode.com/svn/trunk/html5.js"&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    * 如何区分： DOCTYPE声明\新增的结构元素\功能元素
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">简述一下你对HTML语义化的理解？</p>
+        </div>
+        <div class="panel-body"><pre> 用正确的标签做正确的事情。
+    html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;
+    及时在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的;
+    搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;
+    使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                HTML5的离线储存怎么使用，工作原理能不能解释一下？</p>
+        </div>
+        <div class="panel-body"><pre>    在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。
+
+    原理：HTML5的离线存储是基于一个新建的.appcache文件的缓存机制(不是存储技术)，
+            通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储了下来。之后当网络在处于离线状态下时，
+            浏览器会通过被离线存储的数据进行页面展示。
+
+
+    如何使用：
+    1、页面头部像下面一样加入一个manifest的属性；
+    2、在cache.manifest文件的编写离线存储的资源；
+    CACHE MANIFEST
+    #v0.11
+    CACHE:
+    js/app.js
+    css/style.css
+    NETWORK:
+    resourse/logo.png
+    FALLBACK:
+    / /offline.html
+    3、在离线状态时，操作window.applicationCache进行需求实现。
+  </pre>
+        </div>
+        <div class="panel-footer">
+            <p>详细的使用请参考：<a href="http://segmentfault.com/a/1190000000732617">有趣的HTML5：离线存储</a>
+            </p>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</p>
+        </div>
+        <div class="panel-body"><pre> 在线的情况下，浏览器发现html头部有manifest属性，
+             它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。离线的情况下，浏览器就直接使用离线存储的资源。
+  </pre>
+        </div>
+        <div class="panel-footer">
+            <p>
+                详细的使用请参考：<a href="http://segmentfault.com/a/1190000000732617">有趣的HTML5：离线存储</a>
+            </p>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">请描述一下 cookies，sessionStorage 和 localStorage 的区别？</p>
+        </div>
+        <div class="panel-body"><pre> cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。
+    cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。
+    sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
+
+
+    存储大小：
+    cookie数据大小不能超过4k。
+    sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。
+
+    有期时间：
+    localStorage 存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；
+    sessionStorage 数据在当前浏览器窗口关闭后自动删除。
+    cookie 设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                iframe有那些缺点？</p>
+        </div>
+        <div class="panel-body"><pre> *iframe会阻塞主页面的Onload事件；
+    *搜索引擎的检索程序无法解读这种页面，不利于SEO;
+
+    *iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+
+    使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript
+    动态给iframe添加src属性值，这样可以可以绕开以上两个问题。
+  </pre>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                你如何对网站的文件和资源进行优化?</p>
+        </div>
+        <div class="panel-body"><pre> 文件合并
+　　文件最小化/文件压缩
+　　使用CDN托管
+　　缓存的使用
+  </pre>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                什么是语义化的HTML?</p>
+        </div>
+        <div class="panel-body"><pre>
+　　直观的认识标签 对于搜索引擎的抓取有好处
+
+  </pre>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                img标签上title与alt属性的区别是什么?</p>
+        </div>
+        <div class="panel-body"><pre>
+　　Alt 当图片不显示是 用文字代表。
+　　Title 为该属性提供信息
+
+
+  </pre>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                Label的作用是什么？是怎么用的？</p>
+        </div>
+        <div class="panel-body"><pre> label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。
+
+    &lt;label for="Name"&gt;Number:&lt;/label&gt; &lt;input type=“text“name="Name" id="Name"/&gt;
+
+    &lt;label&gt;Date:&lt;input type="text" name="B" /&gt;&lt;/label&gt;
+  </pre>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                HTML5的form如何关闭自动完成功能？</p>
+        </div>
+        <div class="panel-body"><pre> 给不想要提示的 form 或下某个input 设置为 autocomplete=off。
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">请描述一下 cookies，sessionStorage 和 localStorage 的区别？</p>
+        </div>
+        <div class="panel-body"><pre> cookie在浏览器和服务器间来回传递。 sessionStorage和localStorage不会
+    sessionStorage和localStorage的存储空间更大；
+    sessionStorage和localStorage有更多丰富易用的接口；
+    sessionStorage和localStorage各自独立的存储空间；
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                如何实现浏览器内多个标签页之间的通信? (阿里)</p>
+        </div>
+        <div class="panel-body"><pre> 调用localstorge、cookies等本地存储方式
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                webSocket如何兼容低浏览器？(阿里)</p>
+        </div>
+        <div class="panel-body"><pre> Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、
+            基于 multipart 编码发送 XHR 、 基于长轮询的 XHR
+  </pre>
+        </div>
+    </div>
+    <h2><a></span></a><a name="user-content-css">CSS</a></h2>
+    <hr>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">CSS的基本语句构成是？</p>
+        </div>
+        <div class="panel-body"><pre> （选择器{属性1:值1;属性2:值2;……}
+  </pre>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">介绍一下CSS的盒子模型？</p>
+        </div>
+        <div class="panel-body"><pre> （1）有两种， IE 盒子模型、标准 W3C 盒子模型；IE的content部分包含了 border 和 pading;
+
+    （2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border).
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？</p>
+        </div>
+        <div class="panel-body"><pre> *   1.id选择器（ # myid）
+    2.类选择器（.myclassname）
+    3.标签选择器（div, h1, p）
+    4.相邻选择器（h1 + p）
+    5.子选择器（ul &gt; li）
+    6.后代选择器（li a）
+    7.通配符选择器（ * ）
+    8.属性选择器（a[rel = "external"]）
+    9.伪类选择器（a: hover, li: nth - child）
+
+    *   可继承的样式： font-size font-family color, UL LI DL DD DT;
+
+    *   不可继承的样式：border padding margin width height ;
+
+    *   优先级就近原则，同权重情况下样式定义最近者为准;
+
+    *   载入样式以最后载入的定位为准;
+  </pre>
+        </div>
+        <div class="panel-heading">
+            <p class="panel-title">优先级为:</p>
+        </div>
+        <div class="panel-body"><pre>    !important &gt;  id &gt; class &gt; tag
+
+    important 比 内联优先级高
+  </pre>
+        </div>
+        <div class="panel-heading">
+            <p class="panel-title">CSS3新增伪类举例：</p>
+        </div>
+        <div class="panel-body"><pre> p:first-of-type 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+    p:last-of-type  选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+    p:only-of-type  选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+    p:only-child    选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。
+    p:nth-child(2)  选择属于其父元素的第二个子元素的每个 &lt;p&gt; 元素。
+    :enabled  :disabled 控制表单控件的禁用状态。
+    :checked        单选框或复选框被选中。
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">如何居中div？如何居中一个浮动元素？</p>
+        </div>
+        <ul>
+
+            <li>
+                给div设置一个宽度，然后添加margin:0 auto属性
+            </li>
+            <div class="panel-body">
+                    <pre>
+                    div{
+                        width:200px;
+                         margin:0 auto;
+                    }
+                </pre>
+            </div>
+            <li>居中一个浮动元素</li>
+            <div class="panel-body">
+                    <pre>   确定容器的宽高 宽500 高 300 的层设置层的外边距
+
+                      .div {
+                             Width:500px ; height:300px;//高度可以不设
+                             Margin: -150px 0 0 -250px;
+                             position:relative;相对定位
+                             background-color:pink;//方便看效果
+                             left:50%;
+                             top:50%;
+                             }
+                </pre>
+            </div>
+        </ul>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                列出display的值，说明他们的作用。position的值， relative和absolute定位原点是？</p>
+        </div>
+        <div class="panel-body"><pre>   1.
+    block 象块类型元素一样显示。
+    none 缺省值。象行内元素类型一样显示。
+    inline-block 象行内元素一样显示，但其内容象块类型元素一样显示。
+    list-item 象块类型元素一样显示，并添加样式列表标记。
+
+    2.
+    *absolute
+    生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+
+    *fixed （老IE不支持）
+    生成绝对定位的元素，相对于浏览器窗口进行定位。
+
+    *relative
+    生成相对定位的元素，相对于其正常位置进行定位。
+
+    * static  默认值。没有定位，元素出现在正常的流中
+    *（忽略 top, bottom, left, right z-index 声明）。
+
+    * inherit 规定从父元素继承 position 属性的值。
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">CSS3有哪些新特性？</p>
+        </div>
+        <div class="panel-body"><pre>   CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px），
+    对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+    transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜
+    增加了更多的CSS选择器  多背景 rgba
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">一个满屏 品 字布局 如何设计?
+            </p>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">常见兼容性问题？</p>
+        </div>
+        <div class="panel-body"><pre> * png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.
+
+    * 浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。
+
+    * IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。
+
+    浮动ie产生的双倍距离 #box{ float:left; width:10px; margin:0 0 0 100px;}
+
+    这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——_display:inline;将其转化为行内属性。
+            (_这个符号只有ie6会识别)
+
+    渐进识别的方式，从总体中逐渐排除局部。
+
+    首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。
+    接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。
+
+    css
+    .bb{
+    background-color:#f1ee18;/*所有识别*/
+    .background-color:#00deff\9; /*IE6、7、8识别*/
+    +background-color:#a200ff;/*IE6、7识别*/
+    _background-color:#1e0bd1;/*IE6识别*/
+    }
+
+    *  IE下,可以使用获取常规属性的方法来获取自定义属性,
+    也可以使用getAttribute()获取自定义属性;
+    Firefox下,只能使用getAttribute()获取自定义属性.
+    解决方法:统一通过getAttribute()获取自定义属性.
+
+    * IE下,even对象有x,y属性,但是没有pageX,pageY属性;
+    Firefox下,event对象有pageX,pageY属性,但是没有x,y属性.
+
+    * 解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。
+
+    * Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,
+    可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决.
+
+    超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序:
+    L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}
+  </pre>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                写出几种IE6 BUG的解决方法</p>
+        </div>
+        <div class="panel-body"><pre>       1.双边距BUG float引起的 使用display
+　　2.3像素问题 使用float引起的 使用dislpay:inline -3px
+　　3.超链接hover 点击后失效 使用正确的书写顺序 link visited hover active
+　　4.Ie z-index问题 给父级添加position:relative
+　　5.Png 透明 使用js代码 改
+　　6.Min-height 最小高度 !Important 解决’
+　　7.select 在ie6下遮盖 使用iframe嵌套
+　　8.为什么没有办法定义1px左右的宽度容器(IE6默认的行高造成的，使用over:hidden,zoom:0.08 line-height:1px)
+　　9.ie 6 不支持!important
+  </pre>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                描述css reset的作用和用途</p>
+        </div>
+        <div class="panel-body"><pre> - 　Reset重置浏览器的css默认属性 浏览器的品种不同，样式不同，然后重置，让他们统一
+  </pre>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                解释css sprites，如何使用。</p>
+        </div>
+        <div class="panel-body"><pre> Css 精灵 把一堆小的图片整合到一张大的图片上，减轻服务器对图片的请求数量
+  </pre>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                为什么要初始化CSS样式。</p>
+        </div>
+        <div class="panel-body"><pre> - 因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，
+            如果没对CSS初始化往往会出现浏览器之间的页面显示差异。
+
+    - 当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。
+
+    *最简单的初始化方法就是： * {padding: 0; margin: 0;} （不建议）
+
+    淘宝的样式初始化：
+    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+    body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+    h1, h2, h3, h4, h5, h6{ font-size:100%; }
+    address, cite, dfn, em, var { font-style:normal; }
+    code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+    small{ font-size:12px; }
+    ul, ol { list-style:none; }
+    a { text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    sup { vertical-align:text-top; }
+    sub{ vertical-align:text-bottom; }
+    legend { color:#000; }
+    fieldset, img { border:0; }
+    button, input, select, textarea { font-size:100%; }
+    table { border-collapse:collapse; border-spacing:0; }
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                absolute的containing block计算方式跟正常流有什么不同？</p>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                position跟display、margin collapse、overflow、float这些特性相互叠加后会怎么样？
+            </p>
+        </div>
+        <div class="panel-footer">详细请看
+            <a href="http://www.cnblogs.com/jackyWHJ/p/3756087.html">'display'、'position' 和 'float' 的相互关系</a></div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">对BFC规范的理解？</p>
+        </div>
+        <div class="panel-body"><pre> （W3C CSS 2.1 规范中的一个概念,
+            它决定了元素如何对其内容进行定位,以及与其他元素的关 系和相互作用。）
+  </pre>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">css定义的权重</p>
+        </div>
+        <div class="panel-body"><pre> 以下是权重的规则：
+            标签的权重为1，class的权重为10，id的权重为100，以下例子是演示各种定义的权重值：
+
+    /*权重为1*/
+    div{
+    }
+    /*权重为10*/
+    .class1{
+    }
+    /*权重为100*/
+    #id1{
+    }
+    /*权重为100+1=101*/
+    #id1 div{
+    }
+    /*权重为10+1=11*/
+    .class1 div{
+    }
+    /*权重为10+10+1=21*/
+    .class1 .class2 div{
+    }
+
+    如果权重相同，则最后定义的样式会起作用，但是应该避免这种情况出现
+  </pre>
+        </div>
+    </div>
+    <div class="panel-primary panel">
+        <div class="panel-heading">
+            <p class="panel-title">
+                解释下浮动和它的工作原理？清除浮动的技巧</p>
+        </div>
+        <div class="panel-footer">
+            详情请看
+            <a href="http://snailsky.me/2014/08/20/%E6%B5%AE%E5%8A%A8%E5%92%8C%E5%AE%83%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%9F%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%8A%80%E5%B7%A7%EF%BC%9F/">【CSS】浮动和它的工作原理？清除浮动的技巧？</a>
+        </div>
+    </div>
+
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                用过媒体查询，针对移动端的布局吗？</p>
+
+        </div>
+
+        <div class="panel-body"><pre>   通过媒体查询可以为不同大小和尺寸的媒体定义不同的css，适合相应的设备显示；即响应式布局
+
+            @media screen and (min-width: 400px) and (max-width: 700px) { … }
+            @media handheld and (min-width: 20em), screen and (min-width: 20em) { … }
+  </pre>
+        </div>
+    </div>
+
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">使用 CSS 预处理器吗？喜欢那个？
+            </p>
+        </div>
+        <div class="panel-body"><pre>CSS 预处理器是什么？一般来说，它们基于 CSS 扩展了一套属于自己的 DSL，来解决我们书写 CSS 时难以解决的问题：
+
+语法不够强大，比如无法嵌套书写导致模块化开发中需要书写很多重复的选择器；
+没有变量和合理的样式复用机制，使得逻辑上相关的属性值必须以字面量的形式重复输出，导致难以维护。
+所以这就决定了 CSS 预处理器的主要目标：提供 CSS 缺失的样式层复用机制、减少冗余代码，提高样式代码的可维护性。这不是锦上添花，而恰恰是雪中送炭。
+
+  </pre>
+
+        </div>
+        <div class="panel-footer">详情请看<a href="http://efe.baidu.com/blog/revisiting-css-preprocessors/">再谈 CSS 预处理器</a></div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                如果需要手动写动画，你认为最小时间间隔是多久，为什么？（阿里）</p>
+        </div>
+        <div class="panel-body"><pre> 多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔为1/60＊1000ms ＝ 16.7ms
+  </pre>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                css hack
+            </p>
+        </div>
+        <div class="panel-body"><pre> _marging \\IE 6
+　　+margin \\IE 7
+　　Marging:0 auto \9 所有Ie
+　　Margin \0 \\IE 8
+
+  </pre>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p class="panel-title">
+                display:inline-block 什么时候会显示间隙？(携程)
+            </p>
+        </div>
+        <div class="panel-body"><pre> 移除空格、使用margin负值、使用font-size:0、letter-spacing、word-spacing
+  </pre>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

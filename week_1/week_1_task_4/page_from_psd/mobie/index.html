@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--药品电商手机网站，兼容最低480p像素的手机，在720p以上的设备运行状况较好-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--设置初始宽度，禁止屏幕缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--引入css进行一些初始化的工作-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <title></title>
+    <!--引入自己写的css文件-->
+    <link type="text/css" rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<!--将所有内容包裹在container容器里面-->
+<div class="container">
+    <!--开始头部-->
+    <header>
+        <!--头部宣传广告-->
+        <div class="header-banner">
+            <div class="img-box">
+                <img src="images/sliderbanner.png">
+                <!--宣传广告导航按钮-->
+                <div class="slider-nav">
+                    <ul>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--顶部工具条-->
+            <div class="top-bar">
+                <div class="top-bar-content">
+                    <!--选择分类按键-->
+                    <a class="classify">
+                        <img src="images/classify.png">
+                    </a>
+                    <!--搜索框-->
+                    <div class="search">
+                        <input type="text" name="search-products" id="search-products" placeholder="输入搜索关键词">
+                        <img src="images/search.png" alt="search">
+                    </div>
+                    <!--购物车按钮-->
+                    <a href="#" class="cart">
+                        <img src="images/cart.png" alt="购物车">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--产品分类选择区域-->
+    <div class="subjects">
+        <div class="subjects-content">
+            <!--第一个分类-->
+            <div class="subjects-item item-a">
+                <div class="subject-img">
+                    <img src="images/subjectA.png" alt="中西药">
+                </div>
+                <div class="subject-name">中西药</div>
+                <a href="#"></a>
+            </div>
+            <!--第二个分类-->
+            <div class="subjects-item item-b">
+                <div class="subject-img">
+                    <img src="images/subjectB.png" alt="儿童用药">
+                </div>
+                <div class="subject-name">儿科用药</div>
+                <a href="#"></a>
+            </div>
+            <!--第三个分类-->
+            <div class="subjects-item item-c">
+                <div class="subject-img">
+                    <img src="images/subjectC.png" alt="皮肤用药">
+                </div>
+                <div class="subject-name">皮肤用药</div>
+                <a href="#"></a>
+            </div>
+            <!--第四个分类-->
+            <div class="subjects-item item-d">
+                <div class="subject-img">
+                    <img src="images/subjectD.png" alt="医疗器械">
+                </div>
+                <div class="subject-name">医疗器械</div>
+                <a href="#"></a>
+            </div>
+            <!--第二行开始-->
+            <!--第五个分类-->
+            <div class="subjects-item item-e">
+                <div class="subject-img">
+                    <img src="images/subjectE.png" alt="养生保健">
+                </div>
+                <div class="subject-name">养生保健</div>
+                <a href="#"></a>
+            </div>
+            <!--第六个分类-->
+            <div class="subjects-item item-f">
+                <div class="subject-img">
+                    <img src="images/subjectF.png" alt="隐形眼镜">
+                </div>
+                <div class="subject-name">隐形眼镜</div>
+                <a href="#"></a>
+            </div>
+            <!--第七个分类-->
+            <div class="subjects-item item-g">
+                <div class="subject-img">
+                    <img src="images/subjectG.png" alt="美容护肤">
+                </div>
+                <div class="subject-name">美容护肤</div>
+                <a href="#"></a>
+            </div>
+            <!--第八个分类-->
+            <div class="subjects-item item-h">
+                <div class="subject-img">
+                    <img src="images/subjectH.png" alt="成人用品">
+                </div>
+                <div class="subject-name">成人用品</div>
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+
+    <!--促销商品区域-->
+    <div class="promotion">
+        <div class="promotion-content">
+            <!--促销活动标题-->
+            <div class="box-title">
+                <div class="deco-box"></div>
+                <span>全网最低价</span>
+            </div>
+            <!--左边商品区域-->
+            <div class="box-left">
+                <div class="box-text">
+                    【力魂】灵芝益寿胶囊 <br>
+                    <span class="red-text">￥8.99</span>
+                </div>
+                <div class="box-img">
+                    <img src="images/promotion1.png" alt="【资美堂】胶原蛋白粉">
+                </div>
+                <!--产品链接-->
+                <a></a>
+            </div>
+
+            <!--右边产品区域-->
+            <div class="box-right">
+                <!--右边上方产品-->
+                <div class="box-right-up">
+                    <div class="box-text">
+                        【永安康健】 <br>
+                        玛咖<br>
+                        <span class="red-text">￥119.80</span>
+                    </div>
+                    <div class="box-img">
+                        <img src="images/promotion3.png">
+                    </div>
+                    <!--产品链接-->
+                    <a></a>
+                </div>
+                <!--右边下方产品-->
+                <div class="box-right-down">
+                    <div class="box-img">
+                        <img src="images/promotion2.png" alt="马上订购">
+                    </div>
+                    <div class="box-text">
+                        【金奥力】<br>蜂胶胶囊 <br>
+                        <span class="red-text">￥138.00</span>
+                    </div>
+                    <!--产品链接-->
+                    <a></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--第一个广告栏-->
+    <div class="center-banner-a">
+        <div class="center-banner-a-content">
+            <a><img src="images/centerbanner.png"></a>
+
+        </div>
+    </div>
+
+    <!--推荐产品区域-->
+    <div class="recommend">
+        <div class="recommend-content">
+            <!--推荐产品活动标题-->
+            <div class="box-title">
+                <div class="deco-box"></div>
+                <span>答谢恩师</span>
+            </div>
+            <!--左边产品展示区域-->
+            <div class="box-left">
+                <!--左边上方产品区域-->
+                <div class="box-left-up">
+                    <div class="box-text">
+                <span>
+                    【恒诚】
+                    <br>跌打榜药酒
+                    <p class="red-text">￥13.80</p>
+                </span>
+                    </div>
+
+                    <div class="box-img">
+                        <img src="images/recommendb.png" alt="马上订购">
+                    </div>
+                    <!--产品链接-->
+                    <a></a>
+                </div>
+                <!--左边下方产品展示-->
+                <div class="box-left-down">
+                    <div class="box-text">
+                <span>
+                    【万通】
+                    <br>颈痛灵药酒
+                    <p class="red-text">￥25.00</p>
+                </span>
+                    </div>
+                    <div class="box-img">
+                        <img src="images/recommenda.png" alt="马上订购">
+                    </div>
+                    <!--产品链接-->
+                    <a></a>
+                </div>
+            </div>
+            <!--右边产品展示区域-->
+            <div class="box-right">
+                <div class="box-text">
+                <span>
+                    鸿茅药酒（500ml）
+                    <p class="red-text">￥196.00</p>
+                </span>
+                </div>
+
+                <div class="box-img">
+                    <img src="images/recommendc.png" alt="马上订购">
+                </div>
+                <!--产品链接-->
+                <a></a>
+            </div>
+        </div>
+    </div>
+
+    <!--第二个广告栏-->
+    <div class="center-banner-b">
+        <div class="center-banner-b-content">
+            <a>
+                <img src="images/banner2.png">
+            </a>
+        </div>
+    </div>
+
+    <!--化妆品展示区域-->
+    <div class="cosmetics">
+        <!--菜单栏底部白色背景部分-->
+        <div class="cosmetic-bottom"></div>
+        <div class="cosmetics-content">
+            <!--化妆品区域标题-->
+            <div class="box-title">
+                <div class="deco-box"></div>
+                <span>美美哒</span>
+            </div>
+            <!--右边产品展示区域-->
+            <div class="box-left">
+                <div class="box-text">
+                    【姿美堂】胶原蛋白粉 <br>
+                    <span class="red-text">￥89.00</span>
+                </div>
+                <div class="box-img">
+                    <img src="images/cosmetic1.png" alt="【资美堂】胶原蛋白粉">
+                </div>
+                <!--产品链接-->
+                <a></a>
+            </div>
+            <!--右边产品展示-->
+            <div class="box-right">
+                <!--右上方产品-->
+                <div class="box-right-up">
+                    <div class="box-text">
+                        新加坡DRC蛋白蚕丝精华液 <br>
+                        <span class="red-text">￥15.80</span>
+                    </div>
+                    <div class="box-img">
+                        <img src="images/cosmetic2.png">
+                    </div>
+                    <!--产品链接-->
+                    <a></a>
+                </div>
+                <!--右下方产品-->
+                <div class="box-right-down">
+                    <div class="box-img">
+                        <img src="images/cosmetic3.png" alt="马上订购">
+                    </div>
+                    <div class="box-text">
+                        【爱美得】大眼睛睫毛膏 <br>
+                        <span class="red-text">￥36.00</span>
+                    </div>
+                    <!--产品链接-->
+                    <a></a>
+                </div>
+            </div>
+
+            <!--展示区域底部的菜单栏按钮-->
+            <div class="nav-btn">
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+
+    <!--开始底部-->
+    <footer>
+        <!--底部最上方-->
+        <div class="footer-line footer-first-line">
+            <div class="footer-content">
+                <ul>
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">回首页
+                        <img src="images/home.png" class="home">
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <!--底部第二条工具栏-->
+        <div class="footer-line footer-second-line">
+            <div class="footer-content">
+                <ul>
+                    <li><a href="#">触屏版</a></li>
+                    <li><a href="#">电脑板</a></li>
+                    <li><a href="#">APP版</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--底部第三条工具栏-->
+        <div class="footer-line footer-thrid-line">
+            <div class="footer-content">
+                <img src="images/footerleft.png" class="footer-left">
+                正规药店
+                <img src="images/footercenter.png" class="footer-center">
+                提供发票
+                <img src="images/footerright.png" class="footer-right">
+                七天退货
+            </div>
+        </div>
+        <!--最下方联系电话-->
+        <div class="footer-line footer-last-line">
+            <div class="footer-content">
+                <a href="#" class="tel">
+                    咨询电话：400-7579-818
+                </a>
+            </div>
+        </div>
+
+    </footer>
+</div>
+</div>
+</body>
+</html>

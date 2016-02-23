@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8">
+
+    <!--[ifltIE9]>
+    <script type="text/javascript" src="script/html5shiv.js"></script>
+    <![endif]-->
+
+    <title>My Baidu Home</title>
+    <script type="text/javascript" src="Resource/jquery-2.1.4.min%20.js"></script>
+    <script type="text/javascript" src="Resource/index.js"></script>
+    <!--通过媒体内容来控制电脑端和手机端-->
+    <!--使用media-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen and (min-device-width:720px)">
+    <link rel="stylesheet" type="text/css" href="css/styleMobie.css" media="screen and (max-device-width:720px)">
+
+</head>
+<body>
+<div class="wrapper">
+    <!--设置面板-->
+    <div class="setting-pannel">
+        <ul>
+            <li><a href="#">搜索设置</a></li>
+            <li><a href="#">高级搜索</a></li>
+            <li><a href="#">关闭预测</a></li>
+            <li><a href="#">搜索历史</a></li>
+        </ul>
+    </div>
+
+    <div class="more-items">
+        <div class="more-items-title">
+            更多产品
+        </div>
+        <div class="more-items-list">
+            <ul>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">音乐</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">图片</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">知道</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">文库</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">风云榜</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="items-img-box"></div>
+                    <div class="text-box">百度推广</div>
+                </a></li>
+            </ul>
+        </div>
+        <div class="more-items-bottom">
+            全部产品<br>
+            >>
+        </div>
+    </div>
+    <!--导航栏-->
+    <div id="u1">
+        <a href="http://news.baidu.com/">新闻</a>
+        <a href="http://www.hao123.com">hao123</a>
+        <a href="http://map.baidu.com/">地图</a>
+        <a href="http://v.baidu.com">视频</a>
+        <a href="http://tieba.baidu.com">贴吧</a>
+        <a id="login" class="lb"><b>登录</b></a>
+        <a id="setting" class="lb">设置</a>
+        <a class="products" id="more-products" href="https://www.baidu.com/more/">更多产品</a>
+    </div>
+    <div class="s_form_wrapper">
+        <div class="img-box">
+            <img src="Resource/bdlogo.png" alt="百度的logo" title="百度一下，你就知道"
+                 name="baidu-logo" id="logo"
+                 width="270" height="129">
+        </div>
+
+        <!--利用get方法可以实现简单的搜索-->
+        <div class="search-form">
+            <form action="http://www.baidu.com/s" method="get">
+        <span class="input-span">
+        <input type="text" name="wd" id="wd" autofocus="autofocus">
+        </span>
+        <span class="submit-span">
+        <input type="submit" value="百度一下" title="百度一下，你就知道" id="for-search">
+        </span>
+            </form>
+        </div>
+    </div>
+
+    <!--底部标签-->
+    <div class="footer">
+        <p class="up">
+            <a href="https://www.baidu.com/cache/sethelp/help.html">
+                把百度设为主页
+            </a>
+            <a href="http://home.baidu.com/">
+                关于百度
+            </a>
+            <a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-homeprofile">
+                About Baidu
+            </a>
+        </p>
+        <span id="declaration">
+            ©2015 Baidu
+            <a href="http://www.baidu.com/duty">使用百度前必读</a>
+            <a href="http://jianyi.baidu.com">意见反馈</a>
+            京ICP证030173号</span>
+        <i class="c-icon-icrlogo"></i>
+
+        </divfooter>
+    </div>
+</div>
+
+
+<!--开始定义手机端页面-->
+<div class="phone-container">
+    <div class="phone-header">
+        <div class="phone-login">
+            <a href="#" class="glyphicon glyphicon-user"></a>
+        </div>
+    </div>
+    <div class="phone-logo-box">
+        <img src="Resource/bdlogo.png" alt="百度一下，你就知道" style="width: 70%"/>
+    </div>
+    <div class="phone-search-box">
+        <form action="http://wap.baidu.com" class="phone-search">
+            <div class="phone-search-input">
+                <input type="text" name="search">
+                <a href="#" class="phone-speaker"></a>
+            </div>
+            <input type="submit" value="百度一下" class="phone-submit">
+        </form>
+    </div>
+
+    <!--百度搜所服务列表-->
+    <div class="phone-nav">
+        <ul>
+            <li>
+                <a href="#" class="glyphicon glyphicon-list-alt"></a>
+
+                <div class="phone-nav-text">新闻</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-book"></a>
+
+                <div class="phone-nav-text">小说</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-hd-video"></a>
+
+                <div class="phone-nav-text">视频</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-plus"></a>
+
+                <div class="phone-nav-text">生活+</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-map-marker"></a>
+
+                <div class="phone-nav-text">地图</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-menu-down" id="phone-more"></a>
+
+                <div class="phone-nav-text" >更多</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-comment"></a>
+
+                <div class="phone-nav-text">贴吧</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-picture"></a>
+
+                <div class="phone-nav-text">图片</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-eye-open"></a>
+
+                <div class="phone-nav-text">网址</div>
+            </li>
+            <li>
+                <a href="#" class="glyphicon glyphicon-globe"></a>
+
+                <div class="phone-nav-text">推广</div>
+            </li>
+        </ul>
+    </div>
+
+
+<!--常用网页部分-->
+    <div class="phone-hot-site">
+        <div class="phone-box-header">
+            <a href="" class="phone-header-left glyphicon glyphicon-globe"></a> 常用网址
+            <a class="phone-header-right glyphicon glyphicon-option-vertical" id="hot-site-right"></a>
+        </div>
+        <div class="phone-header-setting-pannel" id="hot-site-setting">
+            <ul>
+                <li><a href="#">编辑</a></li>
+                <li><a href="#">置顶</a></li>
+                <li><a href="#">关闭</a></li>
+            </ul>
+        </div>
+        <div class="phone-box-content">
+            <ul>
+                <li><a href="#">贴吧</a></li>
+                <li><a href="#">hao123</a></li>
+                <li><a href="#">地图</a></li>
+                <li><a href="#">百度...</a></li>
+                <li><a href="#">图片</a></li>
+                <li><a href="#">音乐</a></li>
+                <li><a href="#">糯米</a></li>
+                <li><a href="#" class="glyphicon glyphicon-plus"></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--热点新闻区域-->
+    <div class="phone-hot-news">
+        <div class="phone-box-header">
+            <a href="" class="phone-header-left glyphicon glyphicon-duplicate"></a> 热点新闻
+            <a class="phone-header-right glyphicon glyphicon-option-vertical" id="hot-news-right"></a>
+        </div>
+        <div class="phone-news-content">
+            <ul>
+                <li><a href="#">热点新闻热点新闻</a></li>
+                <li><a href="#">热点新闻热点新闻</a></li>
+                <li><a href="#">热点新闻热点新闻</a></li>
+                <li><a href="#">热点新闻热点新闻</a></li>
+                <li><a href="#">热点新闻热点新闻</a></li>
+                <li><a href="#">热点新闻热点新闻</a></li>
+            </ul>
+        </div>
+        <div class="phone-news-bottom">
+            <a href="">
+                百度风云榜 >
+            </a>
+        </div>
+    </div>
+
+    <!--地址服务的区域-->
+    <div class="phone-service">
+        <div class="phone-box-header">
+            <a href="" class="phone-header-left glyphicon glyphicon-map-marker"></a> 生活服务
+            <a class="phone-header-right glyphicon glyphicon-option-vertical" id="service-right"></a>
+        </div>
+        <div class="phone-header-setting-pannel" id="service-setting">
+            <ul>
+                <li><a href="#">置顶</a></li>
+                <li><a href="#">关闭</a></li>
+            </ul>
+        </div>
+        <div class="position-locate">
+            <div class="position-locate-text">
+                点击按钮获取您的位置信息
+            </div>
+            <button class="position-locate-btn"><a class="glyphicon glyphicon-screenshot"></a>
+                <span class="position-text">定位</span>
+                </button>
+        </div>
+
+        <div class="phone-service-items">
+            <ul>
+                <li><a href="#">
+                    <div class="service-icon"></div>
+                    <div class="service-text">电影</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">团购</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">外卖</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">打车</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">酒店</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">美食</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">KTV</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">银行</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">飞机票</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">火车票</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">汽车票</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">公交站</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">旅行</div>
+                </a></li>
+                <li><a href="">
+                    <div class="service-icon"></div>
+                    <div class="service-text">挂号</div>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <button class="show-more-service">
+        展开全部
+    </button>
+    <!--百度设置部分-->
+    <div class="phone-baidu-setting">
+        <a href="" class="glyphicon glyphicon-cog"></a>
+        <a id="into-phone-manager" href="#top">管理我的百度首页</a>
+    </div>
+    <div class="phone-bottom">
+        <ul>
+            <li><a href="">极速版</a></li>
+            <li><a href="">用户反馈</a></li>
+        </ul>
+    </div>
+    <!--底部版权声明-->
+    <div class="phone-footer">
+        使用百度前必读&nbspBaidu&nbsp京ICP证030173号
+    </div>
+
+    <!--手机管理界面-->
+    <div class="phone-manager">
+        <div class="phone-manager-header">
+            <a id="manager-back" name="top" class="glyphicon glyphicon-menu-left"></a>
+            <h1>管理我的首页</h1>
+        </div>
+        <div class="phone-manager-content">
+            <ul>
+                <li>
+                    <div class="phone-manager-text">
+                        <p class="up"><a class="glyphicon glyphicon-globe"></a>常用网址</p>
+                        <p class="down">常用网址一触即达</p>
+                    </div>
+                    <a class="phone-manager-toggle toggle-1">
+                        <div class="toggle-switch switch-1"></div>
+                    </a>
+                </li>
+                <li>
+                    <div class="phone-manager-text">
+                        <p class="up"><a class="glyphicon glyphicon-duplicate"></a>时事热点</p>
+                        <p class="down">实时资讯随时掌握</p>
+                    </div>
+                    <a class="phone-manager-toggle toggle-2">
+                        <div class="toggle-switch switch-2"></div>
+                    </a>
+                </li>
+                <li>
+                    <div class="phone-manager-text">
+                        <p class="up"><a class="glyphicon glyphicon-map-marker"></a>生活服务</p>
+                        <p class="down">随时随地吃喝玩乐</p>
+                    </div>
+                    <a class="phone-manager-toggle toggle-3">
+                        <div class="toggle-switch switch-3"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

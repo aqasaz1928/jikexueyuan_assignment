@@ -13,6 +13,10 @@ week_1:
 		baidu_for_ie6,
 		swing_layout
 	task_4:
+		baidu_advance,
+		bootstrap_dashboard,
+		page_from_psd,
+		web_interview
 	
 week_2:
 	task_1:

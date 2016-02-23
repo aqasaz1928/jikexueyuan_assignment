@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--登录界面-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Login My DashBoard</title>
+</head>
+<body>
+<header>
+    <div class="navbar navbar-inverse">
+        <h1>用户登录界面</h1>
+    </div>
+</header>
+<!--主题容器-->
+<div class="container">
+    <!--登录界面对话框-->
+    <div class="login-content">
+
+    <form action="index.html" method="post">
+        <div class="form-group">
+            <label for="user-name">用户名：</label>
+            <input type="text" class="form-control" id="user-name" placeholder="请输入您的用户名"
+                    required>
+        </div>
+        <div class="form-group">
+            <label for="user-password">密码：</label>
+            <input type="password" class="form-control" id="user-password" placeholder="密码"
+                    required>
+        </div>
+        <div class="checkbox checkbox-inline">
+            <label>
+                <input type="checkbox" id="check-remenmber-me">记住我
+            </label>
+        </div>
+        <button type="submit" id="submit-btn" class="btn btn-primary btn-lg">Submit</button>
+    </form>
+    </div>
+</div>
+
+</body>
+</html>

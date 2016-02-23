@@ -1,0 +1,854 @@
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 240, 240, .95);
+    /*设定文档宽高和背景颜色*/
+}
+
+ul, li {
+    /*清除列表的样式*/
+    padding: 0;
+    margin: 0;
+}
+
+.top-bar {
+    /*将顶部工具栏设为固定*/
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    background: url("../images/topbarbackground.png") repeat-x;
+    background-size: 100%; /*顶部工具栏背景图片*/
+    z-index: 999; /*顶部工具栏始终保持最前端显示*/
+}
+
+.top-bar-content {
+    width: 100%;
+    height:50px;
+    margin: 0 auto;
+    text-align: center;
+    /*设定最低和最大宽度，使其兼容480到1080不同分辨率的移动设备*/
+}
+
+header {
+    position: relative;
+    width: 100%;
+
+}
+
+/*定义头部分类导航按钮样式*/
+a.classify {
+    position: relative;
+    display: inline-block;
+    top: 10%;
+    margin-right: 10px;
+
+}
+a.classify img{
+    width: 70%;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:hover {
+    /*通过透明度改编的提示按钮*/
+    opacity: .7;
+}
+
+div.search{
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    width: 60%;
+    padding: 0;
+    border-radius: 5% 5% 5% 5%;
+    background: #fff;
+
+}
+/*设定搜索输入框样式*/
+input#search-products {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    border: 0;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%; /*输入框长度为整体的60%，将根据设备不同而变化*/
+
+}
+.search img{
+    float: right;
+    position: relative;
+    top: 10%;
+    right: 5%;
+    box-sizing: border-box;
+    display: inline-block;
+    max-height: 80% !important;
+
+}
+
+
+/*购物车图表样式*/
+
+a.cart {
+    position: relative;
+    display: inline-block;
+    top: -10%;
+    margin-left: 5px;
+
+}
+a.cart img{
+    width: 70%;
+}
+
+/*头部广告横幅切换按钮*/
+.slider-nav {
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    bottom: 10%;
+    right: 5%;
+
+}
+
+.slider-nav ul {
+    position: relative;
+    padding-left: 5%;
+}
+
+.slider-nav ul li {
+    display: inline;
+    float: left;
+    margin-left: 5%;
+
+}
+
+/*设置每个切换按钮样式*/
+.slider-nav ul li a {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+/*第一个切换按钮为已选样式*/
+.slider-nav ul li:first-child a {
+    background: #fff;
+}
+
+/*头部横幅样式*/
+.header-banner {
+    position: relative;
+    text-align: center;
+}
+
+.header-banner .img-box img {
+    position: relative;
+    width: 100%;
+
+}
+
+
+/*开始设置分类浏览按钮区域的样式*/
+.subjects {
+    width: 100%;
+
+}
+
+.subjects-content {
+    position: relative;
+    width: 98%;
+    height: 300px;
+    margin: 10px auto;
+    background: #fff;
+}
+
+
+.img-box {
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/*分类浏览图标*/
+.subjects-item {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    height: 150px;
+    text-align: center;
+}
+
+.subjects-item :hover {
+    opacity: .7;
+
+}
+
+/*分类名称字体设置*/
+.subjects-item .subject-name{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    color: #000;
+    font-family: "Microsoft Yahei" !important;
+
+}
+.subjects-item .subject-img{
+    position: relative;
+    top: 5px;
+    height: 70%;
+    width: 100%;
+}
+.subjects-item .subject-img img{
+    height: 80%;
+    max-width: 90%;
+    max-height: 90%;
+}
+/*分类图标背景设置*/
+.subjects-item a {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.subjects-item a:hover{
+    background: #8888ff;
+    opacity: .2;
+}
+
+
+
+/*开始设置促销区域样式*/
+.promotion {
+    width: 100%;
+}
+
+/*促销区域的内容区域*/
+.promotion-content {
+    width: 98%;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 1px 1px #ddd;
+    background: #fff;
+}
+
+/*促销区域的标题样式*/
+.box-title {
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+/*标题左边的装饰*/
+.box-title .deco-box {
+    position: relative;
+    left: 5%;
+    width: 2%;
+    height: 50%;
+    background: rgba(42, 137, 222, .85);
+}
+
+/*标题本身*/
+.box-title span {
+    position: relative;
+    left: 10%;
+    font-size: 16px;
+    font-family: "Microsoft Yahei" !important;
+}
+
+/*设置价格都为红色*/
+.promotion .red-text {
+    position: relative;
+    top: 10px;
+    color: #f00;
+    font-size: 16px;
+}
+
+/*设置每个商品被链接覆盖*/
+.promotion a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+
+}
+/*左边盒子*/
+.box-left {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    height: 260px;
+    border-right: 1px solid #cccccc;
+
+}
+
+
+.box-left .box-text {
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 30%;
+    padding: 5%;
+
+}
+
+.red-text {
+    position: relative;
+    top: 5px;
+
+}
+
+.box-left .box-img {
+    width: 100%;
+    height: 60%;
+    text-align: center;
+}
+
+.box-left .box-img img {
+    position: relative;
+    top: 5%;
+    width: 80%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+/*设置右边区域*/
+.box-right {
+    box-sizing: border-box;
+    width: 50%;
+    height: 260px;
+    float: left;
+
+}
+
+/*右边分为上下两个区域*/
+.box-right-up {
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #cccccc;
+}
+
+.box-right-up .box-text {
+    font-size: 16px;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 5%;
+}
+
+.box-right-up .box-img {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.box-right-up .box-img img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.box-right-down {
+    height: 50%;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+}
+
+.box-right-down .box-text {
+    float: left;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    font-size: 16px;
+}
+
+.box-right-down .box-img {
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.box-right-down .box-img img {
+    width: 100%;
+    max-height: 100%;
+}
+
+
+.promotion a:hover {
+    background: #3999ff;
+    opacity: .3;
+}
+
+/*设置广告栏样式*/
+.center-banner-a {
+    width: 100%;
+
+}
+
+/*广告栏内容区域*/
+.center-banner-a-content {
+    position: relative;
+    width: 98%;
+    margin: 20px auto;
+
+}
+
+/*广告图片*/
+.center-banner-a-content img {
+    width: 100%;
+}
+
+/*广告栏被链接覆盖*/
+.center-banner-a-content a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.center-banner-a-content a:hover {
+    background: #fff;
+    opacity: .4;
+}
+
+
+/*设置推荐商品区域的样式*/
+.recommend {
+    width: 100%;
+
+}
+
+.recommend-content {
+    width: 98%;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 1px 1px #ddd;
+    background: #fff;
+
+}
+
+.recommend a {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.recommend a:hover {
+    background: #3999ff;
+    opacity: .3;
+}
+
+
+/*设置左边商品的盒子*/
+.recommend .box-left {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: 260px;
+
+}
+
+.recommend .box-left-up {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #ccc;
+
+}
+
+/*分别设置文字和图片的盒子样式，*/
+/*图片使用img标签可以使得其随设备大小而变化*/
+/*以兼容不同分辨率的设备*/
+.recommend .box-left-up .box-text {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    font-size: 16px;
+    height: 100%;
+}
+
+.recommend .box-left-up .box-img {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.recommend .box-left-up .box-img img {
+    width: 90%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*左下方盒子*/
+.recommend .box-left-down {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+
+}
+
+.recommend .box-left-down .box-text {
+    box-sizing: border-box;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+.recommend .box-left-down .box-img {
+    box-sizing: border-box;
+    float: right;
+    width: 40%;
+    height: 100%;
+}
+
+.recommend .box-left-down .box-img img {
+    max-height: 90%;
+    max-width: 100%;
+    width: 90%;
+}
+
+/*右边盒子*/
+.recommend .box-right {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: 260px;
+    border-left: 1px solid #cccccc;
+
+}
+
+.recommend .box-right {
+    position: relative;
+    text-align: center;
+    font-family: "Microsoft Yahei" !important;
+    font-size: 16px;
+}
+
+.recommend .box-right .box-text {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30%;
+}
+
+.recommend .box-right .box-img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70%;
+
+}
+
+.recommend .box-right .box-img img {
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*商品价格均为红色*/
+.red-text {
+    position: relative;
+    top: -30px;
+}
+
+/*设置商品名称字体*/
+.recommend .box-left-up {
+    position: relative;
+    font-family: "Microsoft Yahei" !important;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.recommend .red-text {
+    position: relative;
+    top: -20px;
+    color: #f00;
+    fontsize: 20px;
+}
+
+.recommend .box-left-down {
+    position: relative;
+    font-size: 16px;
+}
+
+.center-banner-b {
+    width: 100%;
+
+}
+
+
+/*设置第二个广告栏样式*/
+.center-banner-b-content {
+    position: relative;
+    width: 98%;
+    margin: 20px auto;
+
+}
+
+.center-banner-b-content img {
+
+    width: 100%;
+}
+
+.center-banner-b-content a {
+    width: 100%;
+    height: 100%;
+
+}
+
+.center-banner-b-content a:hover {
+    background-color: #fff;
+    opacity: .5;
+}
+
+
+/*化妆品区域的样式基本和促销区域一致*/
+.cosmetics {
+    position: relative;
+    width: 100%;
+}
+
+.cosmetics-content {
+    position: relative;
+    width: 98%;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 1px 1px #ddd;
+    background: #fff;
+}
+/*同样是产品介绍区域被a标签覆盖*/
+.cosmetics a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+
+}
+
+.cosmetics a:hover {
+    background: #3999ff;
+    opacity: .3;
+}
+.cosmetics .red-text {
+    position: relative;
+    top: 10px;
+    color: #f00;
+    font-size: 20px;
+}
+
+/*底部菜单按钮样式*/
+.nav-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 10%;
+}
+
+.nav-btn a {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: url("../images/bottombtn.png") no-repeat 0 0;
+    background-size: 100%;
+    z-index: 998;
+    border-radius: 50%;
+}
+
+.nav-btn a:hover {
+    opacity: .7;
+    background: url("../images/bottombtn.png") no-repeat 0 0;
+    background-size: 100%;
+}
+
+/*最下方产品区域下的白色背景*/
+.cosmetic-bottom {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    bottom: -50px;
+
+}
+
+
+/*开始底部设置*/
+footer {
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    height: 160px;
+
+}
+
+/*底部内容区域*/
+.footer-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+/*底部每一行的宽高*/
+.footer-line {
+    width: 100%;
+    height: 40px;
+}
+
+/*底部第二行和最后一行颜色一样*/
+.footer-second-line,
+.footer-last-line {
+    background: rgba(23, 113, 210, .85);
+}
+
+.footer-thrid-line {
+    background: rgba(42, 138, 222, .85);
+}
+
+/*底部第一行样式*/
+.footer-first-line ul {
+    position: relative;
+    left: 5%;
+
+}
+
+.footer-first-line li {
+    position: relative;
+    float: left;
+    display: inline-block;
+    height: 25px;
+    margin-right: 5%;
+    top: 10px;
+
+}
+
+.footer-first-line li:last-child {
+    float: right;
+    left: -5%;
+}
+
+.footer-first-line li a {
+    color: rgba(23, 113, 210, .85);
+    font-size: 18px;
+    font-family: "Microsoft Yahei" !important;
+    position: relative;
+    line-height: 80px;
+    top: -30px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-first-line li:first-child {
+    padding-right: 5%;
+    border-right: 1px solid #888;
+
+}
+
+/*底部第二行样式*/
+.footer-second-line {
+    position: relative;
+    text-align: center;
+}
+
+.footer-second-line ul {
+    position: relative;
+    top: 10px;
+}
+
+.footer-second-line li {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 25px;
+    margin-right: 4%;
+    left: 5%;
+    border-right: 1px solid rgba(191, 238, 255, 1);
+
+}
+
+.footer-second-line li:last-child {
+    border: 0;
+}
+
+.footer-second-line a {
+    font-family: "Microsoft Yahei" !important;
+    position: relative;
+    color: rgba(191, 238, 255, 1);
+    font-size: 16px;
+    left: -10px;
+    text-decoration: none;
+}
+
+/*底部第三行样式*/
+.footer-thrid-line {
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+    color: rgba(191, 238, 255, 1);
+    font-family: "Microsoft Yahei" !important;
+    font-size: 16px;
+}
+
+.footer-last-line {
+    text-align: center;
+}
+
+.footer-last-line a {
+    font-family: "Microsoft Yahei" !important;
+    font-size: 16px;
+    line-height: 40px;
+    color: rgba(255, 255, 153, 1);
+    text-decoration: none;
+}
+
+.footer-thrid-line img {
+    position: relative;
+    top: 5px;
+    height:50%;
+}
+img.home{
+    height: 100%;
+}

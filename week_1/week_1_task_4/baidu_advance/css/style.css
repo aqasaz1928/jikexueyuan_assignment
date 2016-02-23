@@ -1,0 +1,408 @@
+﻿.phone-container{
+    display: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font: 12px arial;
+    height: 100%;
+    position: relative;
+}
+
+
+div {
+    display: block;
+}
+
+/*设置页面最小高度和宽度*/
+div.wrapper {
+    height: 100%;
+    text-align: center;
+    min-height: 600px;
+    max-height: 9999px;
+    min-width: 810px;
+}
+/*右面更多产品面板样式*/
+.more-items{
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: rgba(235,235,235,.7);
+    z-index: 99;
+}
+.more-items-title{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid;
+    border-color: rgba(20,20,00,.15);
+   line-height: 50px;
+}
+.more-items-list{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    box-sizing: border-box;
+}
+.more-items-list ul{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+.more-items-list li{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 16%;
+    list-style-type: none;
+
+}
+.more-items-list a{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+}
+.more-items-list a:hover{
+    opacity: .7;
+}
+
+.more-items-list .items-img-box{
+    width: 50%;
+    margin: 0 auto;
+    height: 70%;
+}
+.more-items-list .items-img-box{
+    background: url("../Resource/bdbri_icons_2e35e84b.png") no-repeat;
+    background-size: 350px 45px;
+}
+.more-items-list li:nth-child(1) .items-img-box{
+    background-position: -100px 0px;
+}
+.more-items-list li:nth-child(2) .items-img-box{
+    background-position: -155px -2px;
+    background-size: 355px 45px;
+}
+.more-items-list li:nth-child(3) .items-img-box{
+    background-position: -50px 0px;
+    background-size: 355px 45px;
+}
+.more-items-list li:nth-child(4) .items-img-box{
+    background-position: -240px 2px;
+    background-size: 415px 50px;
+}
+.more-items-list li:nth-child(5) .items-img-box{
+    background-position: -290px 0px;
+    background-size: 400px 50px;
+}
+.more-items-list li:nth-child(6) .items-img-box{
+    background-position: -356px 0px;
+    background-size: 410px 50px;
+}
+.more-items-list .text-box{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    color: #333;
+}
+
+
+.more-items-bottom{
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    cursor: pointer;
+    border-top: 1px solid;
+    border-color: rgba(20,20,00,.15);
+}
+
+
+
+
+/*顶部设置面板样式*/
+.setting-pannel{
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    right: 80px;
+    top: 50px;
+    width: 100px;
+    height: 150px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px  #ccc, -1px -1px 2px  #ccc;
+    border-radius: 0 0 5px 5px;
+
+}
+.setting-pannel ul{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+}
+.setting-pannel li{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    list-style-type: none;
+    height: 25%;
+}
+.setting-pannel a{
+    display: inline-block;
+    width: 100%;
+    color: #444;
+    height: 100%;
+    text-decoration: none;
+    line-height: 220%;
+}
+.setting-pannel a:hover{
+    background: #3385ff;
+    color: #fff;
+}
+
+
+
+/*顶部导航栏样式 */
+#u1 {
+    text-align: right;
+    float: right;
+    z-index: 2;
+    color: white;
+    position: relative;
+    top: -1px;
+    margin: 15px 0 5px 0;
+    width: 453px;
+}
+
+#u1 a {
+    position: relative;
+    right: 34px;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 16px;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#u1 a:hover {
+    color: blue;
+}
+
+#u1.lb {
+    display: inline-block;
+    color: #888 !important;
+    font-weight: 100 !important;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+/*更多产品按钮*/
+.products {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    *top: 0;
+    _top:0;
+    _margin-left: 5px;
+    width: 60px;
+    height: 23px;
+    color: white !important;
+    background: #38f;
+    font-size: 13px;
+    font-weight: normal !important;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    text-decoration: none !important;
+}
+
+.products:hover {
+    opacity: 0.85;
+
+}
+
+.s_form_wrapper {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    *top:15%;
+    *left:28%;
+    *min-width: 500px;
+    _left:50%;
+    _margin-left: -320px;
+    margin-left: -320px;
+    padding: 0;
+
+}
+
+
+/*百度logo图片位置和样式*/
+div.img-box {
+    text-align: center;
+    min-width: 600px;
+
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    width: 270px;
+    height: 129px;
+}
+
+/*设置输入框位置*/
+div.search-form {
+    margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+    z-index: 100;
+    position: relative;
+    top: -20px;
+}
+
+/*设置输入框大小*/
+span.input-span {
+    float: left;
+    position: relative;
+    border: 1px solid;
+    border-color: #7b7b7b #b6b6b6 #b6b6b6 #7b7b7b;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    _width:500px;
+    height: 34px;
+    margin-right: 0;
+    border-right-width: 0;
+    overflow: hidden;
+}
+
+/*输入框样式*/
+#wd {
+    position: relative;
+    width: 526px;
+    height: 22px;
+    font: 16px arial;
+    line-height: 22px;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+
+}
+
+input {
+    display: inline-block;
+    border: 0;
+    padding: 0;
+}
+
+.search-form input {
+    width: 500px;
+    _width: 499px;
+
+}
+
+.submit-span {
+    /*float: left;*/
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid transparent;
+}
+
+/*搜索按钮样式*/
+.submit-span  #for-search {
+    _width:100px !important;
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    cursor: pointer;
+}
+
+/*鼠标滑过的效果*/
+.submit-span >#for-search:hover{
+    background: #3377ff;
+
+}
+
+/*底部文字和样式*/
+.footer {
+    height: 100px;
+    position: absolute;
+    margin-left: 50%;
+    left: -300px;
+    bottom: 44px;
+    text-align: center;
+    width: 600px;
+    z-index: 0;
+    overflow: hidden;
+    *position:absolute;
+    *bottom:44px;
+    *left: -300px;
+
+}
+
+
+.footer > p {
+    width: 600px;
+    margin: 0 auto;
+}
+
+
+p.up{
+    margin: 16px 0 5px;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+p>a{
+    margin: 0 10px;
+}
+
+
+span #declaration {
+    color: #666!important;
+}
+#declaration a{
+    color: #666!important;
+}
+
+/*底部logo*/
+.c-icon-icrlogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png) no-repeat;
+    _background-image: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_15f748ea.gif);
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}

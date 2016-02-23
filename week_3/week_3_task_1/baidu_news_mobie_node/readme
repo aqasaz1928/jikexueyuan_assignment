@@ -1,0 +1,9 @@
+前端框架swig
+后端express使用mongodb数据库
+数据库位置./mongodb，可以直接指定dbpath=mongodb来启动数据库
+若是不行，则导入数据库文件
+新闻数据库文件，news.dat
+登录信息数据 admin.dat
+默认端口27017
+后台登陆页面./admin/
+后台登陆账号root，密码admin

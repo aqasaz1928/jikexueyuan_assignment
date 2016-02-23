@@ -1,0 +1,189 @@
+{% extends 'dashboard.layout.html' %}
+
+
+{% block content %}
+<div class="img-edit-window">
+    <div class="img-edit-content">
+        <a class="by-url" id="upload-method">点击这里选择本地上传</a>
+        <br>
+        <label class="img-window-label">图片地址:</label>
+        <input type="text" placeholder="请粘贴图片地址" name="img-file" id="img-file">
+        <input type="hidden" id="for-img" value="">
+        <br>
+        <span id="loading-img"></span>
+        <button class="btn btn-default submit-img">开始上传</button>
+        <button class="btn btn-warning btn-close" onclick="closeImgWindow()">关闭</button>
+    </div>
+</div>
+
+<div class="main-content col-md-8 col-md-offset-2 col-xs-12">
+    {% set subjects = ['社会','科技','娱乐','本地'] %}
+    {% set news = JSON.parse(news) %}
+    <input type="button" value="删除" class="col-md-2 col-xs-6 btn btn-danger" id="do-del">
+    <form action="#" method="post" class="col-md-12 col-xs-12">
+
+        <label for="news-id" class="col-xs-12">新闻ID：</label>
+        <input type="text" name="news-id" id="news-id" class="col-md-8  col-sm-12 col-xs-12" value="{{news['_id']}}" readonly>
+
+        <label for="news-title" class="col-xs-12">新闻标题：</label>
+
+    <input type="text" name="news-title" id="news-title" class="col-md-8 col-sm-12 col-xs-12" value="{{news['title']}}">
+
+
+        <label for="news-subject" class="col-xs-12">新闻分类：</label>
+        <select name="news-subject" id="news-subject" class="col-md-2 col-sm-4 col-xs-12" >
+            {% for subject in subjects %}
+            <option value="{{subject}}" {% if subject == news['subject'] %} selected {% endif %}>{{subject}}</option>
+            {% endfor %}
+        </select>
+
+
+        <label for="news-type" class="col-xs-12" >新闻类型：</label>
+        <input type="text" class="col-md-2 col-sm-3 col-xs-12" name="news-type" id="news-type" value="{{news['newsType']}}" readonly>
+
+
+        {% if news['newsType'] !='c' %}
+        <label for="news-abstract" class=" col-xs-12">新闻摘要：</label>
+        <textarea id="news-abstract" name="news-abstract" class="col-md-8 col-xs-12" rows="4">{{news['abstract']}}</textarea>
+        {% endif %}
+        {% if news['newsType'] != 'b' %}
+        <div class="form-group col-md-12 img-part">
+            <label for="img-list"></label>
+            <ul class="imgs-list col-md-12 col-xs-12" id="img-list">
+                <li class="col-md-4 col-xs-12">
+                    <input type="hidden" name="img-1" id="img-1" value="{{news['newsImg1']}}">
+                    <a class="img-editer">
+                        <img src="{{news['newsImg1']}}" alt="预览" class="news-img" id="img1">
+                        <span>编辑图片</span>
+                    </a>
+                </li>
+                {% if news['newsType'] == 'c' %}
+                <li class="col-md-4 col-xs-12">
+                    <input type="hidden" name="img-2" id="img-2" value="{{news['newsImg2']}}">
+                    <a class="img-editer">
+                        <img src="{{news['newsImg2']}}" alt="预览" class="news-img img-2" id="img2">
+                        <span>编辑图片</span>
+                    </a>
+                </li>
+                <li class="col-md-4 col-xs-12">
+                    <input type="hidden" name="img-3" id="img-3" value="{{news['newsImg3']}}">
+                    <a class="img-editer">
+                        <img src="{{news['newsImg3']}}" alt="预览" class="news-img img-3" id="img3">
+                        <span>编辑图片</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+
+
+        {% endif %}
+
+        <input type="submit" value="提交" class="col-md-2 col-xs-6 btn btn-success">
+    </form>
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+
+    $(function () {
+        var imgFile = $("#img-file");
+        $('#do-del').click(function () {
+            var newsId = window.location.href.split('=')[1];
+            doDelete(newsId);
+        });
+
+
+
+        $("input[type='submit']").click(function (e) {
+
+            if(!submitDataVerify()){
+                //如果表单数据不完整则弹出警告框，然后组织默认事件
+                alert("数据不完整，请您确认表单完整性！");
+                e.preventDefault();
+                return 0;
+            }
+
+            if (!confirm("是否确认提交")) {
+                e.preventDefault();
+            } else {
+                $('form').submit();
+            }
+        });
+
+
+
+        $("#upload-method").click(function () {
+            if ($(this).text() == '点击这里选择本地上传') {
+                $(this).text('点击这里使用网络图片');
+                $(".img-window-label").hide();
+                $("#img-file").attr('type', 'file');
+            } else {
+                $(this).text('点击这里选择本地上传');
+                $(".img-window-label").show();
+                $("#img-file").attr('type', 'text');
+            }
+        });
+
+
+        $(".img-editer").click(function (e) {
+            $("#for-img").val($(this).find('img').attr('id'));
+            $(".img-edit-window").fadeIn(500);
+        });
+
+
+        $(".submit-img").click(function () {
+            if (imgFile.val() == ''||typeof imgFile.val()=='undefined') {
+                alert('输入内容不能为空！');
+                return;
+            }
+            console.log(imgFile.val());
+            if (!isImgFile(imgFile.val())) {
+                alert('图文件格式非法！');
+                return;
+            }
+            if (imgFile.attr('type') == 'file') {
+                var formData = new FormData(); //创建FormData进行表单提交
+                formData.append('img-file', imgFile[0].files[0]);
+                $("#loading-img").show();
+                $(this).text('正在上传');
+                $(this).attr('disabled', true);
+                imgFile.attr('readonly', true);
+//                console.log(imgFile[0].files[0]);
+                $.ajax({                       //创建ajax
+                    url: './upload',
+                    type: 'POST',
+                    cache: false,
+                    data: formData,
+                    processData: false,
+                    contentType: false
+                }).done(function (res) {
+                    console.log(res);
+                    afterUploadHandler(res);
+
+                }).fail(function (res) {
+                    alert("服务器出错！");
+                });
+                return;
+            }
+            $("#loading-img").show();
+            $(this).text('正在上传');
+            $(this).attr('disabled', true);
+            var url = imgFile.val();
+            imgFile.attr('readonly', true);
+            $.post('/admin/getImg', {imgUrl: url}, function (data) {
+                console.log(data);
+                afterUploadHandler(data);
+            })
+
+        });
+
+
+
+
+    });
+</script>
+{% endblock %}
+

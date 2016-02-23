@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=320.1,minimum-scale=1.0,maximum-scale=1.0">
+    <meta charset="UTF-8">
+    <!--所有静态资源被放置在public文件夹下-->
+    <!--加载时提供相对路径即可-->
+    <link rel="stylesheet" href="/libs/flexslider/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/default.css">
+    <script src="/JavaScript/jquery.min.js"></script>
+    <script src="/libs/flexslider/jquery.flexslider-min.js"></script>
+    <script src="/JavaScript/JsFunc.js"></script>
+    <script src="/JavaScript/index.js"></script>
+    <title>百度新闻</title>
+</head>
+<body>
+<!--网页头部部分-->
+<header>
+    <!--头部分成两行，上方为工具栏部分，下方为新闻分类栏-->
+    <div class="tool-bar">
+        <!--工具栏分为左中右三个部分，中间部分是百度logo-->
+        <div class="tool-bar-left">
+            <!--左右两边都各自有两个可点击组建-->
+            <span class="left-item"><a href=""></a></span>
+            <span class="right-item"><a href=""></a></span>
+        </div>
+        <div class="tool-bar-center"><a href=""></a></div>
+        <div class="tool-bar-right">
+            <span class="left-item"><a href=""></a></span>
+            <span class="right-item"><a href=""></a></span>
+        </div>
+    </div>
+    <!--头部导航栏，点击可以切换新闻类别-->
+    <div class="nav-bar">
+        <ul>
+            <li><a class="nav-item">推荐</a></li>
+            <li><a class="nav-item">科技</a></li>
+            <li><a class="nav-item">本地</a></li>
+            <li><a class="nav-item">娱乐</a></li>
+            <li><a class="nav-item">社会</a></li>
+            <li><a>更多</a></li>
+        </ul>
+    </div>
+</header>
+<!--使用container标签包裹主体部分-->
+<div class="container">
+    <!--所有内容放置在main-content容器中，并实现居中-->
+    <div class="main-content">
+        <!--首先布局主体部分最上方的图片轮播-->
+        <div class="slide-banner">
+            <!--图片轮播使用jquery的flex slider库完成-->
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="/images/news%20banner1.jpg"/>
+                    </li>
+                    <li>
+                        <img src="/images/news%20banner2.jpg"/>
+                    </li>
+                    <li>
+                        <img src="images/news%20banner3.jpg"/>
+                    </li>
+                    <li>
+                        <img src="images/news%20banner4.jpg"/>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!--图片轮播下方是滚动热点新闻-->
+        <div class="hot-news">
+            <!--左边热点标签-->
+            <div class="hot-news-icon">热点</div>
+            <!--右边新闻纵向滚动显示-->
+            <div class="hot-news-slider">
+                <ul class="slides">
+                    <li>
+                        <a href="">测试新闻标题1 ></a>
+                    </li>
+                    <li>
+                        <a href="">测试新闻标题2 ></a>
+                    </li>
+                    <li>
+                        <a href="">测试新闻标题3 ></a>
+                    </li>
+                    <li>
+                        <a href="">测试新闻标题4 ></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="news-list">
+
+        </div>
+    </div>
+    <!--该区域将被隐藏，用来记录页面的一些信息-->
+    <div class='more-news'>
+        <!--记录页面加载的页数-->
+        <input type="hidden" name="pageStart" value='0' id="pageStart">
+        <!--记录页面目前现实的分类-->
+        <input type="hidden" name="page-subject" value="推荐" id="page-subject">
+
+        <button class="btn-more-news">加载更多</button>
+    </div>
+</div>
+
+<footer>
+    <ul>
+        <li><a>意见反馈</a></li>
+        <li><a>应用推荐</a></li>
+        <li><a>客户端</a></li>
+    </ul>
+</footer>
+<script>
+
+</script>
+</body>
+</html>

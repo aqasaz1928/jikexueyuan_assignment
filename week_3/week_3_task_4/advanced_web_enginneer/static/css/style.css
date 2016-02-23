@@ -1,0 +1,31 @@
+/**
+ * Created by Joker on 2016/2/16.
+ */
+body{
+    background-color: #f9f9ff!important;
+}
+.container{
+    min-width: 900px;
+}
+img{
+    width: 200px;
+}
+.jumbotron{
+    background-color: #337ab7;
+    color: #ffffff;
+}
+.side-nav{
+    position: absolute;
+    min-width: 200px;
+    height: 100%;
+}
+li{
+    cursor: pointer;
+}
+table th{
+    font-weight: bold;
+    text-align: center;
+}
+table{
+    text-align: center;
+}

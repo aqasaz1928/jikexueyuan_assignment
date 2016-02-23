@@ -1,0 +1,272 @@
+body {
+    min-width: 800px;
+}
+
+.container-fluid {
+    background: #f0f0f0;
+
+}
+
+header {
+    min-width: 700px;
+    height: 70px;
+}
+
+ul {
+    z-index: 99;
+}
+
+form {
+    position: relative;
+    z-index: 99;
+}
+
+.main-content {
+    position: relative;
+    top: 60px;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    min-height: 750px;
+    padding: 20px;
+    text-align: center;
+    min-width: 700px;
+}
+
+.main-content table {
+    margin-bottom: 50px;
+}
+
+.main-content label {
+    text-align: left;
+}
+
+.form-add-news {
+    display: inline-block;
+    border-top: 1px solid rgba(220, 220, 220, .6);
+    position: relative;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.form-add-news input {
+    height: 36px;
+
+}
+
+.form-add-news select {
+    height: 36px;
+
+}
+
+
+
+span.help-block {
+    display: inline;
+}
+
+.unnecessary {
+    display: none;
+}
+
+table td a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+table td {
+    text-align: left;
+}
+
+footer {
+    position: relative;
+    min-width: 600px;
+    width: 100%;
+    height: 150px;
+    background: #333;
+    text-align: center;
+}
+
+footer p {
+    position: relative;
+    top: 50px;
+    text-align: center;
+    color: #aaa;
+    min-width: 600px;
+}
+
+.news-edit-title {
+    margin: 0;
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(220, 220, 220, .8);
+}
+
+.submit-btn-box {
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+.edit-form {
+    margin-top: 20px;
+}
+
+.form-add-news {
+    margin-bottom: 50px;
+}
+
+.edit-form {
+    margin-bottom: 50px;
+}
+img{
+    margin-top: 10px;
+}
+input[type='button']{
+    margin-top: 10px;
+}
+input[type='file']:hover{
+
+    cursor: pointer;
+}
+input[type='submit']{
+
+}
+.table-nav{
+    position: relative;
+    display: inline-block;
+    float: left;
+    max-width: 500px;
+}
+.table-nav li{
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+}
+.table-nav li:hover{
+    color: blue;
+}
+input[readonly]{
+    background-color: #ddd !important;
+    border: 0;
+    box-shadow: none;
+}
+input[type='file']{
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+input,label{
+    text-align: left;
+    margin-top: 5px;
+}
+li{
+    position: relative;
+    margin: 0;
+    height: 80px;
+    padding: 0;
+    list-style-type: none;
+}
+.news-img{
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    max-height: 100px;
+}
+a.img-editer{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 60px;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+a.img-editer:hover{
+    opacity: .7;
+    text-decoration: none;
+
+}
+a.img-editer:hover span{
+    opacity: 1;
+    text-decoration: none;
+
+}
+a.img-editer span{
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 0;
+    margin: auto;
+    line-height: 30px;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 70%;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    opacity: 0;
+    background-color: rgba(220,220,220,.5);
+    color: #000;
+    font-size: 20px;
+}
+.img-edit-window{
+    display: none;
+    position: absolute;
+    z-index: 199;
+    width: 100%;
+    height: 150%;
+    background: rgba(50,50,50,.3);
+}
+.img-edit-content{
+    position: absolute;
+    width: 500px;
+    height: 150px;
+    background: #fff;
+    top: 250px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 5px;
+
+}
+.img-edit-content a{
+    position: relative;
+    cursor: pointer;
+    top: 10px;
+    margin: 20px;
+}
+.img-edit-content label{
+    margin-left: 20px;
+}
+.img-edit-content input{
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 300px;
+}
+.img-edit-content button {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+#loading-img{
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 299;
+    background: url("../images/loading.gif") no-repeat 0 0;
+    background-size: 100%;
+ }
+
+li.list-selected {
+    cursor: none;
+    color: #00f;
+}

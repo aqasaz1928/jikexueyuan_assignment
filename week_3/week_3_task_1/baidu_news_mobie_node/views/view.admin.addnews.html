@@ -1,0 +1,220 @@
+{% extends 'dashboard.layout.html' %}
+
+{% block content %}
+<div class="img-edit-window">
+    <div class="img-edit-content">
+        <a class="by-url" id="upload-method">点击这里选择本地上传</a>
+        <br>
+        <label class="img-window-label">图片地址:</label>
+        <input type="text" placeholder="请粘贴图片地址" name="img-file" id="img-file">
+        <input type="hidden" id="for-img" value="">
+        <br>
+        <span id="loading-img"></span>
+        <button class="btn btn-default submit-img">开始上传</button>
+        <button class="btn btn-warning btn-close" onclick="closeImgWindow()">关闭</button>
+    </div>
+</div>
+<div class="main-content col-md-offset-2 col-md-10 col-xs-12">
+    <form action="#" method="post" class="form-add-news col-md-8 col-xs-12">
+        <div class="form-group col-md-12 col-xs-12">
+            <label for="news-title" class="col-md-12 col-xs-12">新闻标题：</label>
+            <input type="text" id="news-title" name="news-title" required class="col-md-12 col-xs-12"
+                   placeholder="请输入新闻标题...">
+        </div>
+        <div class="form-group col-md-12 col-xs-12">
+            <label for="news-subject" class="col-md-12 col-xs-12">新闻门类：</label>
+            <select id="news-subject" name="news-subject" class="col-md-4 col-xs-12" required>
+                <option value="">请选择</option>
+                <option value="科技">科技</option>
+                <option value="社会">社会</option>
+                <option value="娱乐">娱乐</option>
+                <option value="本地">本地</option>
+            </select>
+
+        </div>
+        <div class="form-group col-md-12 col-xs-12">
+            <label for="news-type" class="col-md-12 col-xs-12">新闻类型：</label>
+            <select id="news-type" name="news-type" class="col-md-4 col-xs-12" required>
+                <option value="">请选择</option>
+                <option value="type-a">A类新闻</option>
+                <option value="type-b">B类新闻</option>
+                <option value="type-c">C类新闻</option>
+            </select>
+
+        </div>
+        <div class="form-group col-md-12 unnecessary abstract col-xs-12">
+            <label for="news-abstract" class="col-md-12 col-xs-12">新闻摘要：</label>
+            <textarea id="news-abstract" name="news-abstract" class="col-md-12 col-xs-12" rows="4"></textarea>
+        </div>
+        <div class="form-group col-md-12 unnecessary img-part">
+            <label for="img-list"></label>
+            <ul class="imgs-list col-md-12 col-xs-12" id="img-list">
+                <li class="col-md-4 col-xs-12">
+                    <input type="hidden" name="img-1" id="img-1">
+                    <a class="img-editer">
+                        <img src="../images/iconfont-tupian.png" alt="预览" class="news-img" id="img1">
+                        <span>编辑图片</span>
+                    </a>
+                </li>
+                <li class="col-md-4 col-xs-12">
+                    <input type="hidden" name="img-2" id="img-2">
+                    <a class="img-editer">
+                        <img src="../images/iconfont-tupian.png" alt="预览" class="news-img img-2" id="img2">
+                        <span>编辑图片</span>
+                    </a>
+                </li>
+                <li class="col-md-4 col-xs-12">
+                    <input type="hidden" name="img-3" id="img-3">
+                    <a class="img-editer">
+                        <img src="../images/iconfont-tupian.png" alt="预览" class="news-img img-3" id="img3">
+                        <span>编辑图片</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-12 unnecessary submit-form col-xs-12">
+            <div class="btn-group col-md-6 col-md-offset-6 col-xs-12">
+                <input type="reset" value="清空" class="col-md-5 col-xs-4 btn btn-info">
+                <input type="submit" value="提交" class="col-md-5 col-md-offset-1 col-xs-4 btn btn-success">
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+{% block script %}
+<script>
+
+    var imgFile = $("#img-file");           //图像文件input元素
+    $(function () {                         //当文档加载完成后执行
+        //使用js在表单提交前进行完整性检查
+        $("input[type='submit']").click(function (e) {
+            if (!submitDataVerify()) {
+                //如果表单数据不完整则弹出警告框，然后组织默认事件
+                alert("数据不完整，请您确认表单完整性！");
+                e.preventDefault();
+            }
+        });
+        //点击切换图片上传方式
+        $("#upload-method").click(function () {
+//            使用网络图片
+            if ($(this).text() == '点击这里选择本地上传') {
+                $(this).text('点击这里使用网络图片');
+                $(".img-window-label").hide();
+                $("#img-file").attr('type', 'file');
+//                使用本地图片
+            } else {
+                $(this).text('点击这里选择本地上传');
+                $(".img-window-label").show();
+                $("#img-file").attr('type', 'text');
+            }
+        });
+//        点击图片预览区域打开图片上传对话框
+        $(".img-editer").click(function (e) {
+            $("#for-img").val($(this).find('img').attr('id'));
+            $(".img-edit-window").fadeIn(500);
+        });
+
+        //点击图片上传按钮触发
+        $(".submit-img").click(function () {
+//            当输入内容欸空，停止事件，并提示
+            if (imgFile.val() == ''||typeof imgFile.val()=='undefined') {
+                alert('输入内容不能为空！');
+                return;
+            }
+//            当图片不是支持的格式，停止事件并提示
+            if (!isImgFile(imgFile.val())) {
+                alert('图文件格式非法！');
+                return;
+            }
+            //当使用本地上传图片时遵循以下逻辑
+            if (imgFile.attr('type') == 'file') {
+                var formData = new FormData(); //创建FormData进行表单提交
+                formData.append('img-file', imgFile[0].files[0]);
+//                console.log(imgFile[0].files[0]);
+                //进行一些ui反馈
+                $("#loading-img").show();       //显示载入图标
+                $(this).text('正在上传');        //改变按钮文字
+                $(this).attr('disabled', true); //设置按钮和输入元素为只读
+                imgFile.attr('readonly', true);
+                $.ajax({                        //创建ajax
+                    url: './upload',            //操作路径
+                    type: 'POST',
+                    cache: false,
+                    data: formData,
+                    processData: false,
+                    contentType: false
+                }).done(function (res) {        //执行成功时触发
+//                    console.log(res);
+                    afterUploadHandler(res);
+
+                }).fail(function (res) {        //执行失败时触发
+                    alert("服务器出错！");
+                });
+                return;
+            }
+
+            $("#loading-img").show();
+            $(this).text('正在上传');
+            $(this).attr('disabled', true);
+            imgFile.attr('readonly', true);
+            var url = imgFile.val();
+//            console.log(url);
+            $.post('/admin/getImg', {imgUrl: url}, function (data) {
+//                console.log(data);
+                afterUploadHandler(data);
+            })
+
+        });
+
+
+
+
+//        监听新闻类型的变化
+        $('#news-type').change(function () {
+            var newsAbstract = $('.abstract');
+            var imgPart = $(".img-part");
+            var img1List = $('#img-list').find('li:first-child');
+            var img2List = $('#img-list').find('li:nth-child(2)');
+            var img3List = $('#img-list').find('li:nth-child(3)');
+//            console.log(img1List);
+            $("img").each(function () {
+                $(this).attr('src','../images/iconfont-tupian.png');
+            })
+            var btnSubmit = $('.submit-form');
+            var optValue = $(this).val();
+            //根据新闻类型，显示不同的表单，当表单类型切换时，同时将不用的表单清空
+            switch (optValue) {
+                case 'type-a':
+                    newsAbstract.show();
+                    imgPart.show();
+                    img2List.hide().find('#img-2').val('');
+                    img3List.hide().find('#img-3').val('');
+                    btnSubmit.show();
+                    break;
+                case 'type-b':
+                    newsAbstract.show();
+                    imgPart.hide();
+                    $('#img-1').val('');
+                    $('#img-2').val('');
+                    $('#img-3').val('');
+                    btnSubmit.show();
+                    break;
+                case 'type-c':
+                    imgPart.show();
+                    newsAbstract.hide().find('#news-abstract').val('');
+                    btnSubmit.show();
+                    img1List.show().find('#img-3').val('');
+                    img2List.show().find('#img-3').val('');
+                    img3List.show().find('#img-3').val('');
+                    break;
+                default :
+                    $('.unnecessary').hide();
+                    break;
+            }
+        })
+    })
+</script>
+{% endblock %}
+

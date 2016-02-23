@@ -1,0 +1,424 @@
+/*初始化页面
+*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li, a {
+    display: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/*开始定义头部样式*/
+header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: #3e98f0;
+    min-width: 320px;
+
+}
+
+/*头部上方的工具栏部分*/
+header .tool-bar {
+    position: absolute;
+    width: 98%;
+    height: 45px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+
+}
+
+/*头部上方工具栏分为左中右三个部分，宽度暂定为20%*/
+.tool-bar .tool-bar-left,
+.tool-bar .tool-bar-center,
+.tool-bar .tool-bar-right {
+    position: absolute;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+}
+
+/*左边靠左*/
+.tool-bar-left {
+    left: 0;
+}
+
+/*中间logo居中*/
+.tool-bar-center {
+    left: 40%;
+}
+
+/*右边靠右*/
+.tool-bar-right {
+    right: 0;
+}
+
+/*设置顶部工具栏可点击组件的样式*/
+.tool-bar span.left-item {
+    position: relative;
+    float: left;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+.tool-bar span.right-item {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+/*设置内部图标的样式，内部图标应该固定大小，并始终居中*/
+.tool-bar span a {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/*分别设置每个图标的背景图片*/
+.tool-bar-left .left-item a {
+    background: url("/images/baidu%20items.png") no-repeat 0 0;
+    background-size: 400% 100%;
+}
+
+.tool-bar-left .right-item a {
+    background: url("/images/baidu%20items.png") no-repeat -24px 0;
+    background-size: 400% 100%;
+}
+
+.tool-bar-right .left-item a {
+    background: url("/images/baidu%20items.png") no-repeat -49px 0;
+    background-size: 400% 100%;
+}
+
+.tool-bar-right .right-item a {
+    background: url("/images/baidu%20items.png") no-repeat -74px 0;
+    background-size: 400% 100%;
+}
+
+.tool-bar-center {
+    text-align: center;
+}
+
+.tool-bar-center a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80px;
+    height: 30px;
+    margin: auto;
+    background: url("/images/baidu%20logo.png") no-repeat 50% 50%;
+    background-size: 100%;
+}
+
+/*定义头部导航栏的样式*/
+.nav-bar {
+    position: absolute;
+    width: 98%;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.nav-bar ul {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 18px;
+}
+
+.nav-bar li {
+    width: 16.5%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    border-left: 1px solid rgba(200, 200, 200, .7);
+}
+
+.nav-bar ul li:first-child {
+    border: none;
+}
+
+.nav-bar a {
+    line-height: 15px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+/*定义页首图片轮播样式*/
+.slide-banner {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/*将最外层设为内容居中*/
+.container {
+    min-width: 320px;
+    text-align: center;
+}
+
+/*搜友内容放置在main-content标签中，标签宽度95%，并居中*/
+.main-content {
+    position: relative;
+    display: inline-block;
+    width: 95%;
+}
+
+/*定义新闻热点滚动部分的样式*/
+.hot-news {
+    position: relative;
+    top: -55px;
+    width: 100%;
+    height: 30px;
+    background: #f5f5f5;
+}
+
+/*热点滚动左边的热点标签样式*/
+.hot-news-icon {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 10%;
+    height: 100%;
+    background: #f00;
+    line-height: 180%;
+    color: #fff;
+}
+
+.hot-news-slider {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 90%;
+    text-align: left;
+    padding-left: 15px;
+    float: left;
+}
+
+.hot-news-slider li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.news-list {
+    position: relative;
+    top: -45px;
+}
+
+.news-content-box {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+/*开始定义新闻内容框的样式*/
+/*type-a新闻框，包含一张图片和新闻简介*/
+.news-type-a {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid rgba(220, 220, 220, .5);
+}
+
+/*type-b新闻不包含图片*/
+.news-type-b {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    border-bottom: 1px solid rgba(220, 220, 220, .5);
+}
+
+/*type-c新闻主要内容为三张图片，但不含摘要*/
+.news-type-c {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    border-bottom: 1px solid rgba(220, 220, 220, .5);
+}
+
+.news-img-box {
+    display: inline-block;
+    float: left;
+    width: 95px;
+    left: 0;
+    height: 100%;
+
+}
+
+.news-text-box {
+    float: left;
+
+}
+
+.news-title-box,
+.news-abstract {
+    position: relative;
+    display: block;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.news-title-box {
+    font-size: 16px;
+    left: 5px;
+    color: #333;
+    height: 20px;
+    overflow: hidden;
+}
+
+.news-abstract {
+    min-width: 50%;
+    margin-top: 8px;
+    float: left;
+    font-size: 14px;
+    overflow: hidden;
+    color: #666;
+}
+
+.news-type-a .news-time {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+}
+
+.news-type-b .news-time {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.news-from {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    border-radius: 2px;
+    background: #f00;
+}
+
+.sina-news {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+}
+
+.news-type-c .news-content-box {
+    height: 95%;
+}
+
+.news-img-list {
+    width: 100%;
+    height: 110px;
+    margin-top: 10px;
+    float: left;
+}
+
+.news-img-list ul {
+    display: inline-block;
+    width: 102%;
+    height: 100%;
+}
+
+.news-img-list li {
+    display: inline-block;
+    width: 33%;
+    box-sizing: border-box;
+    float: left;
+    overflow: hidden;
+    height: 100%;
+}
+
+.news-img-list img {
+    display: inline-block;
+    width: 95%;
+    min-height: 70px;
+    float: left;
+}
+
+.news-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.more-news {
+    position: relative;
+    top: -30px;
+    width: 100%;
+    height: 36px;
+
+}
+
+.btn-more-news {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: #4fadf0;
+}
+
+footer ul {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+footer ul li {
+    position: relative;
+    float: left;
+    width: 33.3%;
+    top: 25%;
+    height: 50%;
+    box-sizing: border-box;
+    border-left: 1px solid rgba(200, 200, 200, .5);
+}
+
+footer li a {
+    position: absolute;
+    display: inline-block;
+    width: 80%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 100%;
+    color: #fff;
+    margin: auto;
+}
+

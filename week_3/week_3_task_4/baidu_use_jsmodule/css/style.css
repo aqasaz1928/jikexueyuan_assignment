@@ -1,0 +1,1832 @@
+﻿.phone-container {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 12px arial;
+    height: 100%;
+    position: relative;
+}
+
+div {
+    display: block;
+}
+*,body{
+    outline: none;
+}
+
+.fixed-search{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: rgba(255,255,255,.8);
+    z-index: 999;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 3px #ccc;
+}
+.fixed-search img{
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin-top: 5px;
+    margin-left: 12%;
+    opacity: .8;
+}
+.fixed-search form{
+    display: inline-block;
+    position: absolute;
+    left: 23%;
+    width: 650px;
+    height: 36px;
+    margin-top: 20px;
+    border: 1px solid #3385ff;
+}
+.fixed-search input[type='text']{
+    display: inline-block;
+    position: absolute;
+    height: 30px;
+    width: 80%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 26px;
+    background: rgba(255,255,255,.8);
+    left: 5px;
+}
+.fixed-search input[type='submit']{
+    display: inline-block;
+    border: 0;
+    float: right;
+    width: 19%;
+    height: 100%;
+    cursor: pointer;
+    color: #fff;
+    background: #3385ff;
+}
+.fixed-search input[type='submit']:hover{
+    background: #3375ff;
+}
+
+.back-to-top{
+    display: none;
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.back-to-top a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #f3f3f3 url("../Resource/iconfont-backtotop.png") no-repeat 50% 50%;
+    background-size: 80%;
+    color: #aaaaaa;
+
+}
+.back-to-top a:hover{
+    background: #f9f9f9 url("../Resource/iconfont-backtotop.png") no-repeat 50% 50%;
+    background-size: 80%;
+}
+/*设置页面最小高度和宽度*/
+div.wrapper {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    min-height: 600px;
+    max-height: 9999px;
+    min-width: 810px;
+}
+
+.wrapper-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    min-width: 720px;
+
+}
+
+.wrapper-header.after-login {
+    border-bottom: 1px solid #ccc;
+}
+
+/*右面更多产品面板样式*/
+.more-items {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: rgba(235, 235, 235, .7);
+    z-index: 99;
+}
+
+.more-items-title {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid;
+    border-color: rgba(20, 20, 00, .15);
+    line-height: 50px;
+}
+
+.more-items-list {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.more-items-list ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.more-items-list li {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 16%;
+    list-style-type: none;
+
+}
+
+.more-items-list a {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+}
+
+.more-items-list a:hover {
+    opacity: .7;
+}
+
+.more-items-list .items-img-box {
+    width: 50%;
+    margin: 0 auto;
+    height: 70%;
+}
+
+.more-items-list .items-img-box {
+    background: url("../Resource/bdbri_icons_2e35e84b.png") no-repeat;
+    background-size: 350px 45px;
+}
+
+.more-items-list li:nth-child(1) .items-img-box {
+    background-position: -100px 0px;
+}
+
+.more-items-list li:nth-child(2) .items-img-box {
+    background-position: -155px -2px;
+    background-size: 355px 45px;
+}
+
+.more-items-list li:nth-child(3) .items-img-box {
+    background-position: -50px 0px;
+    background-size: 355px 45px;
+}
+
+.more-items-list li:nth-child(4) .items-img-box {
+    background-position: -240px 2px;
+    background-size: 415px 50px;
+}
+
+.more-items-list li:nth-child(5) .items-img-box {
+    background-position: -290px 0px;
+    background-size: 400px 50px;
+}
+
+.more-items-list li:nth-child(6) .items-img-box {
+    background-position: -356px 0px;
+    background-size: 410px 50px;
+}
+
+.more-items-list .text-box {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    color: #333;
+}
+
+.more-items-bottom {
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    cursor: pointer;
+    border-top: 1px solid;
+    border-color: rgba(20, 20, 00, .15);
+}
+
+/*顶部设置面板样式*/
+.setting-pannel.before-login {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    right: 70px;
+    top: 40px;
+    width: 100px;
+    height: 120px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ccc, -1px -1px 2px #ccc;
+    border-radius: 0 0 5px 5px;
+
+}
+.setting-pannel.after-login{
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    right: 60px;
+    top: 40px;
+    width: 100px;
+    height: 120px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ccc, -1px -1px 2px #ccc;
+    border-radius: 0 0 5px 5px;
+}
+.ceo-control-panel{
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    right: 110px;
+    top: 40px;
+    width: 100px;
+    height: 150px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ccc, -1px -1px 2px #ccc;
+    border-radius: 0 0 5px 5px;
+}
+
+.setting-pannel ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+}
+.ceo-control-panel ul{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.setting-pannel li {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    list-style-type: none;
+    height: 25%;
+}
+.ceo-control-panel li{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    list-style-type: none;
+    height: 20%;
+}
+
+.setting-pannel a {
+    display: inline-block;
+    width: 100%;
+    color: #444;
+    height: 100%;
+    text-decoration: none;
+    line-height: 220%;
+}
+.ceo-control-panel a{
+    display: inline-block;
+    width: 100%;
+    color: #444;
+    height: 100%;
+    text-decoration: none;
+    line-height: 220%;
+}
+.setting-pannel a:hover {
+    background: #3385ff;
+    color: #fff;
+}
+.ceo-control-panel a:hover{
+    background: #3385ff;
+    color: #fff;
+}
+/*顶部导航栏样式 */
+#u1 {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    width: 500px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 500px;
+
+}
+
+#u1.after-login {
+    right: 0;
+    margin: 0;
+}
+
+#u1.after-login li {
+    width: 12.2%;
+}
+
+.header-tools {
+    position: absolute;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    min-width: 250px;
+
+}
+
+.header-tools > a {
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #333;
+    text-decoration: none;
+    left: 0px;
+}
+
+.header-tools ul {
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header-tools li {
+    display: inline-block;
+    width: 33%;
+    height: 60%;
+    margin-top: 7px;
+    float: left;
+    color: #333;
+
+}
+
+.header-tools ul li:first-child {
+    border-left: 1px solid #ccc;
+}
+
+.header-tools li a {
+    color: #333;
+    text-decoration: none;
+}
+
+#u1 li {
+    position: relative;
+    display: inline-block;
+    width: 12%;
+    float: left;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#u1 a {
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    width: 100%;
+    height: 80%;
+    color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+#u1.after-login a {
+    line-height: 50px;
+    top: -10px;
+    height: 100%;
+}
+
+#u1 li:nth-child(6) a,
+#u1 li:nth-child(7) a,
+#u1 li:last-child a {
+    font-weight: normal;
+}
+
+#u1 li:nth-child(7) a {
+    left: -5px;
+}
+
+#u1 a:hover {
+    color: blue;
+}
+
+#u1.lb {
+    display: inline-block;
+    color: #888 !important;
+    font-weight: 100 !important;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+/*更多产品按钮*/
+#u1 a.products {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    color: white;
+    background: #38f;
+    text-align: center;
+    border-bottom: 1px solid #38f;
+    text-decoration: none;
+    line-height: 26px;
+}
+
+#u1.after-login a.products {
+    top: 0;
+    right: 0;
+    width: 110%;
+    height: 100%;
+    line-height: 32px;
+}
+
+.products:hover {
+    opacity: 0.85;
+
+}
+
+.s_form_wrapper {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    *top: 15%;
+    *left: 28%;
+    *min-width: 500px;
+    _left: 50%;
+    _margin-left: -320px;
+    margin-left: -320px;
+    padding: 0;
+
+}
+
+/*百度logo图片位置和样式*/
+div.img-box {
+    text-align: center;
+    min-width: 600px;
+
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    width: 270px;
+    height: 129px;
+}
+
+/*设置输入框位置*/
+div.search-form {
+    margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+    z-index: 100;
+    position: relative;
+    top: -20px;
+}
+
+/*设置输入框大小*/
+span.input-span {
+    float: left;
+    position: relative;
+    border: 1px solid;
+    border-color: #7b7b7b #b6b6b6 #b6b6b6 #7b7b7b;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    _width: 500px;
+    height: 34px;
+    margin-right: 0;
+    border-right-width: 0;
+    overflow: hidden;
+}
+
+/*输入框样式*/
+#wd {
+    position: relative;
+    width: 526px;
+    height: 22px;
+    font: 16px arial;
+    line-height: 22px;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+
+}
+
+input {
+    display: inline-block;
+    border: 0;
+    padding: 0;
+}
+
+.search-form input {
+    width: 500px;
+    _width: 499px;
+
+}
+
+.submit-span {
+    /*float: left;*/
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid transparent;
+}
+
+/*搜索按钮样式*/
+.submit-span #for-search {
+    _width: 100px !important;
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    cursor: pointer;
+}
+
+/*鼠标滑过的效果*/
+.submit-span > #for-search:hover {
+    background: #3377ff;
+
+}
+
+.content-box {
+    position: absolute;
+    top: 320px;
+    width: 75%;
+    min-width: 920px;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+}
+
+.content-header-nav {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(235, 235, 235, 1);
+}
+
+.content-header-nav ul {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.content-header-nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 18%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.content-header-nav ul li:hover {
+    background: #ccc;
+    color: #ffffff;
+}
+
+.content-header-nav a.active {
+    background: #999;
+    color: #ffffff;
+}
+
+.content-header-nav li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+
+.content-header-nav li:first-child {
+    width: 28%;
+}
+.content-header-nav button{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    border: 0;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("../Resource/setting.png")no-repeat 0 0;
+    background-size: 200% 100%;
+    cursor: pointer;
+}
+.content-header-nav button:hover{
+    background: url("../Resource/setting.png")no-repeat -20px 0;
+    background-size: 200% 100%;
+}
+/*底部文字和样式*/
+.footer.before-login {
+    height: 100px;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 20px;
+    left: -300px;
+    bottom: 44px;
+    text-align: center;
+    width: 600px;
+    z-index: 0;
+    overflow: hidden;
+    *position: absolute;
+    *bottom: 44px;
+    *left: -300px;
+
+}
+
+.content-box-body{
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    border: 1px solid rgba(230,230,230,1);
+}
+
+.content-box-wrapper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 95%;
+    height: 100%;
+    margin: auto;
+}
+.body-navbar {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(230,230,230,1) ;
+}
+.body-navbar span{
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    float: left;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+
+
+}
+
+.body-content-list{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(230,230,230,1);
+}
+.body-content-list span{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    text-align: left;
+    width: 10%;
+    height: 50%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.body-content-list ul{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.body-content-list li{
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    box-sizing: border-box;
+    height: 100%;
+}
+.body-content-list li a{
+    display: inline-block;
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    cursor: pointer;
+    line-height: 45px;
+    color: #333;
+    text-align: left;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 25px;
+    left: 0;
+    top: 0;
+}
+.body-website li a{
+    background: url("../Resource/internet.png")no-repeat 5px 15px;
+    background-size: 10% 30%;
+}
+.body-tieba li a{
+    background: url("../Resource/tieba.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-website li a:hover{
+    background: rgba(230,230,230,1) url("../Resource/internet.png")no-repeat 5px 15px;
+    background-size: 10% 30%;
+}
+.body-tieba li a:hover{
+    background: rgba(230,230,230,1) url("../Resource/tieba.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+
+.body-sociality li:nth-child(1) a{
+    background: url("../Resource/weibo.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-sociality li:nth-child(1) a:hover{
+    background: rgba(230,230,230,1) url("../Resource/weibo.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-sociality li:nth-child(2) a{
+    background: url("../Resource/renren.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-sociality li:nth-child(2) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/renren.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-sociality li:nth-child(3) a{
+    background: url("../Resource/zhihu.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-sociality li:nth-child(3) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/zhihu.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-sociality li:nth-child(4) a{
+    background: url("../Resource/tianya.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-sociality li:nth-child(4) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/tianya.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-sociality li:nth-child(5) a{
+    background: url("../Resource/caoliu.png")no-repeat 5px 15px;
+    background-size: 12% 30%;
+}
+.body-sociality li:nth-child(5) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/caoliu.png")no-repeat 5px 15px;
+    background-size: 12% 30%;
+}
+.body-shopping li:nth-child(1) a{
+    background:url("../Resource/jd.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-shopping li:nth-child(1) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/jd.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-shopping li:nth-child(2) a{
+    background:url("../Resource/taobao.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-shopping li:nth-child(2) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/taobao.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-shopping li:nth-child(3) a{
+    background:url("../Resource/suning.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-shopping li:nth-child(3) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/suning.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-shopping li:nth-child(4) a{
+    background:url("../Resource/amzzon.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-shopping li:nth-child(4) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/amzzon.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-shopping li:nth-child(5) a{
+    background:url("../Resource/tianmao.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-shopping li:nth-child(5) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/tianmao.png")no-repeat 5px 15px;
+    background-size: 9% 30%;
+}
+.body-others li:nth-child(1) a{
+    background:url("../Resource/internet.png")no-repeat 5px 15px;
+    background-size: 10% 30%;
+}
+.body-others li:nth-child(1) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/internet.png")no-repeat 5px 15px;
+    background-size: 10% 30%;
+}
+.body-others li:nth-child(2) a{
+    background:url("../Resource/cnbeta.png")no-repeat 5px 15px;
+    background-size: 10% 30%;
+}
+.body-others li:nth-child(2) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/cnbeta.png")no-repeat 5px 15px;
+    background-size: 10% 30%;
+}
+.body-others li:nth-child(3) a{
+    background:url("../Resource/acfun.png")no-repeat 5px 15px;
+    background-size: 10% 30%;
+}
+.body-others li:nth-child(3) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/acfun.png")no-repeat 5px 15px;
+    background-size: 10% 30%;
+}
+.body-others li:nth-child(4) a{
+    background:url("../Resource/jike.png")no-repeat 5px 15px;
+    background-size: 10% 32%;
+}
+.body-others li:nth-child(4) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/jike.png")no-repeat 5px 15px;
+    background-size: 10% 32%;
+}
+.body-others li:nth-child(5) a{
+    background:url("../Resource/yunyinyue.png")no-repeat 5px 15px;
+    background-size: 10% 32%;
+}
+.body-others li:nth-child(5) a:hover{
+    background: rgba(230,230,230,1)  url("../Resource/yunyinyue.png")no-repeat 5px 15px;
+    background-size: 10% 32%;
+}
+.body-content-list li a:hover{
+
+}
+#my-recommend.content-box-body{
+    display: none;
+    height: 520px;
+}
+#my-recommend .body-navbar{
+    width: 60%;
+}
+
+.hot-news{
+    position: relative;
+    display: inline-block;
+    width: 60%;
+    box-sizing: border-box;
+    height: 90%;
+    float: left;
+}
+.hot-news-item-a{
+    width: 100%;
+    position: relative;
+    height: 145px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(230,230,230,1);
+}
+.hot-news-item-a p{
+    display: inline-block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+}
+.hot-news-item-b p{
+    display: inline-block;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+.hot-news-item-c p{
+    display: inline-block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+}
+.hot-news-item-c .news-title span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url("../Resource/hot.png")no-repeat 0 0;
+    background-size: 100%;
+}
+.news-from{
+    color: #aaa;
+    text-decoration: none;
+}
+.news-info{
+    color: #aaa;
+}
+.hot-news-item-b{
+    width: 100%;
+    position: relative;
+    height: 210px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(230,230,230,1);
+}
+.hot-news-item-c{
+    width: 100%;
+    position: relative;
+    height: 100px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(230,230,230,1);
+}
+.hot-point{
+    float: left;
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    box-sizing: border-box;
+    height: 350px;
+}
+
+.news-title{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.news-title a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: #333;
+}
+.news-title a:hover{
+    color: #3385ff;
+    text-decoration: underline;
+}
+.hot-news-item-c .news-title{
+    top: 20px;
+}
+.news-img{
+    display: inline-block;
+    float: right;
+    width: 35%;
+    box-sizing: border-box;
+    height: 80%;
+    margin-top: 10px;
+}
+.img-news-list{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 60%;
+    margin-top: 45px;
+}
+.img-news-list li{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 33%;
+    height: 100%;
+    
+}
+.img-news-list li a{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+    top: 5px;
+    left: 0;
+    height: 100%;
+    background-size: 100%;
+}
+.img-news-list li:nth-child(1) a{
+    background: url("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=4264756638,3787338110&fm=80")no-repeat;
+}
+.img-news-list li:nth-child(2) a{
+    background: url("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=89564697,3951568709&fm=80")no-repeat;
+}
+.img-news-list li:nth-child(3) a{
+    background: url("https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3892357039,2073311233&fm=80")no-repeat;
+}
+.hot-point-title{
+    position: absolute;
+    top: -25px;
+    height: 20px;
+    width: 90%;
+    right: 0;
+}
+.hot-point-title span{
+    float: left;
+    cursor: pointer;
+    color: #777;
+
+}
+.hot-point-title button{
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    border: 0;
+    margin: 0;
+    padding-left: 10px;
+    background: url("../Resource/refresh.png") no-repeat 0 0;
+    background-size: 23% 90%;
+    cursor: pointer;
+    float: right;
+    color: #777;
+}
+
+ul.hot-point-list{
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    height: 280px;
+    left: 5%;
+    margin: 0;
+    padding: 0;
+}
+ul.hot-point-list li{
+    display: inline-block;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    height: 35px;
+    list-style-type: circle;
+    text-align: left;
+
+}
+ul.hot-point-list li a{
+    text-decoration: none;
+    color: #333;
+    line-height: 35px;
+    text-align: left;
+}
+ul.hot-point-list li a:hover{
+    text-decoration: underline;
+    color: #3385ff;
+}
+
+#my-navigation.content-box-body{
+    display: none;
+    height: 1390px;
+}
+.navigation-content{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    height: 1300px;
+
+}
+.navigation-list{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 103%;
+
+}
+.navigation-list.list-a{
+    height: 320px;
+}
+.navigation-list.list-b{
+     height: 250px;
+ }
+.navigation-list.list-c{
+    height: 180px;
+}
+.navigation-list.list-d{
+    height: 250px;
+}
+.navigation-list.list-e{
+    height: 180px;
+}
+.navigation-list li{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 16%;
+    height: 80px;
+}
+.navigation-list li a{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 90%;
+    height: 70px;
+    background: rgba(250,250,250,1);
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+    color: #333;
+    line-height: 70px;
+    text-decoration: none;
+}
+.navigation-list li a:hover{
+    border: 1px solid #ccc;
+}
+.navigation-content h2{
+    font-size: 16px;
+    font-weight: normal;
+    color: #555;
+    text-align: left;
+}
+
+#my-video.content-box-body{
+    display: none;
+    height: 740px;
+}
+.video-content-box{
+    position: relative;
+    width: 100%;
+    height: 370px;
+    border-bottom: 1px solid rgba(230,230,230,1);
+}
+.video-left-box,
+.video-right-box{
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 320px;
+}
+.video-right-box{
+    width: 52%;
+    left: 50%;
+}
+.video-left-box{
+    left: 0;
+}
+.video-img-box-high{
+    display: inline-block;
+    position: relative;
+    width: 45%;
+    box-sizing: border-box;
+    height: 320px;
+    float: left;
+    margin-right: 5%;
+
+}
+.video-img-box-high .img-part{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+}
+.video-img-box-high .text-part{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+}
+.video-img-box-low{
+    display: inline-block;
+    position: relative;
+    width: 45%;
+    height: 150px;
+    float: left;
+    margin-right: 5%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.video-img-box-low .img-part{
+    position: relative;
+    width: 100%;
+    height: 65%;
+    box-sizing: border-box;
+}
+.video-img-box-low .text-part{
+    position: relative;
+    width: 100%;
+    height: 35%;
+    box-sizing: border-box;
+}
+.video-img-box-low .text-part a{
+    float: left;
+}
+.text-part{
+    background: #f0f0f0;
+}
+.video-img-box-high a,
+.video-img-box-low a{
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.video-left-box .video-img-box-high:nth-child(1) .img-part a{
+    background: url("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3183357006,1069593942&fm=58") no-repeat 0 0;
+    background-size: 100% 100%;
+
+}
+.video-left-box .video-img-box-high:nth-child(2) .img-part a{
+    background: url("https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2505216044,985956986&fm=58") no-repeat 0 0;
+    background-size: 100% 100%;
+
+}
+.video-right-box .video-img-box-low:nth-child(1) .img-part a{
+    background: url("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3222824412,1712892575&fm=58") no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.video-right-box .video-img-box-low:nth-child(2) .img-part a{
+    background: url("https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=287097734,2143909980&fm=58") no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.video-right-box .video-img-box-low:nth-child(3) .img-part a{
+    background: url("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=4030870629,1671125905&fm=58") no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.video-right-box .video-img-box-low:nth-child(4) .img-part a{
+    background: url("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2133774543,3504445274&fm=58") no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.text-part a{
+    position: relative;
+    top: 10px;
+    color: #333;
+    text-align: left;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.text-part a:hover{
+    text-decoration: underline;
+    color: #3385ff;
+}
+
+#my-shopping.content-box-body{
+    display: none;
+    height: 1250px;
+}
+
+.shopping-box-a{
+    position: relative;
+    width: 100%;
+    height: 330px;
+    margin-top: 20px;
+}
+.coupon-list{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 102%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.coupon-list li{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 23%;
+    height: 50%;
+    box-sizing: border-box;
+    margin-right: 2%;
+}
+.coupon-list li a{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 70%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+}
+.coupon-list li a:hover .saled-already{
+    display: inline-block;
+}
+.coupon-list li p{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 30%;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    cursor: pointer;
+
+}
+span.coupon-price{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 20px;
+    color: red;
+}
+.coupon-list li p:hover{
+    color: #3385ff;
+    text-decoration: underline;
+}
+
+.coupon-list li:nth-child(1) a{
+    background: url("https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D26%2C0%2C639%2C388%3Bw%3D469%3Bq%3D79/sign=73e5fc0ea01ea8d39e6d2e44aa380662/9e3df8dcd100baa18d0e0c0e4110b912c8fc2e60.jpg");
+    background-size: 100%;
+}
+.coupon-list li:nth-child(2) a{
+    background: url("https://ss1.bdstatic.com/5eR1ciub_Q63otebn9fN2DJv/upload/deal/2014/12/V_L/2652600-t97sxiwm8t-13296192471568549.jpg");
+    background-size: 100%;
+}
+.coupon-list li:nth-child(3) a{
+    background: url("https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C720%2C436%3Bw%3D720%3Bq%3D99/sign=e70905358726cffc7d65e5f2843166a0/e1fe9925bc315c6064e4184388b1cb134954772c.jpg");
+    background-size: 100%;
+}
+.coupon-list li:nth-child(4) a{
+    background: url("https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C720%2C436%3Bw%3D720%3Bq%3D99/sign=f3d8b18e6e600c33e4368488277c7d3f/d50735fae6cd7b8906ea48190a2442a7d8330ea1.jpg");
+    background-size: 100%;
+}
+.coupon-list li:nth-child(5) a{
+    background: url("https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C720%2C436%3Bw%3D720%3Bq%3D99/sign=13b5bb25f003738dca0556628e2b9c61/8cb1cb134954092377e0a7fb9458d109b2de49ae.jpg");
+    background-size: 100%;
+}
+.coupon-list li:nth-child(6) a{
+    background: url("https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C720%2C436%3Bw%3D720%3Bq%3D99/sign=610f3aaa8335e5dd8463ff9f4bf68bdf/1c950a7b02087bf4241c8d11f4d3572c10dfcf52.jpg");
+    background-size: 100%;
+}
+.coupon-list li:nth-child(7) a{
+    background: url("https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C720%2C436%3Bw%3D720%3Bq%3D99/sign=efa290b0ab6eddc432a8eebb04eb9acd/b3b7d0a20cf431ad2ab9fd6c4d36acaf2edd9878.jpg");
+    background-size: 100%;
+}
+.coupon-list li:nth-child(8) a{
+    background: url("https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C0%2C720%2C436%3Bw%3D720%3Bq%3D80/sign=c40a05155f82b2b7b3d063840c9de7df/2f738bd4b31c8701c4c52ff7217f9e2f0708ffb4.jpg");
+    background-size: 100%;
+}
+ span.saled-already{
+     display: none;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    height: 20%;
+     left: 0;
+    background: rgba(120,120,120,.7);
+     text-align: left;
+     padding-left: 10px;
+     font-size: 16px;
+     color: #fff;
+}
+
+.shopping-box-b{
+    position: relative;
+    width: 100%;
+    height: 900px;
+}
+.goods-list{
+    position: relative;
+    width: 102%;
+    height: 435px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin-top: 10px;
+
+}
+.goods-list li{
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    margin-right: 1%;
+    padding: 0;
+    width: 32%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+.goods-list img{
+    width: 100%;
+    height: 70%;
+    display: inline-block;
+    cursor: pointer;
+}
+.goods-link{
+    color: #555;
+    text-decoration: none;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.goods-link:hover{
+    color: #3385ff;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.content-box-footer{
+    position: absolute;
+    height: 50px;
+    line-height: 60px;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -50px;
+}
+
+
+
+
+
+
+
+
+
+
+.footer.after-login {
+    display: none;
+}
+
+.footer.before-login > p {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.before-login p.up {
+    margin: 16px 0 5px;
+
+}
+
+p > a {
+    margin: 0 10px;
+}
+
+span #declaration {
+    color: #666 !important;
+}
+
+#declaration a {
+    color: #666 !important;
+}
+
+/*底部logo*/
+.c-icon-icrlogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png) no-repeat;
+    _background-image: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_15f748ea.gif);
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}
+
+.login-panel {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(150, 150, 150, .3);
+}
+
+.login-panel-content {
+    position: absolute;
+    display: inline-block;
+    width: 33%;
+    height: 75%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 415px;
+    background: #fff;
+
+}
+
+.login-panel-header {
+    position: relative;
+    width: 100%;
+    height: 12%;
+    border-bottom: 1px solid #ddd;
+    background: rgba(240, 240, 240, 1);
+    box-sizing: border-box;
+}
+
+.login-panel-header img {
+    float: left;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.login-panel-header span {
+    float: left;
+    display: inline-block;
+    height: 100%;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 18px;
+    line-height: 54px;
+}
+
+.login-panel-header button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-top: 10px;
+    border: 0;
+    background: transparent url("../Resource/close-btn.png") no-repeat 2px 5px;
+    background-size: 180%;
+    cursor: pointer;
+    float: right;
+}
+
+.login-panel-header button:hover {
+    background: url("../Resource/close-btn.png") no-repeat -28px 5px;
+    background-size: 180%;
+}
+
+.login-panel-body {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 68%;
+    border-bottom: 1px solid rgba(230, 230, 230, 1);
+}
+
+#login-by-phone {
+    display: inline-block;
+    width: 90%;
+    height: 10%;
+    margin: 15px;
+    text-align: right;
+}
+
+#login-by-phone img {
+    position: relative;
+    top: 12px;
+}
+
+#login-by-phone a {
+    position: relative;
+    top: 10px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #777;
+
+}
+
+#login-by-phone a:hover {
+    color: #3385ff;
+    text-decoration: underline;
+}
+
+form#user-login {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    height: 70%;
+    margin: 0 15px;
+}
+
+.user-name-box,
+.user-password-box {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+.user-name-box span {
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("../Resource/user-icon.png") no-repeat 0 0;
+    background-size: 200% 100%;
+}
+
+.user-password-box span {
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("../Resource/password-icon.png") no-repeat 0 0;
+    background-size: 200% 100%;
+}
+
+.user-name-box input,
+.user-password-box input {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 45px;
+    margin: auto;
+    width: 70%;
+    height: 28px;
+}
+
+#clear-userName {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: url("../Resource/close-btn.png") no-repeat 0 0;
+    background-size: 200% 100%;
+}
+
+#clear-userName:hover {
+    background: url("../Resource/close-btn.png") no-repeat -16px 0;
+    background-size: 200% 100%;
+}
+
+.login-tools span {
+    display: inline-block;
+    float: left;
+}
+
+.login-tools a {
+    float: right;
+    text-decoration: none;
+    color: #3385ff;
+    cursor: pointer;
+}
+
+.login-tools a:hover {
+    text-decoration: underline;
+}
+
+#login-submit {
+    display: inline-block;
+    margin-top: 10px;
+    width: 100%;
+    height: 22%;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition-duration: .5s;
+    background: #3385ff;
+}
+
+#login-submit:hover {
+    opacity: .9;
+}
+
+#register-now {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #3385ff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#register-now:hover {
+    text-decoration: underline;
+}
+
+.login-panel-footer {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 20%;
+}
+
+.login-panel-footer p {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    padding-left: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.login-with-qq {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("../Resource/login-with.png") no-repeat;
+    background-size: 200% 100%;
+}
+
+.login-with-weibo {
+    position: absolute;
+    bottom: 15px;
+    left: 60px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("../Resource/login-with.png") no-repeat -30px;
+    background-size: 200% 100%;
+}
+
+
+
+
+
+.before-login.header-tools{
+    display: none;
+}
+.after-login.header-tools{
+    display: inline-block;
+}
+.content-box.before-login{
+    display: none;
+}
+.content-box.after-login{
+    display: inline-block;
+}

@@ -1,0 +1,121 @@
+{% extends 'dashboard.layout.html' %}
+
+
+{% block content %}
+<div class="main-content col-md-12">
+    <table class="table table-striped table-hover col-md-12">
+        <tr>
+            <th>新闻ID</th>
+            <th>新闻标题</th>
+            <th>新闻类型</th>
+            <th>新闻门类</th>
+            <th>修改时间</th>
+            <th>操作</th>
+
+        </tr>
+        {% for news in JSON.parse(docs) %}
+        <tr>
+            <td>{{news['_id']}}</td>
+            <td>{{news['title']}}</td>
+            <td>{{news['subject']}}</td>
+            <td>{{news['newsType']}}</td>
+            <td>{{news['updateTime']}}</td>
+            <td>
+                <a href="./edit?newsId={{news['_id']}}">修改</a>
+                <a class="do-del">删除</a>
+                <input type="hidden" value="{{news['_id']}}">
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <input type="hidden" id="page-position" value="{{pageStart}}">
+    <ul class="table-nav nav navbar page-nav">
+        <li id="first-page" class="first-page">第一页</li>
+        <li id="pre-page" class="pre-page">上一页</li>
+        <li id="next-page" class="next-page">下一页</li>
+        <li id="last-page" class="last-page">最后</li>
+    </ul>
+    <p id="news-count"></p>
+</div>
+{% endblock %}
+{% block script %}
+<script>
+    function listOnClick() {
+        alert(this.innerHTML);
+    }
+    $(function () {
+        var pages = '';
+        var pagePosition = $("#page-position");
+        if (pagePosition.val() == '0') {
+            $("#first-page").hide();
+            $("#pre-page").hide();
+        }
+
+        $.get('/admin/newscount', function (data) {
+            $("#news-count").text('一共找到' + data + '条数据');
+            pages = Math.ceil(data / 15);
+            for (var i = 0; i < pages; i++) {
+                var list = document.createElement('li');
+                if (i == pagePosition.val()) {
+                    list.className = 'list-selected';
+                    list.innerHTML = i + 1;
+                    $("#next-page").before(list);
+                    continue;
+                }
+                if (i > 3 && (pages - i) > 2) {
+                    if (i > 5 && (pages - i) > 3) {
+                        continue;
+                    }
+                    list.innerHTML = '.';
+                    list.className = 'list-dot';
+                } else {
+                    list.className = 'list-number';
+                    list.innerHTML = i + 1;
+                }
+                $("#next-page").before(list);
+
+            }
+            if (pagePosition.val() == pages - 1) {
+                $("#last-page").hide();
+                $("#next-page").hide();
+            }
+            $(".page-nav").find('li').click(function () {
+                var pageTo = '';
+
+                console.log(pagePosition.val());
+                switch (this.className) {
+                    case 'first-page':
+                        window.location.href = './list';
+                        break;
+                    case 'pre-page':
+                        pageTo = parseInt(pagePosition.val()) - 1;
+                        window.location.href = './list?pageStart=' + pageTo;
+                        break;
+                    case 'next-page':
+                        pageTo = parseInt(pagePosition.val()) + 1;
+                        window.location.href = './list?pageStart=' + pageTo;
+                        break;
+                    case 'last-page':
+                        window.location.href = './list?pageStart=' + parseInt(pages-1);
+                        break;
+                    case 'list-number':
+                        window.location.href = './list?pageStart=' + (this.innerHTML - 1);
+                        break;
+                    case 'list-dot':
+                        break;
+                    default :
+                        break;
+                }
+            });
+
+        });
+
+
+        $(".do-del").click(function (e) {
+            var delId = $(e.target).next().val();
+            doDelete(delId);
+        })
+    });
+
+</script>
+{% endblock %}
